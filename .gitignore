@@ -1,0 +1,8 @@
+# node関係
+node_modules/
+package-lock.json
+
+# OSやVSCodeの一時ファイル
+.DS_Store
+.vscode/
+

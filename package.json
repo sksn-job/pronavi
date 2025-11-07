@@ -1,0 +1,24 @@
+{
+  "name": "pronavi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/scss:assets/css --no-source-map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sksn-job/pronavi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sksn-job/pronavi/issues"
+  },
+  "homepage": "https://github.com/sksn-job/pronavi#readme",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}
