@@ -1,6 +1,21 @@
 @use "mixins" as m;
 @use "variables" as v;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 main {
   font-size: 1.5rem;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: v.$font_main;
+}
+li {
+  list-style: none;
 }
