@@ -2,11 +2,13 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
+  font-family: Noto Sans JP;
+  background-color: #f6f4f2;
 }
 
-main {
-  font-size: 1.5rem;
-  padding: 0;
+img {
+  width: 100%;
 }
 
 a {
@@ -16,6 +18,35 @@ a {
 
 li {
   list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.sec_title {
+  width: 400px;
+  height: 100px;
+  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f2 100%);
+  color: #fff;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.wrapper {
+  padding: 0 5rem;
+  max-width: 100%;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.7;
+  padding: 5rem 0;
+  color: #023f80;
 }
 
 #header {
@@ -40,6 +71,7 @@ li {
 #header #nav {
   width: 300px;
   height: 100vh;
+  font-size: 2rem;
   background: linear-gradient(45deg, rgb(217, 217, 217), #1c497f);
   position: fixed;
   top: 0;
@@ -54,7 +86,7 @@ li {
   opacity: 0.7;
 }
 #header #nav .header_nav {
-  padding-top: 3rem;
+  padding: 8rem 0 0 1rem;
   text-align: start;
 }
 #header #nav .header_nav li {
@@ -62,21 +94,21 @@ li {
 }
 #header #nav .header_nav a {
   color: #fff;
-  font-weight: 500;
+  font-weight: normal;
 }
 #header .toggle_btn {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 3rem;
+  right: 3rem;
   transition: 0.5s;
   z-index: 20;
 }
 #header .toggle_btn span {
   position: absolute;
-  width: 30px;
+  width: 40px;
   height: 3px;
   background-color: #4b769d;
   border-radius: 4px;
@@ -85,25 +117,25 @@ li {
   transition: 0.5s;
 }
 #header .toggle_btn span:nth-child(1) {
-  top: 4px;
+  top: 8px;
 }
 #header .toggle_btn span:nth-child(2) {
-  top: 14px;
+  top: 18px;
 }
 #header .toggle_btn span:nth-child(3) {
-  bottom: 4px;
+  bottom: 8px;
 }
 #header .toggle_btn.open span {
   background-color: #fff;
 }
 #header .toggle_btn.open span:nth-child(1) {
-  transform: translateY(10px) rotate(-315deg);
+  transform: translateY(11px) rotate(-315deg);
 }
 #header .toggle_btn.open span:nth-child(2) {
   display: none;
 }
 #header .toggle_btn.open span:nth-child(3) {
-  transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-11px) rotate(315deg);
 }
 #header #mask {
   display: none;
@@ -122,10 +154,8 @@ li {
   z-index: 15;
 }
 
-main {
-  position: relative;
-}
 main .slick_slider {
+  position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -142,23 +172,11 @@ main .overlay_img {
   z-index: 10;
   height: auto;
   position: absolute;
-  bottom: 3%;
+  top: 30%;
   left: 5%;
 }
-main .catchcopy {
-  position: absolute;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
-  z-index: 10;
-  bottom: 30%;
-  left: 30%;
-}
-main .catchcopy span {
-  display: inline-block;
-  margin-left: 8rem;
-}
-main .btn {
+
+.btn {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -174,15 +192,17 @@ main .btn {
   right: -8%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-main .btn p {
+.btn p {
   display: inline-block;
   width: 100%;
+  font-size: 2.4rem;
   color: #fff;
   margin: 1rem 0 0.5rem 2rem;
 }
-main .btn .btn_push {
+.btn .btn_push {
   width: 50%;
   font-weight: bold;
+  font-size: 2.4rem;
   margin: 0 0 2rem 2rem;
   display: inline-block;
   background-color: #fff;
@@ -191,8 +211,24 @@ main .btn .btn_push {
   text-align: center;
   transition: all 0.5s;
 }
-main .btn .btn_push:hover {
+.btn .btn_push:hover {
   background-color: #d57d33;
   color: #fff;
   transform: scale(1.05);
+}
+
+#about {
+  background-color: #f6f4f2;
+  background-image: url(assets/img/bg2.png), no-repeat, bottom;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20rem;
+}
+#about .venn {
+  width: 30%;
+  position: absolute;
+  top: 20rem;
+  right: 5rem;
 }
