@@ -5,17 +5,34 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-size: 62.5%; //1rem = 10pxに統一//
+  font-family: Noto Sans JP;
+  background-color: v.$bg_color;
 }
-
-main {
-  font-size: 1.5rem;
-  padding: 0;
+img {
+  width: 100%;
 }
-
 a {
   text-decoration: none;
   color: v.$font_main;
 }
 li {
   list-style: none;
+}
+p {
+  font-size: 1.6rem;
+}
+.sec_title {
+  width: 400px;
+}
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.7;
+  padding: 5rem 0;
+  color: v.$font_accent;
+}
+.wrapper {
+  padding: 0 5rem;
+  max-width: 100%;
 }

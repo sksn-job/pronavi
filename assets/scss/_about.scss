@@ -1,0 +1,19 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+#about {
+  background-color: v.$bg_color;
+  background-image: url(assets/img/bg2.png), no-repeat, bottom;
+  background-size: cover;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20rem;
+
+  .venn {
+    width: 30%;
+    position: absolute;
+    top: 20rem;
+    right: 5rem;
+  }
+}
