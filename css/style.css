@@ -26,6 +26,19 @@ p {
 
 .sec_title {
   width: 400px;
+  height: 100px;
+  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f2 100%);
+  color: #fff;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.wrapper {
+  padding: 0 5rem;
+  max-width: 100%;
 }
 
 .subtitle {
@@ -34,11 +47,6 @@ p {
   line-height: 1.7;
   padding: 5rem 0;
   color: #023f80;
-}
-
-.wrapper {
-  padding: 0 5rem;
-  max-width: 100%;
 }
 
 #header {
@@ -63,7 +71,7 @@ p {
 #header #nav {
   width: 300px;
   height: 100vh;
-  font-size: 1.6rem;
+  font-size: 2rem;
   background: linear-gradient(45deg, rgb(217, 217, 217), #1c497f);
   position: fixed;
   top: 0;
@@ -78,7 +86,7 @@ p {
   opacity: 0.7;
 }
 #header #nav .header_nav {
-  padding-top: 8rem;
+  padding: 8rem 0 0 1rem;
   text-align: start;
 }
 #header #nav .header_nav li {
@@ -86,7 +94,7 @@ p {
 }
 #header #nav .header_nav a {
   color: #fff;
-  font-weight: 500;
+  font-weight: normal;
 }
 #header .toggle_btn {
   width: 40px;
@@ -167,20 +175,8 @@ main .overlay_img {
   top: 30%;
   left: 5%;
 }
-main .catchcopy {
-  position: absolute;
-  font-size: 4rem;
-  font-weight: bold;
-  color: #fff;
-  z-index: 10;
-  top: 50%;
-  left: 30%;
-}
-main .catchcopy span {
-  display: inline-block;
-  margin-left: 8rem;
-}
-main .btn {
+
+.btn {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -196,14 +192,14 @@ main .btn {
   right: -8%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-main .btn p {
+.btn p {
   display: inline-block;
   width: 100%;
   font-size: 2.4rem;
   color: #fff;
   margin: 1rem 0 0.5rem 2rem;
 }
-main .btn .btn_push {
+.btn .btn_push {
   width: 50%;
   font-weight: bold;
   font-size: 2.4rem;
@@ -215,7 +211,7 @@ main .btn .btn_push {
   text-align: center;
   transition: all 0.5s;
 }
-main .btn .btn_push:hover {
+.btn .btn_push:hover {
   background-color: #d57d33;
   color: #fff;
   transform: scale(1.05);
