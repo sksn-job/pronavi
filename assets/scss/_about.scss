@@ -3,17 +3,71 @@
 
 #about {
   background-color: v.$bg_color;
-  background-image: url(assets/img/bg2.png), no-repeat, bottom;
-  background-size: cover;
   margin: 0;
   position: relative;
   overflow: hidden;
-  padding-top: 20rem;
+  padding-top: 15rem;
+  width: 100%;
+
+  .about_left,
+  .about_right {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 4rem;
+    overflow: hidden;
+
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .about_text {
+      flex: 1;
+      padding: 0 2rem;
+      color: v.$font_main;
+      line-height: 1.5;
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .about_left {
+    width: 80%;
+    margin-left: 0;
+    margin-right: auto;
+    justify-content: flex-start;
+
+    img {
+      border-radius: 25px 0 0 25px;
+      margin: -2rem 0 -2rem -2rem;
+    }
+  }
+  .about_right {
+    width: 70%;
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: flex-end;
+
+    img {
+      border-radius: 0 25px 25px 0;
+      margin: -2rem -2rem -2rem 0;
+    }
+  }
 
   .venn {
-    width: 30%;
+    width: 350px;
     position: absolute;
-    top: 20rem;
-    right: 5rem;
+    top: 15rem;
+    right: 8rem;
   }
 }
