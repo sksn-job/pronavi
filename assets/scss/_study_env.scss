@@ -1,0 +1,130 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+#study_env {
+  margin-top: 5rem;
+
+  ol.steps {
+    counter-reset: step;
+
+    .env_left,
+    .env_right {
+      .env_flex {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+        flex-direction: row;
+        align-items: center;
+
+        .env_text {
+          flex: 1;
+          width: 70%;
+          position: relative;
+          padding: 0 4rem;
+
+          .env_heading {
+            display: flex;
+            align-items: center;
+            font-size: 2.4rem;
+            color: v.$font_accent;
+            padding-bottom: 0.8rem;
+            width: 100%;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 75%;
+              height: 2px;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: v.$font_accent;
+            }
+            .step_number {
+              counter-increment: step;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: v.$font_accent;
+              color: #fff;
+              font-weight: bold;
+              font-size: 1.8rem;
+              margin-right: 1rem;
+
+              &::before {
+                content: counter(step);
+              }
+            }
+          }
+        }
+
+        .env_st {
+          display: block;
+          margin: 0.5rem 0;
+          color: #313131;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        p {
+          line-height: 1.6;
+        }
+        img {
+          width: 30%;
+          height: auto;
+          margin: 0 2rem;
+          border-radius: 12px;
+        }
+      }
+    }
+    .env_left {
+      .env_text {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 100%;
+          background-color: #313131;
+          top: 0;
+          left: 2rem;
+        }
+        &::after {
+          position: absolute;
+          content: "Feature";
+          bottom: 3rem;
+          left: -4rem;
+          transform: rotate(-90deg);
+          letter-spacing: 0.2rem;
+          font-size: 2rem;
+          color: #aaa1a1;
+        }
+      }
+    }
+    .env_right {
+      .env_text {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 100%;
+          background-color: #313131;
+          top: 0;
+          right: 2rem;
+        }
+        &::after {
+          position: absolute;
+          content: "Feature";
+          bottom: 3rem;
+          right: -4rem;
+          transform: rotate(-90deg);
+          letter-spacing: 0.2rem;
+          font-size: 2rem;
+          color: #aaa1a1;
+        }
+      }
+    }
+  }
+}
