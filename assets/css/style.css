@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-size: 62.5%;
   font-family: Noto Sans JP;
+  color: #505050;
 }
 @media (max-width: 767px) {
   html,
@@ -40,13 +41,14 @@ p {
 .sec_title {
   width: 400px;
   height: 100px;
-  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f2 100%);
+  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fffbf9 100%);
   color: #fff;
   font-size: 2.4rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 2rem;
+  margin-top: 10rem;
 }
 
 .wrapper {
@@ -244,7 +246,7 @@ main .catchcopy {
 #about {
   margin: 0;
   position: relative;
-  padding-top: 20rem;
+  padding-top: 10rem;
   width: 100%;
 }
 #about .about_left,
@@ -323,7 +325,7 @@ main .catchcopy {
   display: inline-block;
   background: #d9d9d9;
   padding: 2rem;
-  border-radius: 30% 40% 30% 60%/60% 50% 50% 40%;
+  border-radius: 30% 40% 60% 60%/60% 50% 50% 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 400px;
   height: auto;
@@ -443,7 +445,7 @@ main .catchcopy {
   width: 30%;
   height: auto;
   margin: 0 2rem;
-  border-radius: 12px;
+  border-radius: 30px;
 }
 #study_env ol.steps .env_left .env_text::before {
   position: absolute;
@@ -482,4 +484,81 @@ main .catchcopy {
   letter-spacing: 0.2rem;
   font-size: 2rem;
   color: #aaa1a1;
+}
+
+#reason {
+  width: 100%;
+}
+#reason .reason_flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15rem 0 5rem 0;
+  align-items: center;
+}
+#reason .reason_flex img {
+  width: 40%;
+}
+#reason .reason_flex .reason_text {
+  width: 55%;
+}
+#reason .reason_flex .reason_text .reason_subtitle {
+  padding: 0 0 0 2rem;
+  align-items: center;
+  line-height: 1.3;
+  font-size: 3.2rem;
+  color: #023f80;
+  border-left: 5px solid #023f80;
+  margin-bottom: 1rem;
+}
+#reason .reason_flex .reason_text .reason_catch {
+  font-size: 2.4rem;
+  color: #023f80;
+  margin-bottom: 1rem;
+}
+#reason .reason_flex .reason_text .reason_content {
+  line-height: 1.6;
+  padding-left: 2rem;
+}
+#reason .wrapper > .reason_flex:first-of-type {
+  margin-top: 5rem;
+}
+#reason .point {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 35px;
+  background-color: #fffbf9;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+#reason .point span {
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  text-align: center;
+  font-size: 2.4rem;
+  border-radius: 50px 0 0 50px;
+  width: 15%;
+}
+#reason .point span:hover {
+  background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+}
+#reason .point p {
+  width: 85%;
+  text-align: center;
+}
+#reason .commentary {
+  font-size: 1.6rem;
+  width: 60%;
+  color: #023f80;
+  margin: -2rem -4rem 0 auto;
 }
