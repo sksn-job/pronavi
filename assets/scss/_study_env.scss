@@ -18,7 +18,7 @@
       display: inline-block;
       background: #d9d9d9;
       padding: 2rem;
-      border-radius: 30% 40% 30% 60% / 60% 50% 50% 40%; // 複雑に丸めてモコモコ感
+      border-radius: 30% 40% 60% 60% / 60% 50% 50% 50%; // 複雑に丸めてモコモコ感
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 400px;
       height: auto;
@@ -141,7 +141,7 @@
           width: 30%;
           height: auto;
           margin: 0 2rem;
-          border-radius: 12px;
+          border-radius: 30px;
         }
       }
     }

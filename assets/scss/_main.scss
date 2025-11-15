@@ -7,6 +7,7 @@ body {
   padding: 0;
   font-size: 62.5%; //1rem = 10pxに統一//
   font-family: Noto Sans JP;
+  color: v.$font_main;
 
   @include m.sp {
     font-size: 53%; // SP: 1rem ≈ 8.5px
@@ -48,6 +49,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   padding-left: 2rem;
+  margin-top: 10rem;
 }
 .wrapper {
   padding: 0 5rem;
