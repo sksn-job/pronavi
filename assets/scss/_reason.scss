@@ -3,6 +3,9 @@
 
 #reason {
   width: 100%;
+  height: auto;
+  margin-bottom: 10rem;
+
 
   .reason_flex {
     width: 100%;
@@ -68,5 +71,14 @@
     width: 60%;
     color: v.$font_accent;
     margin: -2rem -4rem 0 auto;
+  }
+
+  .reason_link {
+    @include m.orange_button;
+    display: block;
+    margin: 15rem auto 0;
+    font-size: 2.6rem;
+    text-align: center;
+    width: 30%;
   }
 }

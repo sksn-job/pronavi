@@ -15,10 +15,9 @@ body {
 
 main {
   background-image: url(../img/bg/bg_long.webp);
-  background-repeat: repeat-y;
   background-size: 100% 100%;
-  background-position: center 100vh;
-  z-index: -1;
+  background-position: top center;
+  background-repeat: repeat-y;
 }
 
 img {
@@ -41,7 +40,7 @@ p {
 .sec_title {
   width: 400px;
   height: 100px;
-  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fffbf9 100%);
+  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f1 100%);
   color: #fff;
   font-size: 2.4rem;
   display: flex;
@@ -488,6 +487,8 @@ main .catchcopy {
 
 #reason {
   width: 100%;
+  height: auto;
+  margin-bottom: 10rem;
 }
 #reason .reason_flex {
   width: 100%;
@@ -530,7 +531,7 @@ main .catchcopy {
   justify-content: space-between;
   align-items: center;
   border-radius: 35px;
-  background-color: #fffbf9;
+  background-color: #f6f4f1;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 #reason .point span {
@@ -561,4 +562,64 @@ main .catchcopy {
   width: 60%;
   color: #023f80;
   margin: -2rem -4rem 0 auto;
+}
+#reason .reason_link {
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 15rem auto 0;
+  font-size: 2.6rem;
+  text-align: center;
+  width: 30%;
+}
+#reason .reason_link:hover {
+  background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+}
+
+#metalife {
+  width: 100%;
+  height: auto;
+  background-color: #f6f4f1;
+  position: relative;
+  z-index: 0;
+}
+#metalife .meta_group {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#metalife .meta_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+}
+#metalife .meta_flex .meta_text {
+  width: 60%;
+  height: auto;
+  padding-top: 5rem;
+}
+#metalife .meta_flex .meta_text .para {
+  margin-bottom: 3rem;
+}
+#metalife .meta_flex .meta_text .bold {
+  font-weight: bold;
+}
+#metalife .meta_flex .meta_text span:first-of-type {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+#metalife .meta_flex img {
+  width: 35%;
 }
