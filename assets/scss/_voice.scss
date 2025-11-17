@@ -5,42 +5,39 @@
 voice
 ----------------------------*/
 .voice {
-    position: relative;
 
     .voice_intro {
-        height: 820px;
+        height: 900px;
         width: 100%;
-        background-image:
-            /* 1. 上部のパターン画像 (手前に表示したい方) */
-            url('../assets/img/subpage_img/sub_bg/voice_hakkathon_bg.jpg'),
-            /* 2. 背景の帯画像 (奥に表示したい方) */
-            url('../assets/img/subpage_img/sub_bg/voice_bg2.jpg');
-        /* 1. 各背景画像の位置を指定 */
-        background-position: center top, center top;
-
-        /* 2. 各背景画像のサイズを指定 */
-        background-size: contain, 100% auto;
-        /* bottom.png は幅100%で高さを自動調整 */
-
-        /* 3. 画像の繰り返しを指定 (通常は繰り返さない) */
+        background-image: url('../img/subpage_img/sub_bg/bg_hackathon_voice.jpg');
+        background-position: center top;
+        background-size: contain;
         background-repeat: no-repeat;
-        z-index: 2;
+
+        .voice_title {
+            padding-top: 280px;
+            font-size: 4.8rem;
+            font-weight: bold;
+            padding-bottom: 60px;
+            color: v.$font_accent;
+            text-shadow: 0px 4px 4px #FFFFFF;
+        }
+
+        .voice_text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: v.$font_accent;
+            padding-left: 2rem;
+            line-height: 2em;
+            text-shadow: 0px 4px 4px #FFFFFF;
+            padding-bottom: 190px;
+        }
     }
 }
 
 
-// .voice .voice_title {
-//     font-size: 4rem;
-//     font-weight: bold;
-//     padding-bottom: 10rem;
-//     color: v.$font_accent;
-// }
 
-// .voice .voice_text {
-//     font-size: 2rem;
-//     color: v.$font_accent;
-//     padding-left: 2rem;
-//     line-height: 2em;
+
 
 
 //     &:last-of-type {

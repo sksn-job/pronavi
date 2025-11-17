@@ -192,8 +192,7 @@ main .slick_slider {
 main .slick_slider img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .overlay_img {
   width: 300px;
@@ -309,8 +308,7 @@ main .catchcopy {
 #about .about_right img {
   width: 300px;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #about .about_left .about_text,
 #about .about_right .about_text {
@@ -638,79 +636,30 @@ main .catchcopy {
 /* --------------------------
 voice
 ----------------------------*/
-.voice {
-  background: transparent;
-}
 .voice .voice_intro {
-  height: 820px;
+  height: 900px;
   width: 100%;
-  background-image: url(assets/img/subpage_img/sub_bg/voice_bg2.jpg);
+  background-image: url("../img/subpage_img/sub_bg/bg_hackathon_voice.jpg");
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.voice .voice .voice_title {
-  font-size: 4rem;
+.voice .voice_intro .voice_title {
+  padding-top: 280px;
+  font-size: 4.8rem;
   font-weight: bold;
-  padding-bottom: 10rem;
+  padding-bottom: 60px;
   color: #023f80;
+  text-shadow: 0px 4px 4px #FFFFFF;
 }
-.voice .voice .voice_text {
+.voice .voice_intro .voice_text {
   font-size: 2rem;
+  font-weight: bold;
   color: #023f80;
   padding-left: 2rem;
   line-height: 2em;
-}
-.voice .voice .voice_text:last-of-type {
-  padding-top: 1em;
-  padding-bottom: 10rem;
-}
-.voice .profile_card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem;
-}
-.voice .profile_card .profile_img {
-  width: 50%;
-}
-.voice .profile_card .profile_img img {
-  display: block;
-  width: 280px;
-  height: 280px;
-  margin: 0 auto;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
-}
-.voice .profile_card .profile-content {
-  flex: 1;
-}
-.voice .profile_card .profile-content .profile_title {
-  width: 350px;
-  padding: 5px 10px;
-  border-radius: 50px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #f6f4f1;
-  background-color: #023f80;
-  font-size: 1.6rem;
-}
-.voice .profile_card .profile-content .profile_list {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.8rem;
-}
-.voice .profile_card .profile-content .profile_list dt,
-.voice .profile_card .profile-content .profile_list dd {
-  padding-bottom: 1rem;
-}
-.voice .profile_card .profile-content .profile_list dt {
-  width: 30%;
-  text-align: right;
-  margin-left: 0;
-  padding-right: 2rem;
-}
-.voice .profile_card .profile-content .profile_list dd {
-  width: 60%;
+  text-shadow: 0px 4px 4px #FFFFFF;
+  padding-bottom: 190px;
 }
 
 #metalife {
@@ -723,8 +672,7 @@ voice
 #metalife .meta_group {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #metalife .meta_flex {
   display: flex;
@@ -751,4 +699,4 @@ voice
 }
 #metalife .meta_flex img {
   width: 35%;
-}
+}/*# sourceMappingURL=style.css.map */
