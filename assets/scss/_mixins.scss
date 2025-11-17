@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 $sp: 767px;
 
 @mixin sp {
@@ -21,4 +23,40 @@ $sp: 767px;
   &:hover {
     background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
   }
+}
+
+@mixin title_beige {
+  width: 400px;
+  height: 100px;
+  background: linear-gradient(
+    to right,
+    v.$font_accent 0%,
+    v.$sub_color 60%,
+    v.$bg_color 100%
+  );
+  color: #fff;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  margin-top: 10rem;
+}
+
+@mixin title_white {
+  width: 400px;
+  height: 100px;
+  background: linear-gradient(
+    to right,
+    v.$font_accent 0%,
+    v.$sub_color 60%,
+    v.$white 100%
+  );
+  color: #fff;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  margin-top: 10rem;
 }
