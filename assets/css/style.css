@@ -186,8 +186,7 @@ main .slick_slider {
 main .slick_slider img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .overlay_img {
   width: 300px;
@@ -266,8 +265,7 @@ main .catchcopy {
 #about .about_right img {
   width: 300px;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #about .about_left .about_text,
 #about .about_right .about_text {
@@ -563,6 +561,7 @@ main .catchcopy {
   color: #023f80;
   margin: -2rem -4rem 0 auto;
 }
+<<<<<<< Updated upstream
 #reason .reason_link {
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
   color: white;
@@ -623,3 +622,80 @@ main .catchcopy {
 #metalife .meta_flex img {
   width: 35%;
 }
+=======
+
+/* --------------------------
+voice
+----------------------------*/
+.voice {
+  padding-block: 150px 175px;
+}
+
+.voice .voice_title {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-bottom: 10rem;
+  color: #023f80;
+}
+
+.voice .voice_text {
+  font-size: 2rem;
+  color: #023f80;
+  padding-left: 2rem;
+  line-height: 2em;
+}
+.voice .voice_text:last-of-type {
+  padding-top: 1em;
+  padding-bottom: 10rem;
+}
+
+.profile_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+}
+.profile_card .profile_img {
+  width: 50%;
+}
+.profile_card .profile_img img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
+}
+.profile_card .profile-content {
+  flex: 1;
+}
+.profile_card .profile-content .profile_title {
+  width: 350px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fffbf9;
+  background-color: #023f80;
+  font-size: 1.6rem;
+}
+.profile_card .profile-content .profile_list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.8rem;
+}
+.profile_card .profile-content .profile_list dt,
+.profile_card .profile-content .profile_list dd {
+  padding-bottom: 1rem;
+}
+.profile_card .profile-content .profile_list dt {
+  width: 30%;
+  text-align: right;
+  margin-left: 0;
+  padding-right: 2rem;
+}
+.profile_card .profile-content .profile_list dd {
+  width: 60%;
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> Stashed changes
