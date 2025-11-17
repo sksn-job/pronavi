@@ -3,6 +3,15 @@
 
 #study_env {
   margin-top: 5rem;
+  background-color: v.$bg_color;
+  padding-top: 5rem;
+
+  .subtitle {
+    text-align: center;
+    span {
+      font-size: 4.8rem;
+    }
+  }
 
   .env_question {
     display: flex;
