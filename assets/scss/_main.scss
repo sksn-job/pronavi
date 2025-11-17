@@ -13,12 +13,7 @@ body {
     font-size: 53%; // SP: 1rem ≈ 8.5px
   }
 }
-main {
-  background-image: url(../img/bg/bg_long.webp);
-  background-size: 100% 100%;
-  background-position: top center;
-  background-repeat: repeat-y;
-}
+
 img {
   width: 100%;
 }
@@ -32,22 +27,11 @@ li {
 p {
   font-size: 1.6rem;
 }
-.sec_title {
-  width: 400px;
-  height: 100px;
-  background: linear-gradient(
-    to right,
-    v.$font_accent 0%,
-    v.$sub_color 60%,
-    v.$bg_color 100%
-  );
-  color: #fff;
-  font-size: 2.4rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 2rem;
-  margin-top: 10rem;
+.sec_title_b {
+  @include m.title_beige;
+}
+.sec_title_w {
+  @include m.title_white;
 }
 .wrapper {
   padding: 0 5rem;

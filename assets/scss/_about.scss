@@ -4,9 +4,48 @@
 #about {
   margin: 0;
   position: relative;
-  padding-top: 10rem;
+  padding-top: 0.5rem;
   width: 100%;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../img/bg/linetop_bg2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .about_catch {
+    position: absolute;
+    color: v.$white;
+    width: 100%;
+    top: 35rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-align: left;
+    line-height: 2;
+
+    span {
+      display: inline-block;
+      font-size: 4rem;
+      line-height: 2;
+    }
+
+    .catch_right {
+      position: absolute;
+      right: 30rem;
+      top: 20rem;
+    }
+  }
+  .about_contents {
+    margin-top: 70%;
+  }
   .about_left,
   .about_right {
     width: 88%;
@@ -15,7 +54,8 @@
     padding: 2rem;
     background-color: #fff;
     border-radius: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #505050;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 5rem;
     overflow: hidden;
     position: relative;

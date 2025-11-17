@@ -13,13 +13,6 @@ body {
   }
 }
 
-main {
-  background-image: url(../img/bg/bg_long.webp);
-  background-size: 100% 100%;
-  background-position: top center;
-  background-repeat: repeat-y;
-}
-
 img {
   width: 100%;
 }
@@ -37,10 +30,23 @@ p {
   font-size: 1.6rem;
 }
 
-.sec_title {
+.sec_title_b {
   width: 400px;
   height: 100px;
   background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f1 100%);
+  color: #fff;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  margin-top: 10rem;
+}
+
+.sec_title_w {
+  width: 400px;
+  height: 100px;
+  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fff 100%);
   color: #fff;
   font-size: 2.4rem;
   display: flex;
@@ -69,7 +75,7 @@ p {
 
 #header {
   width: 100vw;
-  height: 80px;
+  height: 70px;
   background-color: rgba(242, 242, 242, 0.7);
   position: fixed;
   display: flex;
@@ -90,12 +96,7 @@ p {
   width: 300px;
   height: 100vh;
   font-size: 2rem;
-  background: linear-gradient(
-    45deg,
-    rgb(217, 217, 217) 0%,
-    #12345a 70%,
-    #1c497f 100%
-  );
+  background: linear-gradient(45deg, rgb(217, 217, 217) 0%, #12345a 70%, #1c497f 100%);
   position: fixed;
   top: 0;
   overflow-y: auto;
@@ -192,7 +193,7 @@ main .slick_slider img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main .overlay_img {
   width: 300px;
@@ -250,8 +251,44 @@ main .catchcopy {
 #about {
   margin: 0;
   position: relative;
-  padding-top: 10rem;
+  padding-top: 0.5rem;
   width: 100%;
+}
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background-image: url(../img/bg/linetop_bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: -1;
+}
+#about .about_catch {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  top: 35rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 2;
+}
+#about .about_catch span {
+  display: inline-block;
+  font-size: 4rem;
+  line-height: 2;
+}
+#about .about_catch .catch_right {
+  position: absolute;
+  right: 30rem;
+  top: 20rem;
+}
+#about .about_contents {
+  margin-top: 70%;
 }
 #about .about_left,
 #about .about_right {
@@ -261,7 +298,8 @@ main .catchcopy {
   padding: 2rem;
   background-color: #fff;
   border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #505050;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 5rem;
   overflow: hidden;
   position: relative;
@@ -272,7 +310,7 @@ main .catchcopy {
   width: 300px;
   height: auto;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 #about .about_left .about_text,
 #about .about_right .about_text {
@@ -314,6 +352,14 @@ main .catchcopy {
 
 #study_env {
   margin-top: 5rem;
+  background-color: #f6f4f1;
+  padding-top: 5rem;
+}
+#study_env .subtitle {
+  text-align: center;
+}
+#study_env .subtitle span {
+  font-size: 4.8rem;
 }
 #study_env .env_question {
   display: flex;
@@ -335,8 +381,7 @@ main .catchcopy {
   height: auto;
   z-index: 2;
 }
-#study_env .env_question .cloud::after,
-#study_env .env_question .cloud::before {
+#study_env .env_question .cloud::after, #study_env .env_question .cloud::before {
   content: "";
   position: absolute;
   background: #d9d9d9;
@@ -429,20 +474,8 @@ main .catchcopy {
   font-size: 1.8rem;
   margin-right: 1rem;
 }
-#study_env
-  ol.steps
-  .env_left
-  .env_flex
-  .env_text
-  .env_heading
-  .step_number::before,
-#study_env
-  ol.steps
-  .env_right
-  .env_flex
-  .env_text
-  .env_heading
-  .step_number::before {
+#study_env ol.steps .env_left .env_flex .env_text .env_heading .step_number::before,
+#study_env ol.steps .env_right .env_flex .env_text .env_heading .step_number::before {
   content: counter(step);
 }
 #study_env ol.steps .env_left .env_flex .env_st,
@@ -606,50 +639,52 @@ main .catchcopy {
 voice
 ----------------------------*/
 .voice {
-  padding-block: 150px 175px;
+  background: transparent;
 }
-
-.voice .voice_title {
+.voice .voice_intro {
+  height: 820px;
+  width: 100%;
+  background-image: url(assets/img/subpage_img/sub_bg/voice_bg2.jpg);
+}
+.voice .voice .voice_title {
   font-size: 4rem;
   font-weight: bold;
   padding-bottom: 10rem;
   color: #023f80;
 }
-
-.voice .voice_text {
+.voice .voice .voice_text {
   font-size: 2rem;
   color: #023f80;
   padding-left: 2rem;
   line-height: 2em;
 }
-.voice .voice_text:last-of-type {
+.voice .voice .voice_text:last-of-type {
   padding-top: 1em;
   padding-bottom: 10rem;
 }
-
-.profile_card {
+.voice .profile_card {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2.5rem;
 }
-.profile_card .profile_img {
+.voice .profile_card .profile_img {
   width: 50%;
 }
-.profile_card .profile_img img {
+.voice .profile_card .profile_img img {
   display: block;
   width: 280px;
   height: 280px;
   margin: 0 auto;
   border-radius: 50%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
 }
-.profile_card .profile-content {
+.voice .profile_card .profile-content {
   flex: 1;
 }
-.profile_card .profile-content .profile_title {
+.voice .profile_card .profile-content .profile_title {
   width: 350px;
   padding: 5px 10px;
   border-radius: 50px;
@@ -659,22 +694,22 @@ voice
   background-color: #023f80;
   font-size: 1.6rem;
 }
-.profile_card .profile-content .profile_list {
+.voice .profile_card .profile-content .profile_list {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.8rem;
 }
-.profile_card .profile-content .profile_list dt,
-.profile_card .profile-content .profile_list dd {
+.voice .profile_card .profile-content .profile_list dt,
+.voice .profile_card .profile-content .profile_list dd {
   padding-bottom: 1rem;
 }
-.profile_card .profile-content .profile_list dt {
+.voice .profile_card .profile-content .profile_list dt {
   width: 30%;
   text-align: right;
   margin-left: 0;
   padding-right: 2rem;
 }
-.profile_card .profile-content .profile_list dd {
+.voice .profile_card .profile-content .profile_list dd {
   width: 60%;
 }
 
@@ -689,7 +724,7 @@ voice
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 #metalife .meta_flex {
   display: flex;
