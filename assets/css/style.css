@@ -90,7 +90,12 @@ p {
   width: 300px;
   height: 100vh;
   font-size: 2rem;
-  background: linear-gradient(45deg, rgb(217, 217, 217) 0%, #12345a 70%, #1c497f 100%);
+  background: linear-gradient(
+    45deg,
+    rgb(217, 217, 217) 0%,
+    #12345a 70%,
+    #1c497f 100%
+  );
   position: fixed;
   top: 0;
   overflow-y: auto;
@@ -186,6 +191,7 @@ main .slick_slider {
 main .slick_slider img {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 main .overlay_img {
@@ -265,6 +271,7 @@ main .catchcopy {
 #about .about_right img {
   width: 300px;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 #about .about_left .about_text,
@@ -328,7 +335,8 @@ main .catchcopy {
   height: auto;
   z-index: 2;
 }
-#study_env .env_question .cloud::after, #study_env .env_question .cloud::before {
+#study_env .env_question .cloud::after,
+#study_env .env_question .cloud::before {
   content: "";
   position: absolute;
   background: #d9d9d9;
@@ -421,8 +429,20 @@ main .catchcopy {
   font-size: 1.8rem;
   margin-right: 1rem;
 }
-#study_env ol.steps .env_left .env_flex .env_text .env_heading .step_number::before,
-#study_env ol.steps .env_right .env_flex .env_text .env_heading .step_number::before {
+#study_env
+  ol.steps
+  .env_left
+  .env_flex
+  .env_text
+  .env_heading
+  .step_number::before,
+#study_env
+  ol.steps
+  .env_right
+  .env_flex
+  .env_text
+  .env_heading
+  .step_number::before {
   content: counter(step);
 }
 #study_env ol.steps .env_left .env_flex .env_st,
@@ -561,7 +581,6 @@ main .catchcopy {
   color: #023f80;
   margin: -2rem -4rem 0 auto;
 }
-<<<<<<< Updated upstream
 #reason .reason_link {
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
   color: white;
@@ -582,47 +601,6 @@ main .catchcopy {
 #reason .reason_link:hover {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
 }
-
-#metalife {
-  width: 100%;
-  height: auto;
-  background-color: #f6f4f1;
-  position: relative;
-  z-index: 0;
-}
-#metalife .meta_group {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#metalife .meta_flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 10rem;
-}
-#metalife .meta_flex .meta_text {
-  width: 60%;
-  height: auto;
-  padding-top: 5rem;
-}
-#metalife .meta_flex .meta_text .para {
-  margin-bottom: 3rem;
-}
-#metalife .meta_flex .meta_text .bold {
-  font-weight: bold;
-}
-#metalife .meta_flex .meta_text span:first-of-type {
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-#metalife .meta_flex img {
-  width: 35%;
-}
-=======
 
 /* --------------------------
 voice
@@ -664,6 +642,7 @@ voice
   height: 280px;
   margin: 0 auto;
   border-radius: 50%;
+  -o-object-fit: cover;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
 }
@@ -676,7 +655,7 @@ voice
   border-radius: 50px;
   margin-bottom: 20px;
   text-align: center;
-  color: #fffbf9;
+  color: #f6f4f1;
   background-color: #023f80;
   font-size: 1.6rem;
 }
@@ -697,5 +676,44 @@ voice
 }
 .profile_card .profile-content .profile_list dd {
   width: 60%;
-}/*# sourceMappingURL=style.css.map */
->>>>>>> Stashed changes
+}
+
+#metalife {
+  width: 100%;
+  height: auto;
+  background-color: #f6f4f1;
+  position: relative;
+  z-index: 0;
+}
+#metalife .meta_group {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#metalife .meta_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+}
+#metalife .meta_flex .meta_text {
+  width: 60%;
+  height: auto;
+  padding-top: 5rem;
+}
+#metalife .meta_flex .meta_text .para {
+  margin-bottom: 3rem;
+}
+#metalife .meta_flex .meta_text .bold {
+  font-weight: bold;
+}
+#metalife .meta_flex .meta_text span:first-of-type {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+#metalife .meta_flex img {
+  width: 35%;
+}
