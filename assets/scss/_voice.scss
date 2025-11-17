@@ -5,94 +5,109 @@
 voice
 ----------------------------*/
 .voice {
-    background: transparent;
+    position: relative;
 
     .voice_intro {
         height: 820px;
         width: 100%;
-        background-image: url(assets/img/subpage_img/sub_bg/voice_bg2.jpg);
-    }
+        background-image:
+            /* 1. 上部のパターン画像 (手前に表示したい方) */
+            url('../assets/img/subpage_img/sub_bg/voice_hakkathon_bg.jpg'),
+            /* 2. 背景の帯画像 (奥に表示したい方) */
+            url('../assets/img/subpage_img/sub_bg/voice_bg2.jpg');
+        /* 1. 各背景画像の位置を指定 */
+        background-position: center top, center top;
 
-    .voice .voice_title {
-        font-size: 4rem;
-        font-weight: bold;
-        padding-bottom: 10rem;
-        color: v.$font_accent;
-    }
+        /* 2. 各背景画像のサイズを指定 */
+        background-size: contain, 100% auto;
+        /* bottom.png は幅100%で高さを自動調整 */
 
-    .voice .voice_text {
-        font-size: 2rem;
-        color: v.$font_accent;
-        padding-left: 2rem;
-        line-height: 2em;
-
-
-        &:last-of-type {
-            padding-top: 1em;
-            padding-bottom: 10rem;
-
-        }
-    }
-
-    .profile_card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // border-bottom: 0.5px solid #505050;
-        // border-radius: 10px;
-        padding: 2.5rem;
-
-        .profile_img {
-            width: 50%;
-
-            img {
-                display: block;
-                width: 280px;
-                height: 280px;
-                margin: 0 auto;
-                border-radius: 50%;
-                object-fit: cover;
-                box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
-            }
-        }
-
-        .profile-content {
-            flex: 1;
-
-            .profile_title {
-                width: 350px;
-                padding: 5px 10px;
-                border-radius: 50px;
-                margin-bottom: 20px;
-                text-align: center;
-                color: v.$bg_color;
-                background-color: v.$font_accent;
-                font-size: 1.6rem;
-            }
-
-            .profile_list {
-                display: flex;
-                flex-wrap: wrap;
-                font-size: 1.8rem;
-
-                dt,
-                dd {
-                    padding-bottom: 1rem;
-                }
-
-                dt {
-                    width: 30%;
-                    text-align: right;
-                    margin-left: 0;
-                    padding-right: 2rem;
-                }
-
-                dd {
-                    width: 60%;
-
-
-                }
-            }
-        }
+        /* 3. 画像の繰り返しを指定 (通常は繰り返さない) */
+        background-repeat: no-repeat;
+        z-index: 2;
     }
 }
+
+
+// .voice .voice_title {
+//     font-size: 4rem;
+//     font-weight: bold;
+//     padding-bottom: 10rem;
+//     color: v.$font_accent;
+// }
+
+// .voice .voice_text {
+//     font-size: 2rem;
+//     color: v.$font_accent;
+//     padding-left: 2rem;
+//     line-height: 2em;
+
+
+//     &:last-of-type {
+//         padding-top: 1em;
+//         padding-bottom: 10rem;
+
+//     }
+// }
+
+// .profile_card {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // border-bottom: 0.5px solid #505050;
+//     // border-radius: 10px;
+//     padding: 2.5rem;
+
+//     .profile_img {
+//         width: 50%;
+
+//         img {
+//             display: block;
+//             width: 280px;
+//             height: 280px;
+//             margin: 0 auto;
+//             border-radius: 50%;
+//             object-fit: cover;
+//             box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
+//         }
+//     }
+// }
+//     .profile-content {
+//         flex: 1;
+
+//         .profile_title {
+//             width: 350px;
+//             padding: 5px 10px;
+//             border-radius: 50px;
+//             margin-bottom: 20px;
+//             text-align: center;
+//             color: v.$bg_color;
+//             background-color: v.$font_accent;
+//             font-size: 1.6rem;
+//         }
+
+//         .profile_list {
+//             display: flex;
+//             flex-wrap: wrap;
+//             font-size: 1.8rem;
+
+//             dt,
+//             dd {
+//                 padding-bottom: 1rem;
+//             }
+
+//             dt {
+//                 width: 30%;
+//                 text-align: right;
+//                 margin-left: 0;
+//                 padding-right: 2rem;
+//             }
+
+//             dd {
+//                 width: 60%;
+
+
+//             }
+//         }
+//     }
+// }
