@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -193,7 +194,8 @@ main .slick_slider {
 main .slick_slider img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .overlay_img {
   width: 300px;
@@ -316,7 +318,8 @@ main .catchcopy {
 #about .about_right img {
   width: 300px;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #about .about_left .about_text,
 #about .about_right .about_text {
@@ -703,7 +706,8 @@ voice
   transform: translate(-50%, 50%);
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   border: 1px solid #fff;
 }
@@ -853,7 +857,8 @@ voice
   display: block;
   margin: 0 auto;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100px;
   height: 100px;
   margin-bottom: 3rem;
@@ -903,7 +908,8 @@ voice
   display: block;
   border: 1px solid red;
   margin-top: 40px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #metalife {
@@ -916,7 +922,8 @@ voice
 #metalife .meta_group {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #metalife .meta_flex {
   display: flex;
@@ -963,7 +970,8 @@ voice
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading img {
   width: 20%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading .heading_text {
   width: 80%;
@@ -1009,17 +1017,95 @@ voice
 #voice .voice_slider {
   max-width: 100%;
   display: flex;
+  /* 選択中のドット */
 }
 #voice .voice_slider .slide {
-  width: 30%;
+  width: 20%;
   height: auto;
   background-color: #fff;
-  padding: 2rem;
+  padding: 6rem 6rem;
   border-radius: 1rem;
+  text-align: start;
+  margin-bottom: 10rem;
 }
 #voice .voice_slider .slide img {
   border-radius: 50%;
-  object-fit: cover;
-  width: 50px;
-  height: 50px;
-}/*# sourceMappingURL=style.css.map */
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+#voice .voice_slider .slide h4 {
+  font-weight: bold;
+  color: #023f80;
+  font-size: 2.4rem;
+  padding: 1rem;
+  align-items: center;
+}
+#voice .voice_slider .slide p {
+  padding: 1rem;
+}
+#voice .voice_slider .slide .graduate_status {
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #fcf2e8;
+  color: #023f80;
+  font-weight: bold;
+  font-size: 2rem;
+}
+#voice .voice_slider .slide a {
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  width: 90%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 2rem auto;
+  display: block;
+}
+#voice .voice_slider .slide a:hover {
+  background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+}
+#voice .voice_slider .slick-dots li button {
+  width: 15px; /* 幅 */
+  height: 15px; /* 高さ */
+  border-radius: 50%; /* 丸くする */
+  background-color: #ccc; /* 通常色 */
+}
+#voice .voice_slider .slick-dots li button::before {
+  content: "";
+}
+#voice .voice_slider .slick-dots li.slick-active button {
+  background-color: #023f80; /* 選択中の色 */
+  width: 15px;
+  height: 15px;
+}
+#voice .graduate_work {
+  display: block;
+  width: 30%;
+  margin: 10rem auto;
+  padding: 1rem;
+  background: linear-gradient(to right, #023f80, #6891b0);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#voice .graduate_work:hover {
+  scale: 1.2;
+}
+
+#instagram {
+  width: 100%;
+}
