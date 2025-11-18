@@ -8,6 +8,7 @@ body {
   font-size: 62.5%; //1rem = 10pxに統一//
   font-family: Noto Sans JP;
   color: v.$font_main;
+  width: 100vw;
 
   @include m.sp {
     font-size: 53%; // SP: 1rem ≈ 8.5px

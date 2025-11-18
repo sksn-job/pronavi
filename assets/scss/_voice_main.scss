@@ -1,0 +1,32 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+#voice {
+  background-color: v.$bg_color;
+  width: 100%;
+  padding: 10rem 0;
+
+  .sec_title_b {
+    margin-top: 0;
+  }
+
+  .voice_slider {
+    max-width: 100%;
+    display: flex;
+
+    .slide {
+      width: 30%;
+      height: auto;
+      background-color: v.$white;
+      padding: 2rem;
+      border-radius: 1rem;
+
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

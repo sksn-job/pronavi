@@ -4,8 +4,12 @@
 #reason {
   width: 100%;
   height: auto;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
+  background-color: v.$bg_color;
 
+  .sec_title_b {
+    margin: 0;
+  }
 
   .reason_flex {
     width: 100%;
@@ -51,7 +55,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 35px;
-    background-color: v.$bg_color;
+    background-color: v.$white;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 
     span {
@@ -68,9 +72,11 @@
   }
   .commentary {
     font-size: 1.6rem;
-    width: 60%;
+    width: 40%;
+    text-align: start;
     color: v.$font_accent;
-    margin: -2rem -4rem 0 auto;
+    margin: 0 auto;
+    padding: 2rem 0;
   }
 
   .reason_link {

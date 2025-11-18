@@ -8,6 +8,18 @@ $(document).ready(function () {
     arrows: false,
     dots: false,
   });
+  /*voice_slider*/
+  $(".voice_slider").slick({
+    slidesToShow: 3, // 一画面に3つ表示
+    slidesToScroll: 1,
+    centerMode: true, // 両サイドを見切れさせる
+    centerPadding: "40px", // 見切れの幅
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    arrows: true, // 前後矢印表示
+    dots: true, // 下のページネーション
+  });
 });
 
 $(function () {
