@@ -61,7 +61,7 @@ $sp: 767px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1030px;
+  max-width: 1030px;
   border-radius: 30px;
   padding-block: 10px;
   margin-bottom: 80px;
@@ -101,4 +101,24 @@ $sp: 767px;
   padding-bottom: 70px;
   font-size: 1.6rem;
   text-align: left;
+}
+
+@mixin link_blue {
+  display: block;
+  width: 520px;
+  padding-block: 1rem;
+  margin: 0 auto;
+  background: linear-gradient(to right,
+      v.$font_accent 30%,
+      v.$sub_color 70%,
+      v.$sub_color_b 100%);
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 35px;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
 }
