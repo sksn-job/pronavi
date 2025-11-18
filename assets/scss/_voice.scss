@@ -7,104 +7,142 @@ voice
 .voice {
 
     .voice_intro {
-        height: 900px;
+        position: relative;
+
+        height: 650px;
         width: 100%;
         background-image: url('../img/subpage_img/sub_bg/bg_hackathon_voice.jpg');
         background-position: center top;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
 
-        .voice_title {
-            padding-top: 280px;
-            font-size: 4.8rem;
-            font-weight: bold;
-            padding-bottom: 60px;
+        .voice_title,
+        .voice_text {
+            max-width: 1200px;
+            padding: 0 2%;
+            margin: 0 auto;
+            position: absolute;
+            left: 2rem;
+            right: 2rem;
             color: v.$font_accent;
             text-shadow: 0px 4px 4px #FFFFFF;
+        }
+
+        .voice_title {
+            top: 30%; // 画像内での位置を %で調整
+            font-size: clamp(1.8rem, 4vw, 4.8rem);
+            font-weight: bold;
         }
 
         .voice_text {
-            font-size: 2rem;
+            top: 60%; // 画像内での位置
+            font-size: clamp(1rem, 2vw, 2rem);
             font-weight: bold;
-            color: v.$font_accent;
-            padding-left: 2rem;
-            line-height: 2em;
-            text-shadow: 0px 4px 4px #FFFFFF;
-            padding-bottom: 190px;
+            line-height: 1.8em;
+            padding-left: 5rem;
         }
     }
+
+    .profile_card {
+        .blue_box {
+            position: relative;
+            height: 200px;
+            background-color: #607CA8;
+
+            .profile_name {
+                position: absolute;
+                right: 30%;
+                bottom: 0;
+                font-size: 6rem;
+                color: v.$white;
+                font-weight: bold;
+
+                span {
+                    font-size: 3.2rem;
+                }
+            }
+
+            .profile_term {
+                position: absolute;
+                right: 29%;
+                bottom: -30%;
+                font-size: 4.0rem;
+                font-weight: bold;
+                color: v.$font_main;
+            }
+
+            img {
+                position: absolute;
+                left: 30%;
+                bottom: 0;
+                transform: translate(-50%, 50%);
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid #fff;
+            }
+        }
+
+        .profile-content {
+            height: 520px;
+            background-color: v.$bg_color;
+
+            .profile_list {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 2rem;
+
+                dt,
+                dd {
+                    display: block;
+                    margin-bottom: 16px;
+                    padding-block: 15px;
+
+                    &:first-of-type {
+                        margin-top: 190px;
+                    }
+                }
+
+                dt {
+                    width: 30%;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: v.$sub_back_color;
+                    color: v.$white;
+                }
+
+                dd {
+                    width: 70%;
+                    background-color: v.$white;
+                    text-indent: 1.5em;
+                }
+            }
+        }
+    }
+
 }
 
+.article {
 
 
+    .article_title {
+        @include m.article_title;
+    }
+
+    .article_question {
+        @include m.article_question;
+        // border: 1px solid red;
+    }
+
+    .article_answer {
+        @include m.article_answer;
+    }
+
+    .before {
+        padding-top: 100px;
 
 
+    }
 
-//     &:last-of-type {
-//         padding-top: 1em;
-//         padding-bottom: 10rem;
-
-//     }
-// }
-
-// .profile_card {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     // border-bottom: 0.5px solid #505050;
-//     // border-radius: 10px;
-//     padding: 2.5rem;
-
-//     .profile_img {
-//         width: 50%;
-
-//         img {
-//             display: block;
-//             width: 280px;
-//             height: 280px;
-//             margin: 0 auto;
-//             border-radius: 50%;
-//             object-fit: cover;
-//             box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
-//         }
-//     }
-// }
-//     .profile-content {
-//         flex: 1;
-
-//         .profile_title {
-//             width: 350px;
-//             padding: 5px 10px;
-//             border-radius: 50px;
-//             margin-bottom: 20px;
-//             text-align: center;
-//             color: v.$bg_color;
-//             background-color: v.$font_accent;
-//             font-size: 1.6rem;
-//         }
-
-//         .profile_list {
-//             display: flex;
-//             flex-wrap: wrap;
-//             font-size: 1.8rem;
-
-//             dt,
-//             dd {
-//                 padding-bottom: 1rem;
-//             }
-
-//             dt {
-//                 width: 30%;
-//                 text-align: right;
-//                 margin-left: 0;
-//                 padding-right: 2rem;
-//             }
-
-//             dd {
-//                 width: 60%;
-
-
-//             }
-//         }
-//     }
-// }
+}
