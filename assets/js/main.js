@@ -20,6 +20,23 @@ $(document).ready(function () {
     arrows: true, // 前後矢印表示
     dots: true, // 下のページネーション
   });
+
+  // other_person-sliderに対してSlickを適用
+  $('.other_person-slider').slick({
+
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    variableWidth: true,
+    infinite: true,
+
+    // fade: false またはこの行を削除します
+    // fade: true は slidesToShow: 1 の場合のみ有効です
+    // fade: false,
+
+    // ドットはそのまま表示
+    dots: true,
+  });
 });
 
 $(function () {

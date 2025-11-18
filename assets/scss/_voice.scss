@@ -207,20 +207,73 @@ voice
         }
     }
 
-    .other_person-slick {
-        background-color: v.$bg_color;
+    .other_person-slider {
+        margin-top: 50px;
+        padding-bottom: 40px;
+    }
 
+    .slide_sub {
+        width: 250px;
+        box-sizing: border-box;
+        background-color: v.$white;
+        padding: 3rem 2rem;
+        margin-left: 50px;
+        border-radius: 1rem;
+        border: 1px solid rgb(190, 190, 190);
 
-        .other_person-card {
-            width: 340px;
-            height: 600px;
-            border: 1px solid gray;
-            border-radius: 30px;
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 3rem;
+        }
 
-            a {
-                @include m.orange_button;
-            }
+        h4 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        span {
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            background-color: #FCF2E8;
+            border-radius: 5px;
+            color: v.$font_accent;
+            font-weight: bold;
+        }
+
+        a {
+            @include m.orange_button;
+            display: block;
+            margin: 0 auto;
         }
     }
+
+
+}
+
+.cta-counseling {
+    display: flex;
+    margin-top: 70px;
+    height: 500px;
+
+
+    .img {
+        display: block;
+        border: 1px solid red;
+        margin-top: 40px;
+        object-fit: cover;
+    }
+
 
 }
