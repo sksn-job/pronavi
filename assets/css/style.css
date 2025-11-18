@@ -7,7 +7,7 @@ body {
   color: #505050;
   width: 100vw;
 }
-@media (max-width: 767px) {
+@media (max-width: 930px) {
   html,
   body {
     font-size: 53%;
@@ -285,6 +285,9 @@ main .catchcopy {
 #about .about_catch .catch_left {
   position: absolute;
   top: 0;
+}
+#about .about_catch .catch_right {
+  position: absolute;
 }
 #about .about_catch .catch_right {
   position: absolute;
