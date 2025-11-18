@@ -361,68 +361,53 @@ main .catchcopy {
 #study_env .subtitle span {
   font-size: 4.8rem;
 }
-#study_env .env_question {
+#study_env .env_catch {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 98%;
-  margin: 0 auto;
-  padding: 4rem 0;
-  position: relative;
+  height: 400px;
+  width: 100%;
+  color: #023f80;
 }
-#study_env .env_question .cloud {
-  position: relative;
-  display: inline-block;
-  background: #d9d9d9;
-  padding: 2rem;
-  border-radius: 30% 40% 60% 60%/60% 50% 50% 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  height: auto;
-  z-index: 2;
+#study_env .env_catch .env_catch_contents {
+  width: 20%;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
 }
-#study_env .env_question .cloud::after, #study_env .env_question .cloud::before {
+#study_env .env_catch .left_right {
+  align-self: flex-start;
+}
+#study_env .env_catch .flex_center {
+  align-self: flex-end;
+}
+#study_env .no_wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #023f80;
+  padding: 0;
+  text-align: center;
+}
+#study_env .no_wrapper::before {
   content: "";
   position: absolute;
-  background: #d9d9d9;
-  border-radius: 50%;
-}
-#study_env .env_question .cloud::after {
-  width: 30px;
-  height: 35px;
-  top: 30%;
-  right: -4rem;
-}
-#study_env .env_question .cloud::before {
-  width: 18px;
-  height: 23px;
-  top: 38%;
-  right: -6.5rem;
-}
-#study_env .env_question .cloud p {
-  display: block;
-  text-align: center;
-  color: #023f80;
-}
-#study_env .env_question img {
-  display: block;
-  width: 250px;
-  height: auto;
-  border-radius: 1rem;
-  position: absolute;
-  top: 2rem;
-  left: 38%;
-  z-index: 1;
-}
-#study_env .env_question .q_text {
-  color: #023f80;
-  font-size: 2rem;
-  font-weight: bold;
-  padding-right: 2rem;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 80px solid #f6f4f1;
+  width: 0;
+  height: 0;
   z-index: 2;
+}
+#study_env .no_wrapper .subtitle {
+  color: #fff;
+  padding-top: 10rem;
 }
 #study_env ol.steps {
   counter-reset: step;
+  padding: 10rem 0;
 }
 #study_env ol.steps .env_left .env_flex,
 #study_env ol.steps .env_right .env_flex {
@@ -539,7 +524,11 @@ main .catchcopy {
 #reason {
   width: 100%;
   height: auto;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
+  background-color: #f6f4f1;
+}
+#reason .sec_title_b {
+  margin: 0;
 }
 #reason .reason_flex {
   width: 100%;
@@ -610,9 +599,11 @@ main .catchcopy {
 }
 #reason .commentary {
   font-size: 1.6rem;
-  width: 60%;
+  width: 40%;
+  text-align: start;
   color: #023f80;
-  margin: -2rem -4rem 0 auto;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 #reason .reason_link {
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
