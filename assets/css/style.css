@@ -1009,7 +1009,8 @@ voice
 #voice {
   background-color: #f6f4f1;
   width: 100%;
-  padding: 10rem 0;
+  padding: 10rem 0 6rem;
+  overflow-x: hidden;
 }
 #voice .sec_title_b {
   margin-top: 0;
@@ -1020,7 +1021,10 @@ voice
   /* 選択中のドット */
 }
 #voice .voice_slider .slide {
-  width: 20%;
+  flex: 0 0 30%;
+  margin-right: 20px;
+  box-sizing: border-box;
+  width: 30vw;
   height: auto;
   background-color: #fff;
   padding: 6rem 6rem;
@@ -1028,12 +1032,15 @@ voice
   text-align: start;
   margin-bottom: 10rem;
 }
+#voice .voice_slider .slide:last-child {
+  margin-right: 20px;
+}
 #voice .voice_slider .slide img {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto;
 }
 #voice .voice_slider .slide h4 {
@@ -1066,7 +1073,7 @@ voice
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
-  width: 90%;
+  width: 80%;
   text-align: center;
   font-size: 1.8rem;
   margin: 2rem auto;
@@ -1108,4 +1115,175 @@ voice
 
 #instagram {
   width: 100%;
+  background-color: #4b769d;
+  height: auto;
+  padding-bottom: 10rem;
+}
+#instagram .subtitle {
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+#instagram ul {
+  display: flex;
+  justify-content: center;
+}
+#instagram ul li {
+  width: 200px;
+  margin-right: 3rem;
+}
+#instagram ul li:last-child {
+  margin-right: 0;
+}
+#instagram ul li img {
+  border-radius: 50%;
+}
+#instagram ul li p {
+  margin-top: 3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#price {
+  width: 100%;
+  text-align: center;
+  padding: 10rem 0;
+  font-weight: bold;
+}
+#price h2 {
+  font-size: 6rem;
+  color: #023f80;
+  padding-bottom: 2rem;
+}
+#price .price_flex {
+  display: flex;
+  justify-content: space-between;
+}
+#price .price_flex span + p {
+  display: inline-block;
+  padding-bottom: 4rem;
+}
+#price .price_flex .price_left,
+#price .price_flex .price_right {
+  width: 50%;
+  padding: 3rem;
+  height: auto;
+}
+#price .price_flex .price_left {
+  background-color: #f6f4f1;
+  color: #505050;
+}
+#price .price_flex .price_left .price_title {
+  width: 40%;
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+  margin: 3rem auto;
+  background-color: #023f80;
+  color: #fff;
+  border-radius: 30px;
+}
+#price .price_flex .price_left dl {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 30%;
+}
+#price .price_flex .price_left dl dt,
+#price .price_flex .price_left dl dd {
+  font-size: 2rem;
+}
+#price .price_flex .price_left dl dt {
+  width: 40%;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+#price .price_flex .price_left dl dd {
+  width: 60%;
+  text-align: left;
+}
+#price .price_flex .price_left span {
+  font-size: 3rem;
+}
+#price .price_flex .price_left a {
+  font-size: 1.8rem;
+  display: block;
+  position: relative;
+  padding-left: 5%;
+  align-items: center;
+  margin: 0 auto;
+  width: 20%;
+}
+#price .price_flex .price_left a::before {
+  content: "＞";
+  position: absolute;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #023f80;
+  color: #fff;
+  line-height: 28px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+#price .price_flex .price_right {
+  background-color: #023f80;
+  color: #fff;
+}
+#price .price_flex .price_right .price_title {
+  width: 40%;
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+  margin: 3rem auto;
+  background-color: #fff;
+  color: #023f80;
+  border-radius: 30px;
+}
+#price .price_flex .price_right p + p {
+  display: inline-block;
+  padding-bottom: 2rem;
+}
+#price .price_flex .price_right ul {
+  width: 28%;
+  font-size: 2rem;
+  margin: 0 auto 2rem;
+  padding: 0;
+  text-align: left;
+}
+#price .price_flex .price_right ul li {
+  list-style: "＞";
+  text-align: left;
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+}
+#price .price_flex .price_right span {
+  font-size: 3rem;
+}
+#price .price_flex .price_right a {
+  font-size: 1.8rem;
+  display: block;
+  position: relative;
+  padding-left: 5%;
+  align-items: center;
+  margin: 0 auto;
+  width: 20%;
+  color: #fff;
+}
+#price .price_flex .price_right a::before {
+  content: "＞";
+  position: absolute;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #023f80;
+  line-height: 28px;
+  text-align: center;
+  font-size: 1.4rem;
 }

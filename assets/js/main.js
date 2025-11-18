@@ -18,13 +18,14 @@ $(document).ready(function () {
   });
 
   // voice_slider 本体
+  /*voice_slider*/
   $(".voice_slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: false,
+    centerMode: true,
     dots: true,
     arrows: true,
     responsive: [

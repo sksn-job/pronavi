@@ -3,4 +3,38 @@
 
 #instagram {
   width: 100%;
+  background-color: #4b769d;
+  height: auto;
+  padding-bottom: 10rem;
+
+  .subtitle {
+    text-align: center;
+    display: block;
+    color: v.$white;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      width: 200px;
+      margin-right: 3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+      p {
+        margin-top: 3rem;
+        text-align: center;
+        color: v.$white;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
 }

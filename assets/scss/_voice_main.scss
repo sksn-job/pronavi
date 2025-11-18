@@ -4,7 +4,8 @@
 #voice {
   background-color: v.$bg_color;
   width: 100%;
-  padding: 10rem 0;
+  padding: 10rem 0 6rem;
+  overflow-x: hidden;
 
   .sec_title_b {
     margin-top: 0;
@@ -15,7 +16,10 @@
     display: flex;
 
     .slide {
-      width: 20%;
+      flex: 0 0 30%;
+      margin-right: 20px;
+      box-sizing: border-box;
+      width: 30vw;
       height: auto;
       background-color: v.$white;
       padding: 6rem 6rem;
@@ -23,11 +27,15 @@
       text-align: start;
       margin-bottom: 10rem;
 
+      &:last-child {
+        margin-right: 20px;
+      }
+
       img {
         border-radius: 50%;
         object-fit: cover;
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         margin: 0 auto;
       }
       h4 {
@@ -52,7 +60,7 @@
 
       a {
         @include m.orange_button;
-        width: 90%;
+        width: 80%;
         text-align: center;
         font-size: 1.8rem;
         margin: 2rem auto;
