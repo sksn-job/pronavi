@@ -833,16 +833,47 @@ voice
   margin-left: 8px;
   margin-top: 5px;
 }
-.other_person .other_person-slick {
-  background-color: #f6f4f1;
+.other_person .other_person-slider {
+  margin-top: 50px;
+  padding-bottom: 40px;
 }
-.other_person .other_person-slick .other_person-card {
-  width: 340px;
-  height: 600px;
-  border: 1px solid gray;
-  border-radius: 30px;
+.other_person .slide_sub {
+  width: 250px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  margin-left: 50px;
+  border-radius: 1rem;
+  border: 1px solid rgb(190, 190, 190);
 }
-.other_person .other_person-slick .other_person-card a {
+.other_person .slide_sub img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 3rem;
+}
+.other_person .slide_sub h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.other_person .slide_sub p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.other_person .slide_sub span {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  background-color: #FCF2E8;
+  border-radius: 5px;
+  color: #023f80;
+  font-weight: bold;
+}
+.other_person .slide_sub a {
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
   color: white;
   text-decoration: none;
@@ -853,9 +884,23 @@ voice
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
-.other_person .other_person-slick .other_person-card a:hover {
+.other_person .slide_sub a:hover {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+}
+
+.cta-counseling {
+  display: flex;
+  margin-top: 70px;
+  height: 500px;
+}
+.cta-counseling .img {
+  display: block;
+  border: 1px solid red;
+  margin-top: 40px;
+  object-fit: cover;
 }
 
 #metalife {
