@@ -640,29 +640,147 @@ main .catchcopy {
 voice
 ----------------------------*/
 .voice .voice_intro {
-  height: 900px;
+  position: relative;
+  height: 650px;
   width: 100%;
   background-image: url("../img/subpage_img/sub_bg/bg_hackathon_voice.jpg");
   background-position: center top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.voice .voice_intro .voice_title {
-  padding-top: 280px;
-  font-size: 4.8rem;
-  font-weight: bold;
-  padding-bottom: 60px;
+.voice .voice_intro .voice_title,
+.voice .voice_intro .voice_text {
+  max-width: 1200px;
+  padding: 0 2%;
+  margin: 0 auto;
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
   color: #023f80;
   text-shadow: 0px 4px 4px #FFFFFF;
 }
+.voice .voice_intro .voice_title {
+  top: 30%;
+  font-size: clamp(1.8rem, 4vw, 4.8rem);
+  font-weight: bold;
+}
 .voice .voice_intro .voice_text {
+  top: 60%;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: bold;
+  line-height: 1.8em;
+  padding-left: 5rem;
+}
+.voice .profile_card .blue_box {
+  position: relative;
+  height: 200px;
+  background-color: #607CA8;
+}
+.voice .profile_card .blue_box .profile_name {
+  position: absolute;
+  right: 30%;
+  bottom: 0;
+  font-size: 6rem;
+  color: #fff;
+  font-weight: bold;
+}
+.voice .profile_card .blue_box .profile_name span {
+  font-size: 3.2rem;
+}
+.voice .profile_card .blue_box .profile_term {
+  position: absolute;
+  right: 29%;
+  bottom: -30%;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #505050;
+}
+.voice .profile_card .blue_box img {
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.voice .profile_card .profile-content {
+  height: 520px;
+  background-color: #f6f4f1;
+}
+.voice .profile_card .profile-content .profile_list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+}
+.voice .profile_card .profile-content .profile_list dt,
+.voice .profile_card .profile-content .profile_list dd {
+  display: block;
+  margin-bottom: 16px;
+  padding-block: 15px;
+}
+.voice .profile_card .profile-content .profile_list dt:first-of-type,
+.voice .profile_card .profile-content .profile_list dd:first-of-type {
+  margin-top: 190px;
+}
+.voice .profile_card .profile-content .profile_list dt {
+  width: 30%;
+  font-weight: bold;
+  text-align: center;
+  background-color: #607CA8;
+  color: #fff;
+}
+.voice .profile_card .profile-content .profile_list dd {
+  width: 70%;
+  background-color: #fff;
+  text-indent: 1.5em;
+}
+
+.article .article_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1030px;
+  border-radius: 30px;
+  padding-block: 10px;
+  margin-bottom: 80px;
+  background-color: #607CA8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.article .article_title::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid white;
+  margin-right: 8px;
+}
+.article .article_question {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   color: #023f80;
-  padding-left: 2rem;
-  line-height: 2em;
-  text-shadow: 0px 4px 4px #FFFFFF;
-  padding-bottom: 190px;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+.article .article_answer {
+  width: 58%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  font-size: 1.6rem;
+  text-align: left;
+}
+.article .before {
+  padding-top: 100px;
 }
 
 #metalife {

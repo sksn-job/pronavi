@@ -28,12 +28,10 @@ $sp: 767px;
 @mixin title_beige {
   width: 400px;
   height: 100px;
-  background: linear-gradient(
-    to right,
-    v.$font_accent 0%,
-    v.$sub_color 60%,
-    v.$bg_color 100%
-  );
+  background: linear-gradient(to right,
+      v.$font_accent 0%,
+      v.$sub_color 60%,
+      v.$bg_color 100%);
   color: #fff;
   font-size: 2.4rem;
   display: flex;
@@ -46,12 +44,10 @@ $sp: 767px;
 @mixin title_white {
   width: 400px;
   height: 100px;
-  background: linear-gradient(
-    to right,
-    v.$font_accent 0%,
-    v.$sub_color 60%,
-    v.$white 100%
-  );
+  background: linear-gradient(to right,
+      v.$font_accent 0%,
+      v.$sub_color 60%,
+      v.$white 100%);
   color: #fff;
   font-size: 2.4rem;
   display: flex;
@@ -59,4 +55,50 @@ $sp: 767px;
   align-items: center;
   padding-left: 2rem;
   margin-top: 10rem;
+}
+
+@mixin article_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1030px;
+  border-radius: 30px;
+  padding-block: 10px;
+  margin-bottom: 80px;
+  background-color: v.$sub_back_color;
+  color: v.$white;
+  font-weight: bold;
+  font-size: 2rem;
+
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid white;
+    margin-right: 8px;
+  }
+}
+
+@mixin article_question {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: v.$font_accent;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+@mixin article_answer {
+  width: 58%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  font-size: 1.6rem;
+  text-align: left;
 }
