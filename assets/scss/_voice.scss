@@ -5,94 +5,106 @@
 voice
 ----------------------------*/
 .voice {
-    background: transparent;
 
     .voice_intro {
-        height: 820px;
+        height: 900px;
         width: 100%;
-        background-image: url(assets/img/subpage_img/sub_bg/voice_bg2.jpg);
-    }
+        background-image: url('../img/subpage_img/sub_bg/bg_hackathon_voice.jpg');
+        background-position: center top;
+        background-size: contain;
+        background-repeat: no-repeat;
 
-    .voice .voice_title {
-        font-size: 4rem;
-        font-weight: bold;
-        padding-bottom: 10rem;
-        color: v.$font_accent;
-    }
-
-    .voice .voice_text {
-        font-size: 2rem;
-        color: v.$font_accent;
-        padding-left: 2rem;
-        line-height: 2em;
-
-
-        &:last-of-type {
-            padding-top: 1em;
-            padding-bottom: 10rem;
-
-        }
-    }
-
-    .profile_card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // border-bottom: 0.5px solid #505050;
-        // border-radius: 10px;
-        padding: 2.5rem;
-
-        .profile_img {
-            width: 50%;
-
-            img {
-                display: block;
-                width: 280px;
-                height: 280px;
-                margin: 0 auto;
-                border-radius: 50%;
-                object-fit: cover;
-                box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
-            }
+        .voice_title {
+            padding-top: 280px;
+            font-size: 4.8rem;
+            font-weight: bold;
+            padding-bottom: 60px;
+            color: v.$font_accent;
+            text-shadow: 0px 4px 4px #FFFFFF;
         }
 
-        .profile-content {
-            flex: 1;
-
-            .profile_title {
-                width: 350px;
-                padding: 5px 10px;
-                border-radius: 50px;
-                margin-bottom: 20px;
-                text-align: center;
-                color: v.$bg_color;
-                background-color: v.$font_accent;
-                font-size: 1.6rem;
-            }
-
-            .profile_list {
-                display: flex;
-                flex-wrap: wrap;
-                font-size: 1.8rem;
-
-                dt,
-                dd {
-                    padding-bottom: 1rem;
-                }
-
-                dt {
-                    width: 30%;
-                    text-align: right;
-                    margin-left: 0;
-                    padding-right: 2rem;
-                }
-
-                dd {
-                    width: 60%;
-
-
-                }
-            }
+        .voice_text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: v.$font_accent;
+            padding-left: 2rem;
+            line-height: 2em;
+            text-shadow: 0px 4px 4px #FFFFFF;
+            padding-bottom: 190px;
         }
     }
 }
+
+
+
+
+
+
+//     &:last-of-type {
+//         padding-top: 1em;
+//         padding-bottom: 10rem;
+
+//     }
+// }
+
+// .profile_card {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // border-bottom: 0.5px solid #505050;
+//     // border-radius: 10px;
+//     padding: 2.5rem;
+
+//     .profile_img {
+//         width: 50%;
+
+//         img {
+//             display: block;
+//             width: 280px;
+//             height: 280px;
+//             margin: 0 auto;
+//             border-radius: 50%;
+//             object-fit: cover;
+//             box-shadow: 0 4px 10px rgba(150, 150, 150, 0.3);
+//         }
+//     }
+// }
+//     .profile-content {
+//         flex: 1;
+
+//         .profile_title {
+//             width: 350px;
+//             padding: 5px 10px;
+//             border-radius: 50px;
+//             margin-bottom: 20px;
+//             text-align: center;
+//             color: v.$bg_color;
+//             background-color: v.$font_accent;
+//             font-size: 1.6rem;
+//         }
+
+//         .profile_list {
+//             display: flex;
+//             flex-wrap: wrap;
+//             font-size: 1.8rem;
+
+//             dt,
+//             dd {
+//                 padding-bottom: 1rem;
+//             }
+
+//             dt {
+//                 width: 30%;
+//                 text-align: right;
+//                 margin-left: 0;
+//                 padding-right: 2rem;
+//             }
+
+//             dd {
+//                 width: 60%;
+
+
+//             }
+//         }
+//     }
+// }
