@@ -115,12 +115,12 @@ voice
                 dd {
                     width: 70%;
                     background-color: v.$white;
-                    text-indent: 1.5em;
+                    padding-inline: 2rem
                 }
             }
         }
-    }
 
+    }
 }
 
 .article {
@@ -132,7 +132,6 @@ voice
 
     .article_question {
         @include m.article_question;
-        // border: 1px solid red;
     }
 
     .article_answer {
@@ -141,8 +140,87 @@ voice
 
     .before {
         padding-top: 100px;
+    }
+
+    .message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: stretch;
+        padding-bottom: 90px;
+
+        .message_title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: v.$white;
+            background-color: v.$sub_back_color;
+        }
+
+        .message_answer {
+            flex: 1;
+            margin: 0 auto;
+            padding: 3rem;
+            text-align: left;
+            font-size: 1.6rem;
+            color: v.$font_accent;
+            border: 1px solid gray;
+        }
 
 
+    }
+
+}
+
+.other_person {
+    .other_person-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 520px;
+        padding-block: 1rem;
+        margin: 0 auto;
+        background: linear-gradient(to right,
+                v.$font_accent 30%,
+                v.$sub_color 70%,
+                v.$sub_color_b 100%);
+        color: #fff;
+        font-size: 1.8rem;
+        border-radius: 35px;
+        text-align: center;
+        margin-bottom: 100px;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 13px solid white;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            margin-left: 8px;
+            margin-top: 5px;
+        }
+    }
+
+    .other_person-slick {
+        background-color: v.$bg_color;
+
+
+        .other_person-card {
+            width: 340px;
+            height: 600px;
+            border: 1px solid gray;
+            border-radius: 30px;
+
+            a {
+                @include m.orange_button;
+            }
+        }
     }
 
 }
