@@ -8,7 +8,6 @@ voice
 
     .voice_intro {
         position: relative;
-
         height: 650px;
         width: 100%;
         background-image: url('../img/subpage_img/sub_bg/bg_hackathon_voice.jpg');
@@ -29,14 +28,14 @@ voice
         }
 
         .voice_title {
-            top: 30%; // 画像内での位置を %で調整
-            font-size: clamp(1.8rem, 4vw, 4.8rem);
+            top: 40%; // 画像内での位置を %で調整
+            font-size: clamp(3.8rem, 4vw, 4.8rem);
             font-weight: bold;
         }
 
         .voice_text {
             top: 60%; // 画像内での位置
-            font-size: clamp(1rem, 2vw, 2rem);
+            font-size: clamp(2rem, 2vw, 2rem);
             font-weight: bold;
             line-height: 1.8em;
             padding-left: 5rem;
@@ -44,6 +43,8 @@ voice
     }
 
     .profile_card {
+
+        // ここの帯のところだけメディアクリエトの幅1300px別で設定すること
         .blue_box {
             position: relative;
             height: 200px;
@@ -51,25 +52,25 @@ voice
 
             .profile_name {
                 position: absolute;
-                right: 30%;
-                bottom: 0;
+                right: 35%;
+                bottom: -35%;
                 font-size: 6rem;
                 color: v.$white;
                 font-weight: bold;
+                text-align: center;
 
                 span {
                     font-size: 3.2rem;
                 }
+
+                .term {
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    color: v.$font_main;
+                }
             }
 
-            .profile_term {
-                position: absolute;
-                right: 29%;
-                bottom: -30%;
-                font-size: 4.0rem;
-                font-weight: bold;
-                color: v.$font_main;
-            }
+
 
             img {
                 position: absolute;
@@ -155,7 +156,7 @@ voice
             align-items: center;
             width: 25%;
             text-align: center;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 500;
             color: v.$white;
             background-color: v.$sub_back_color;
@@ -166,7 +167,7 @@ voice
             margin: 0 auto;
             padding: 3rem;
             text-align: left;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             color: v.$font_accent;
             border: 1px solid gray;
         }
@@ -263,9 +264,8 @@ voice
 }
 
 .cta-counseling {
-    display: flex;
     margin-top: 70px;
-    height: 500px;
+    position: relative;
 
 
     .img {
@@ -273,6 +273,28 @@ voice
         border: 1px solid red;
         margin-top: 40px;
         object-fit: cover;
+    }
+
+    .cta_textarea {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        p {
+            // font-size: 2.8rem;
+            font-size: clamp(1.8rem, 2vw, 2.8rem);
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 3rem;
+            line-height: 1.5;
+        }
+
+        .orange_button_long {
+            @include m.orange_button_long;
+            display: block;
+            margin: 0 auto;
+        }
     }
 
 
