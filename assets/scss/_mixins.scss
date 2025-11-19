@@ -47,13 +47,13 @@ $sp: 930px;
 
 @mixin title_beige {
   width: 400px;
-  height: 85px;
+  height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
       v.$sub_color 60%,
       v.$bg_color 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -63,13 +63,13 @@ $sp: 930px;
 
 @mixin title_white {
   width: 400px;
-  height: 85px;
+  height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
       v.$sub_color 60%,
       v.$white 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;

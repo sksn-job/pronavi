@@ -38,10 +38,10 @@ p {
 
 .sec_title_b {
   width: 400px;
-  height: 85px;
+  height: 80px;
   background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f1 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -51,10 +51,10 @@ p {
 
 .sec_title_w {
   width: 400px;
-  height: 85px;
+  height: 80px;
   background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fff 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1013,10 +1013,10 @@ hackathon
 }
 .hackathon .hackathon_intro .subtitle {
   width: 400px;
-  height: 85px;
+  height: 80px;
   background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fff 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
