@@ -9,6 +9,7 @@ body {
   font-family: Noto Sans JP;
   color: v.$font_main;
   width: 100vw;
+  //scroll-behavior: smooth;//最近はこの一言でスムーススクロールするらしい。js不要。
 
   @include m.sp {
     font-size: 53%; // SP: 1rem ≈ 8.5px
