@@ -18,28 +18,36 @@ body {
 img {
   width: 100%;
 }
+
 a {
   text-decoration: none;
   color: v.$font_main;
+  cursor: pointer;
 }
+
 li {
   list-style: none;
 }
+
 p {
   font-size: 1.6rem;
 }
+
 .sec_title_b {
   @include m.title_beige;
 }
+
 .sec_title_w {
   @include m.title_white;
 }
+
 .wrapper {
   padding: 0 5rem;
   max-width: 1200px;
   align-items: center;
   margin: 0 auto;
 }
+
 .subtitle {
   font-size: 2.5rem;
   font-weight: bold;
@@ -48,4 +56,40 @@ p {
   color: v.$font_accent;
   position: relative;
   z-index: 2;
+}
+
+/* ----サブページ無料相談申込----- */
+.cta-counseling {
+  margin-top: 70px;
+  position: relative;
+
+
+  .img {
+    display: block;
+    border: 1px solid red;
+    margin-top: 40px;
+    object-fit: cover;
+  }
+
+  .cta_textarea {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      // font-size: 2.8rem;
+      font-size: clamp(1.8rem, 2vw, 2.8rem);
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 3rem;
+      line-height: 1.5;
+    }
+
+    .orange_button_long {
+      @include m.orange_button_long;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
