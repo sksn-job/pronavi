@@ -25,8 +25,39 @@
         margin-right: 0;
       }
 
-      img {
+      .glow_border {
+        display: inline-block;
+        position: relative;
         border-radius: 50%;
+        overflow: visible;
+
+        img {
+          display: block;
+          border-radius: 50%;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: rgba(255, 255, 255, 0.8);
+          border-right-color: rgba(255, 255, 255, 0.2);
+          border-bottom-color: rgba(255, 255, 255, 0.2);
+          border-left-color: rgba(255, 255, 255, 0.2);
+          opacity: 0;
+          transition: opacity 0.3s;
+          pointer-events: none;
+        }
+
+        &:hover::after {
+          opacity: 1;
+          animation: border-rotate 1s linear infinite;
+        }
       }
       p {
         margin-top: 3rem;
@@ -36,5 +67,14 @@
         font-weight: bold;
       }
     }
+  }
+}
+// 回転アニメ
+@keyframes border-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
