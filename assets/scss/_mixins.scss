@@ -19,6 +19,26 @@ $sp: 930px;
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
+  font-size: 1.3rem;
+
+  &:hover {
+    background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+  }
+}
+
+@mixin orange_button_long {
+  max-width: 90%;
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 
   &:hover {
     background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
@@ -96,10 +116,10 @@ $sp: 930px;
 }
 
 @mixin article_answer {
-  width: 58%;
+  width: 55%;
   margin: 0 auto;
   padding-bottom: 70px;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   text-align: left;
 }
 

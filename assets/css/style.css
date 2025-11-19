@@ -599,6 +599,7 @@ main .catchcopy {
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
+  font-size: 1.3rem;
   text-align: center;
   font-size: 2.4rem;
   border-radius: 50px 0 0 50px;
@@ -630,6 +631,7 @@ main .catchcopy {
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
+  font-size: 1.3rem;
   display: block;
   margin: 15rem auto 0;
   font-size: 2.6rem;
@@ -664,13 +666,13 @@ voice
   text-shadow: 0px 4px 4px #FFFFFF;
 }
 .voice .voice_intro .voice_title {
-  top: 30%;
-  font-size: clamp(1.8rem, 4vw, 4.8rem);
+  top: 40%;
+  font-size: clamp(3.8rem, 4vw, 4.8rem);
   font-weight: bold;
 }
 .voice .voice_intro .voice_text {
   top: 60%;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(2rem, 2vw, 2rem);
   font-weight: bold;
   line-height: 1.8em;
   padding-left: 5rem;
@@ -682,20 +684,18 @@ voice
 }
 .voice .profile_card .blue_box .profile_name {
   position: absolute;
-  right: 30%;
-  bottom: 0;
+  right: 35%;
+  bottom: -35%;
   font-size: 6rem;
   color: #fff;
   font-weight: bold;
+  text-align: center;
 }
 .voice .profile_card .blue_box .profile_name span {
   font-size: 3.2rem;
 }
-.voice .profile_card .blue_box .profile_term {
-  position: absolute;
-  right: 29%;
-  bottom: -30%;
-  font-size: 4rem;
+.voice .profile_card .blue_box .profile_name .term {
+  font-size: 3.5rem;
   font-weight: bold;
   color: #505050;
 }
@@ -778,10 +778,10 @@ voice
   border-bottom: 1px solid gray;
 }
 .article .article_answer {
-  width: 58%;
+  width: 55%;
   margin: 0 auto;
   padding-bottom: 70px;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   text-align: left;
 }
 .article .before {
@@ -800,7 +800,7 @@ voice
   align-items: center;
   width: 25%;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 500;
   color: #fff;
   background-color: #4f6fa3;
@@ -810,7 +810,7 @@ voice
   margin: 0 auto;
   padding: 3rem;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #023f80;
   border: 1px solid gray;
 }
@@ -892,6 +892,7 @@ voice
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
+  font-size: 1.3rem;
   display: block;
   margin: 0 auto;
 }
@@ -900,9 +901,8 @@ voice
 }
 
 .cta-counseling {
-  display: flex;
   margin-top: 70px;
-  height: 500px;
+  position: relative;
 }
 .cta-counseling .img {
   display: block;
@@ -910,6 +910,38 @@ voice
   margin-top: 40px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.cta-counseling .cta_textarea {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cta-counseling .cta_textarea p {
+  font-size: clamp(1.8rem, 2vw, 2.8rem);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 3rem;
+  line-height: 1.5;
+}
+.cta-counseling .cta_textarea .orange_button_long {
+  max-width: 90%;
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  display: block;
+  margin: 0 auto;
+}
+.cta-counseling .cta_textarea .orange_button_long:hover {
+  background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
 }
 
 #metalife {
