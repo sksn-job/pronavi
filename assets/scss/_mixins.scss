@@ -47,7 +47,7 @@ $sp: 930px;
 
 @mixin title_beige {
   width: 400px;
-  height: 100px;
+  height: 85px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
       v.$sub_color 60%,
@@ -63,7 +63,7 @@ $sp: 930px;
 
 @mixin title_white {
   width: 400px;
-  height: 100px;
+  height: 85px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
       v.$sub_color 60%,

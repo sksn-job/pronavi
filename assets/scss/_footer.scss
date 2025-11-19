@@ -1,0 +1,9 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+footer {
+    background-color: v.$font_accent;
+    color: v.$white;
+    display: flex;
+    justify-content: space-between;
+}
