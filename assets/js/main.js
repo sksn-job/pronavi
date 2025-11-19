@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // slick_slider（トップなど）
   $(".slick_slider").slick({
     autoplay: true,
     autoplaySpeed: 4000,
@@ -8,53 +9,59 @@ $(document).ready(function () {
     arrows: false,
     dots: false,
   });
-  /*voice_slider*/
-  $(".voice_slider").slick({
-    slidesToShow: 3, // 一画面に3つ表示
-    slidesToScroll: 1,
-    centerMode: true, // 両サイドを見切れさせる
-    centerPadding: "40px", // 見切れの幅
-    autoplay: true,
-    autoplaySpeed: 4000,
-    infinite: true,
-    arrows: true, // 前後矢印表示
-    dots: true, // 下のページネーション
+
+  // voice_slider 初期化前に margin 設定（余白問題対策）
+  $(".voice_slider").on("init", function (event, slick) {
+    slick.$slides.each(function (index, slide) {
+      $(slide).css("margin-right", "20px");
+    });
   });
 
-  // other_person-sliderに対してSlickを適用
-  $('.other_person-slider').slick({
+  // voice_slider 本体
+  /*voice_slider*/
+  $(".voice_slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    dots: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 
+  // other_person-slider（サブページ用）
+  $(".other_person-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     variableWidth: true,
     infinite: true,
-
-    // fade: false またはこの行を削除します
-    // fade: true は slidesToShow: 1 の場合のみ有効です
-    // fade: false,
-
-    // ドットはそのまま表示
     dots: true,
   });
-});
 
-$(function () {
   /*=================================================
-  ハンバーガーメニュー
-  解説は、「中級編：ストアサイト（インテリア）」参照
+    ハンバーガーメニュー
   ===================================================*/
   $(".toggle_btn").on("click", function () {
     $(this).toggleClass("open");
-    $("#nav, #mask").toggleClass("open"); // ← navにもopenを付ける
+    $("#nav, #mask").toggleClass("open");
   });
 
-  // #maskのエリアをクリックした時にメニューを閉じる
   $("#mask,#nav a").on("click", function () {
     $(".toggle_btn, #nav, #mask").removeClass("open");
   });
+});
 
-  /*=================================================
+/*=================================================
   トップに戻る
   ===================================================
   let pagetop = $("#to_top");
@@ -83,4 +90,3 @@ $(function () {
     // イベントが親要素へ伝播しないための記述
     return false;
   });*/
-});
