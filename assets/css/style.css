@@ -321,7 +321,7 @@ main .catchcopy {
   max-width: 1300px;
   padding-inline: 2%;
   margin-inline: auto;
-  margin-top: 10rem;
+  margin-top: 11rem;
   color: #fff;
   font-weight: bold;
 }
@@ -345,14 +345,105 @@ main .catchcopy {
   z-index: 3;
   padding-top: 8rem;
 }
+#about .about_left,
+#about .about_right {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+#about .about_left img,
+#about .about_right img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+#about .about_left .about_text,
+#about .about_right .about_text {
+  flex: 1;
+  padding: 0 2rem;
+  color: #505050;
+  line-height: 1.5;
+}
+#about .about_left .about_text h4,
+#about .about_right .about_text h4 {
+  font-size: 2.1rem;
+  margin-bottom: 1.3rem;
+  color: #023f80;
+}
+#about .about_left .about_text .fontmiddle,
+#about .about_right .about_text .fontmiddle {
+  font-size: 1.8rem;
+  color: #023f80;
+}
+#about .about_left .about_text .space,
+#about .about_right .about_text .space {
+  padding-top: 1rem;
+}
+#about .about_left .about_text p,
+#about .about_right .about_text p {
+  margin-left: 1rem;
+}
+#about .about_left {
+  margin-left: 0;
+  margin-right: auto;
+  justify-content: flex-start;
+}
+#about .about_left img {
+  border-radius: 25px 0 0 25px;
+  margin: -2rem 0 -2rem -2rem;
+}
+#about .about_left .about_text {
+  margin-left: 2rem;
+}
+#about .about_right {
+  margin-left: auto;
+  margin-right: 0;
+  justify-content: flex-end;
+}
+#about .about_right img {
+  border-radius: 0 25px 25px 0;
+  margin: -2rem -2rem -2rem 0;
+}
 
 /* ▼ sec_title_b のバイーン防止（可動幅制限） */
+.sec_title_b {
+  max-width: 100%;
+  width: clamp(200px, 40vw, 400px);
+  transform: none !important;
+}
+
 @media (max-width: 930px) {
+  /* 930px */
   #about {
     /* ▼ 青い帯（斜めカット） */
   }
   #about .about_bg {
-    height: 30%;
+    height: 50%;
+  }
+}
+@media (max-width: 785px) {
+  /* 785px */
+  #about .about_bg {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  #about .about_bg {
+    height: 70vh;
+  }
+  #about .about_catch .catch_right {
+    text-align: left;
+  }
+}
+@media (max-width: 690px) {
+  #about .about_bg {
+    height: 60vh;
   }
 }
 #study_env {

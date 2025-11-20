@@ -162,7 +162,7 @@
     max-width: 1300px;
     padding-inline: 2%;
     margin-inline: auto;
-    margin-top: 10rem; // ★ 上下余白は固定ではなく後で可変にもできる
+    margin-top: 11rem; // ★ 上下余白は固定ではなく後で可変にもできる
     color: #fff;
     font-weight: bold;
 
@@ -191,22 +191,133 @@
     z-index: 3;
     padding-top: 8rem; // ★ 青帯とぶつからないよう調整
   }
+
+
+  .about_left,
+  .about_right {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .about_text {
+      flex: 1;
+      padding: 0 2rem;
+      color: v.$font_main;
+      line-height: 1.5;
+
+      h4 {
+        font-size: 2.1rem;
+        margin-bottom: 1.3rem;
+        color: v.$font_accent;
+      }
+
+      .fontmiddle {
+        font-size: 1.8rem;
+        color: v.$font_accent;
+      }
+
+      .space {
+        padding-top: 1rem;
+      }
+
+      p {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .about_left {
+    margin-left: 0;
+    margin-right: auto;
+    justify-content: flex-start;
+
+    img {
+      border-radius: 25px 0 0 25px;
+      margin: -2rem 0 -2rem -2rem;
+    }
+
+    .about_text {
+      margin-left: 2rem;
+    }
+  }
+
+  .about_right {
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: flex-end;
+
+    img {
+      border-radius: 0 25px 25px 0;
+      margin: -2rem -2rem -2rem 0;
+    }
+  }
 }
 
+
 /* ▼ sec_title_b のバイーン防止（可動幅制限） */
-// .sec_title_b {
-//   max-width: 100%; // 吹き飛び防止
-//   width: clamp(200px, 40vw, 400px);
-//   margin-inline: auto;
-//   transform: none !important; // スクロールアニメが暴れないように
-// }
+.sec_title_b {
+  max-width: 100%; // 吹き飛び防止
+  width: clamp(200px, 40vw, 400px);
+  transform: none !important; // スクロールアニメが暴れないように
+}
 
 @include m.sp {
+
+  /* 930px */
   #about {
 
     /* ▼ 青い帯（斜めカット） */
     .about_bg {
-      height: 30%;
+      height: 50%;
     }
+  }
+}
+
+
+@include m.sp_small {
+
+  /* 785px */
+  #about {
+    .about_bg {
+      clip-path: polygon(0 0,
+          100% 0,
+          100% 100%,
+          0 100%);
+    }
+
+    .about_bg {
+      height: 70vh;
+    }
+
+
+    .about_catch {
+      .catch_right {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (max-width:690px) {
+  #about {
+
+    .about_bg {
+      height: 60vh;
+    }
+
   }
 }

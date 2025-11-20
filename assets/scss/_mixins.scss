@@ -1,9 +1,16 @@
 @use "variables" as v;
 
 $sp: 930px;
+$sp_small:785px;
 
 @mixin sp {
   @media (max-width: $sp) {
+    @content;
+  }
+}
+
+@mixin sp_small {
+  @media (max-width: $sp_small) {
     @content;
   }
 }
