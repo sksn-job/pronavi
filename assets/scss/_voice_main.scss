@@ -12,15 +12,13 @@
   }
 
   .voice_slider {
-    max-width: 100%;
     display: flex;
 
     .slide {
       flex: 0 0 30%;
       margin-right: 20px;
       box-sizing: border-box;
-      width: 30vw;
-      height: auto;
+      width: 330px;
       background-color: v.$white;
       padding: 6rem 6rem;
       border-radius: 1rem;
@@ -38,16 +36,21 @@
         height: 130px;
         margin: 0 auto;
       }
+
       h4 {
         font-weight: bold;
         color: v.$font_accent;
         font-size: 2.4rem;
-        padding: 1rem;
+        padding-top: 2rem;
         align-items: center;
       }
-      p {
-        padding: 1rem;
+
+      .voice_age,
+      .voice_text_main {
+        font-size: 1.5rem;
+        padding-block: 1.5rem;
       }
+
       .graduate_status {
         width: 100%;
         display: inline-block;
@@ -55,23 +58,28 @@
         background-color: #fcf2e8;
         color: v.$font_accent;
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
 
       a {
         @include m.orange_button;
-        width: 80%;
+        width: 100%;
         text-align: center;
-        font-size: 1.8rem;
-        margin: 2rem auto;
+        font-size: 1.4rem;
+        margin: 0 auto;
         display: block;
       }
     }
+
     .slick-dots li button {
-      width: 15px; /* 幅 */
-      height: 15px; /* 高さ */
-      border-radius: 50%; /* 丸くする */
-      background-color: #ccc; /* 通常色 */
+      width: 15px;
+      /* 幅 */
+      height: 15px;
+      /* 高さ */
+      border-radius: 50%;
+      /* 丸くする */
+      background-color: #ccc;
+      /* 通常色 */
 
       &::before {
         content: "";
@@ -80,11 +88,13 @@
 
     /* 選択中のドット */
     .slick-dots li.slick-active button {
-      background-color: #023f80; /* 選択中の色 */
+      background-color: #023f80;
+      /* 選択中の色 */
       width: 15px;
       height: 15px;
     }
   }
+
   .graduate_work {
     display: block;
     width: 30%;

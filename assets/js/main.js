@@ -133,6 +133,7 @@ $(".voice_slider").slick({
   centerMode: true,
   dots: true,
   arrows: true,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 960,
@@ -153,15 +154,7 @@ $(".qa_question").on("click", function () {
   item.find(".qa_answer").slideToggle(200);
 });
 
-// other_person-slider（サブページ用）
-$(".other_person-slider").slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: true,
-  variableWidth: true,
-  infinite: true,
-  dots: true,
-});
+
 
 /*=================================================
   トップに戻る
