@@ -1,0 +1,50 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.fade_up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fade_up.is_active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*======================================*/
+
+.scroll_in_left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll_in_left.is_active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.scroll_in_right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll_in_right.is_active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*=========================================*/
+
+.scale_up {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.scale_up.is_active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+    

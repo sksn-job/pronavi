@@ -1,0 +1,59 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+#qa {
+  background-color: v.$bg_color;
+  width: 100%;
+  height: auto;
+  padding: 5rem 0;
+
+  .qa {
+    width: 100%;
+    padding: 5rem 0;
+
+    .qa_item {
+      width: 100%;
+      margin-bottom: 3rem;
+
+      .qa_question {
+        cursor: pointer;
+        padding: 2rem 5rem;
+        font-size: 1.6rem;
+        background-color: v.$white;
+        color: v.$font_accent;
+        font-weight: bold;
+        border-radius: 30px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px rgba(v.$font_accent, 0.8);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .qa_answer {
+        display: none;
+        font-size: 1.6rem;
+        background-color: v.$white;
+        margin-bottom: 2rem;
+        box-sizing: border-box;
+        transition: all 0.3s;
+
+        .qa_answer_inner {
+          padding: 4.5rem;
+          width: 100%;
+          border: 1px solid v.$font_accent;
+        }
+      }
+
+      &.active {
+        .qa_question {
+          background-color: v.$font_accent;
+          color: v.$white;
+        }
+
+        //     .qa_answer {
+        //       display: block;
+        //     }
+        //   }
+      }
+    }
+  }
+}
