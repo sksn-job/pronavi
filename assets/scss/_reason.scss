@@ -11,11 +11,14 @@
     margin: 0;
   }
 
+
+
   .reason_flex {
     width: 100%;
+    padding-top: 90px;
     display: flex;
     justify-content: space-between;
-    margin: 15rem 0 5rem 0;
+    margin: 13rem 0 5rem 0;
     align-items: center;
 
     img {
@@ -34,20 +37,24 @@
         border-left: 5px solid v.$font_accent;
         margin-bottom: 1rem;
       }
+
       .reason_catch {
         font-size: 2.4rem;
         color: v.$font_accent;
         margin-bottom: 1rem;
       }
+
       .reason_content {
         line-height: 1.6;
         padding-left: 2rem;
       }
     }
   }
-  .wrapper > .reason_flex:first-of-type {
+
+  .wrapper>.reason_flex:first-of-type {
     margin-top: 5rem; // ★ここだけ好きな値に！
   }
+
   .point {
     width: 80%;
     margin: 0 auto;
@@ -65,11 +72,13 @@
       border-radius: 50px 0 0 50px;
       width: 15%;
     }
+
     p {
       width: 85%;
       text-align: center;
     }
   }
+
   .commentary {
     font-size: 1.6rem;
     width: 40%;
@@ -85,6 +94,39 @@
     margin: 15rem auto 0;
     font-size: 2.6rem;
     text-align: center;
-    width: 30%;
+    width: 50%;
   }
+
+}
+
+#metalife {
+
+
+  .meta_imgarea {
+    position: relative;
+
+    .meta_group_link {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px 45px;
+      border: 5px solid rgb(184, 184, 184);
+      background-color: v.$white;
+      border-radius: 50px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: v.$font_accent;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 5px solid rgb(246, 246, 246);
+        background-color: rgb(184, 184, 184);
+        color: white;
+        // transform: translateY(1px);
+      }
+    }
+
+  }
+
 }

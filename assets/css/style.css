@@ -38,10 +38,10 @@ p {
 
 .sec_title_b {
   width: 400px;
-  height: 100px;
+  height: 80px;
   background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #f6f4f1 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -51,10 +51,10 @@ p {
 
 .sec_title_w {
   width: 400px;
-  height: 100px;
+  height: 80px;
   background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fff 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -309,52 +309,55 @@ main .catchcopy {
   top: 0;
   left: 0;
   width: 100%;
-  height: 1000px;
+  min-height: 1050px;
   background-image: url(../img/bg/linetop_bg2.jpg);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center -195px;
   background-size: cover;
   z-index: -1;
 }
 #about .about_catch {
-  position: relative;
+  margin-top: 15rem;
   color: #fff;
-  width: 100%;
-  top: 10rem;
-  font-size: 3.2rem;
+  max-width: 1300px;
+  padding-inline: 2%;
   font-weight: bold;
+  margin-inline: auto;
+}
+#about .about_catch p {
+  font-size: 2.5rem;
   text-align: left;
   line-height: 2;
+  padding-left: 1em;
 }
 #about .about_catch span {
   display: inline-block;
   font-size: 4rem;
   line-height: 2;
 }
-#about .about_catch .catch_left {
-  position: absolute;
-  top: 0;
-}
 #about .about_catch .catch_right {
-  position: absolute;
+  margin-top: 7rem;
+  margin-left: auto;
 }
-#about .about_catch .catch_right {
-  position: absolute;
-  left: 45rem;
-  top: 20rem;
+#about .about_catch .catch_right p,
+#about .about_catch .catch_right .right {
+  text-align: right;
+  display: block;
 }
 #about .about_contents {
-  margin-top: 70%;
+  padding-block: 9rem;
+}
+#about .about_contents .sec_title_b {
+  margin-bottom: 10rem;
 }
 #about .about_left,
 #about .about_right {
-  width: 88%;
+  width: 90%;
   display: flex;
   align-items: center;
   padding: 2rem;
   background-color: #fff;
   border-radius: 25px;
-  border: 1px solid #505050;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 5rem;
   overflow: hidden;
@@ -376,8 +379,18 @@ main .catchcopy {
 }
 #about .about_left .about_text h4,
 #about .about_right .about_text h4 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.1rem;
+  margin-bottom: 1.3rem;
+  color: #023f80;
+}
+#about .about_left .about_text .fontmiddle,
+#about .about_right .about_text .fontmiddle {
+  font-size: 1.8rem;
+  color: #023f80;
+}
+#about .about_left .about_text .space,
+#about .about_right .about_text .space {
+  padding-top: 1rem;
 }
 #about .about_left .about_text p,
 #about .about_right .about_text p {
@@ -406,11 +419,11 @@ main .catchcopy {
 }
 
 #study_env {
-  margin-top: 5rem;
   background-color: #f6f4f1;
   padding-top: 5rem;
 }
 #study_env .subtitle {
+  margin-top: 8rem;
   text-align: center;
 }
 #study_env .subtitle span {
@@ -463,11 +476,13 @@ main .catchcopy {
 }
 #study_env .no_wrapper .subtitle {
   color: #fff;
-  padding-top: 10rem;
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+  line-height: 2.5;
 }
 #study_env ol.steps {
   counter-reset: step;
-  padding: 10rem 0;
+  padding: 15rem 0;
 }
 #study_env ol.steps .env_left .env_flex,
 #study_env ol.steps .env_right .env_flex {
@@ -592,9 +607,10 @@ main .catchcopy {
 }
 #reason .reason_flex {
   width: 100%;
+  padding-top: 90px;
   display: flex;
   justify-content: space-between;
-  margin: 15rem 0 5rem 0;
+  margin: 13rem 0 5rem 0;
   align-items: center;
 }
 #reason .reason_flex img {
@@ -682,10 +698,33 @@ main .catchcopy {
   margin: 15rem auto 0;
   font-size: 2.6rem;
   text-align: center;
-  width: 30%;
+  width: 50%;
 }
 #reason .reason_link:hover {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+}
+
+#metalife .meta_imgarea {
+  position: relative;
+}
+#metalife .meta_imgarea .meta_group_link {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 45px;
+  border: 5px solid rgb(184, 184, 184);
+  background-color: #fff;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #023f80;
+  transition: all 0.3s;
+}
+#metalife .meta_imgarea .meta_group_link:hover {
+  border: 5px solid rgb(246, 246, 246);
+  background-color: rgb(184, 184, 184);
+  color: white;
 }
 
 #metalife {
@@ -698,8 +737,7 @@ main .catchcopy {
 #metalife .meta_group {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #metalife .meta_flex {
   display: flex;
@@ -746,8 +784,7 @@ main .catchcopy {
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading img {
   width: 20%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading .heading_text {
   width: 80%;
@@ -813,8 +850,7 @@ main .catchcopy {
 }
 #voice .voice_slider .slide img {
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 130px;
   height: 130px;
   margin: 0 auto;
@@ -849,6 +885,7 @@ main .catchcopy {
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
+  font-size: 1.3rem;
   width: 80%;
   text-align: center;
   font-size: 1.8rem;
@@ -958,6 +995,136 @@ main .catchcopy {
     transform: rotate(360deg);
   }
 }
+/* --------------------------
+hackathon
+----------------------------*/
+.hackathon_top img {
+  height: 650px;
+  object-fit: cover;
+}
+.hackathon_top .blue_line {
+  width: 100%;
+  height: 3.5px;
+  background-color: #4f6fa3;
+}
+
+.hackathon .hackathon_intro {
+  padding-bottom: 80px;
+}
+.hackathon .hackathon_intro .subtitle {
+  width: 400px;
+  height: 80px;
+  background: linear-gradient(to right, #023f80 0%, #4b769d 60%, #fff 100%);
+  color: #fff;
+  font-size: 2.1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 80px;
+}
+.hackathon .hackathon_intro .hackathon_heading {
+  font-weight: bold;
+  color: #023f80;
+  font-size: 2.2rem;
+  line-height: 1.6;
+}
+.hackathon .hackathon_intro .hackathon_heading:first-of-type {
+  padding-bottom: 1em;
+}
+.hackathon .hackathon_block {
+  padding-block: 90px;
+}
+.hackathon .hackathon_block .block_title {
+  max-width: 1100px;
+  background: white;
+  color: #023f80;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(2rem, 2vw, 2.4rem);
+  box-shadow: 3px 3px 3.3px rgba(0, 47, 109, 0.7);
+  margin-bottom: 80px;
+  text-indent: 5rem;
+}
+.hackathon .hackathon_block .block_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 80px;
+}
+.hackathon .hackathon_block .block_content .block_textarea {
+  width: 70%;
+  padding-bottom: 50px;
+  padding: 2rem;
+}
+.hackathon .hackathon_block .block_content img {
+  flex: 1;
+  padding-right: 2rem;
+}
+.hackathon .hackathon_block .block_content .block_theme {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.hackathon .hackathon_block .block_content .block_theme.black_line {
+  border-bottom: 1px solid #505050;
+}
+.hackathon .hackathon_block .block_content .block_theme.white_line {
+  border-bottom: 1px solid #fff;
+}
+.hackathon .hackathon_block .block_content .block_text {
+  font-size: 1.8rem;
+}
+.hackathon .is-first {
+  background-color: #f6f4f1;
+}
+.hackathon .is-second {
+  background-color: #4f6fa3;
+  color: #fff;
+}
+.hackathon .block_link_blue {
+  display: block;
+  width: 520px;
+  padding-block: 1rem;
+  margin: 0 auto;
+  background: linear-gradient(to right, #023f80 30%, #4b769d 70%, #98bad9 100%);
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 35px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.hackathon .block_link_blue:hover {
+  filter: brightness(0.8);
+  transform: translateY(1px);
+}
+.hackathon .block_link_white {
+  display: block;
+  width: 520px;
+  padding-block: 1rem;
+  margin: 0 auto;
+  background: white;
+  color: #023f80;
+  font-size: 1.8rem;
+  border-radius: 35px;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.hackathon .block_link_white:hover {
+  background-color: #023f80;
+  transform: translateY(1px);
+  color: #e4e2df;
+}
+
 #qa {
   background-color: #f6f4f1;
   width: 100%;
@@ -1693,6 +1860,7 @@ voice
   transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
+
 #price .price_flex .price_left,
 #price .price_flex .price_right {
   width: 50%;
@@ -1728,3 +1896,4 @@ hackathon
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
