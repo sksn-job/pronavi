@@ -1,9 +1,30 @@
 @use "mixins" as m;
 @use "variables" as v;
 
-footer {
-    background-color: v.$font_accent;
-    color: v.$white;
-    display: flex;
-    justify-content: space-between;
-}
+// footer {
+// background-color: v.$font_accent;
+// height: 100px;
+
+// .footer_nav {
+//     .footer_list {
+//         display: flex;
+//         justify-content: space-between;
+//         gap: 20px;
+
+//         .footer_link {
+//             color: v.$white;
+//         }
+//     }
+// }
+
+
+//     .footer_under {
+//         display: flex;
+//         justify-content: space-between;
+
+//         .footer_sns {
+//             display: flex;
+//             justify-content: space-between;
+//         }
+//     }
+// }

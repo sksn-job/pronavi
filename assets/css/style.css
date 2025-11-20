@@ -1099,11 +1099,10 @@ hackathon
   border-radius: 35px;
   text-align: center;
   font-weight: 600;
-  transition: all 0.2s;
+  transition: transform 0.3s ease;
 }
 .hackathon .block_link_blue:hover {
-  filter: brightness(0.8);
-  transform: translateY(1px);
+  transform: scale(1.1);
 }
 .hackathon .block_link_white {
   display: block;
@@ -1116,14 +1115,31 @@ hackathon
   border-radius: 35px;
   text-align: center;
   font-weight: 600;
-  transition: background-color 0.2s;
+  transition: transform 0.3s ease;
 }
 .hackathon .block_link_white:hover {
-  background-color: #023f80;
-  transform: translateY(1px);
-  color: #e4e2df;
+  transform: scale(1.1);
 }
 
+@media (max-width: 930px) {
+  .hackathon .block_content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .hackathon .block_content .block_textarea {
+    width: 100%;
+  }
+  .hackathon .block_content .block_textarea .block_theme {
+    width: 100%;
+  }
+  .hackathon .block_content .block_textarea .block_text {
+    width: 100%;
+  }
+  .hackathon .block_content img {
+    width: 90%;
+    padding-right: 0;
+  }
+}
 #qa {
   background-color: #f6f4f1;
   width: 100%;
@@ -1635,11 +1651,4 @@ voice
 .scale_up.is_active {
   opacity: 1;
   transform: translateY(0) scale(1);
-}
-
-footer {
-  background-color: #023f80;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
