@@ -48,52 +48,54 @@ voice
 
     .profile_card {
 
-        // ここの帯のところだけメディアクリエトの幅1300px別で設定すること
         .blue_box {
-            position: relative;
-            height: 200px;
+
+            height: 345px;
             background-color: #607CA8;
 
+            .profile_inner {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 100px;
+            }
+
             .profile_name {
-                position: absolute;
-                right: 35%;
-                bottom: -35%;
                 font-size: 6rem;
                 color: v.$white;
                 font-weight: bold;
                 text-align: center;
+                padding-bottom: 1rem;
+                border-bottom: 3px solid white;
 
                 span {
                     font-size: 3.2rem;
                 }
-
-                .term {
-                    font-size: 3.5rem;
-                    font-weight: bold;
-                    color: v.$font_main;
-                }
             }
 
-
+            .profile_term {
+                font-size: 3.5rem;
+                font-weight: bold;
+                color: v.$white;
+            }
 
             img {
-                position: absolute;
-                left: 30%;
-                bottom: 0;
-                transform: translate(-50%, 50%);
-                width: 200px;
-                height: 200px;
+                width: 280px;
+                height: 280px;
                 object-fit: cover;
                 border-radius: 50%;
                 border: 1px solid #fff;
+                margin: 0;
             }
         }
 
         .profile-content {
-            height: 520px;
             background-color: v.$bg_color;
+            padding-block: 70px;
 
             .profile_list {
+                height: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 font-size: 2rem;
@@ -103,15 +105,11 @@ voice
                     display: block;
                     margin-bottom: 16px;
                     padding-block: 15px;
-
-                    &:first-of-type {
-                        margin-top: 190px;
-                    }
+                    font-weight: bold;
                 }
 
                 dt {
                     width: 30%;
-                    font-weight: bold;
                     text-align: center;
                     background-color: v.$sub_back_color;
                     color: v.$white;
@@ -130,7 +128,6 @@ voice
 
 .article {
 
-
     .article_title {
         @include m.article_title;
     }
@@ -147,12 +144,27 @@ voice
         padding-top: 100px;
     }
 
+    .accent_img_right,
+    .accent_img_left {
+        width: 230px;
+        display: block;
+        // padding-bottom: 30px;
+    }
+
+    .accent_img_right {
+        margin-left: auto;
+    }
+
+    .accent_img_left {
+        margin-right: auto;
+    }
+
     .message {
         display: flex;
         justify-content: center;
         align-items: center;
         align-items: stretch;
-        padding-bottom: 90px;
+        padding-bottom: 180px;
 
         .message_title {
             display: flex;
@@ -160,7 +172,7 @@ voice
             align-items: center;
             width: 25%;
             text-align: center;
-            font-size: 1.7rem;
+            font-size: 2rem;
             font-weight: 500;
             color: v.$white;
             background-color: v.$sub_back_color;
@@ -171,7 +183,7 @@ voice
             margin: 0 auto;
             padding: 3rem;
             text-align: left;
-            font-size: 1.7rem;
+            font-size: 2rem;
             color: v.$font_accent;
             border: 1px solid gray;
         }
@@ -264,4 +276,3 @@ voice
         }
     }
 }
-
