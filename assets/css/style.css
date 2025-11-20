@@ -160,7 +160,7 @@ p {
   opacity: 0.7;
 }
 #header #nav .header_nav {
-  padding: 8rem 0 0 1rem;
+  padding: 6rem 0 0 1rem;
   text-align: start;
 }
 #header #nav .header_nav li {
@@ -241,17 +241,17 @@ main .slick_slider {
 }
 main .slick_slider img {
   width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
 }
 main .overlay_img {
-  width: 300px;
+  width: 240px;
   height: auto;
   z-index: 10;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 5%;
+  top: 56%;
+  left: 8%;
 }
 main .catchcopy {
   z-index: 10;
@@ -265,12 +265,12 @@ main .catchcopy {
 
 .btn {
   background-image: url(../../assets/img/logo_btn/button.png);
-  width: 500px;
-  height: 140px;
+  width: 480px;
+  height: 130px;
   z-index: 15;
   position: fixed;
-  bottom: 5rem;
-  right: -8rem;
+  bottom: 4.5rem;
+  right: -12rem;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -292,137 +292,75 @@ main .catchcopy {
   transition: all 0.5s;
 }
 .btn .btn_push:hover {
-  background-color: #d57d33;
+  background-color: #ffa600;
   color: #fff;
   transform: scale(1.05);
 }
 
 #about {
-  margin: 0;
   position: relative;
-  padding-top: 0.5rem;
   width: 100%;
+  overflow: hidden;
+  /* ▼ 青い帯（斜めカット） */
+  /* ▼ 白文字（キャッチコピー） */
+  /* ▼ 下のコンテンツ（ProNaviとは） */
 }
-#about::before {
-  content: "";
+#about .about_bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  aspect-ratio: 16/9;
-  background-image: url(../img/bg/linetop_bg2.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  z-index: -1;
+  height: 140vh;
+  background-color: #023F80;
+  clip-path: polygon(0 55%, 0 0, 100% 15%, 100% 70%);
+  z-index: 2;
 }
 #about .about_catch {
-  margin-top: 15rem;
-  color: #fff;
+  position: relative;
+  z-index: 2;
   max-width: 1300px;
   padding-inline: 2%;
-  font-weight: bold;
   margin-inline: auto;
+  margin-top: 10rem;
+  color: #fff;
+  font-weight: bold;
 }
 #about .about_catch p {
-  font-size: 2.5rem;
-  text-align: left;
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
   line-height: 2;
   padding-left: 1em;
 }
 #about .about_catch span {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.6;
   display: inline-block;
-  font-size: 4rem;
-  line-height: 2;
 }
 #about .about_catch .catch_right {
-  margin-top: 7rem;
+  margin-top: 4rem;
   margin-left: auto;
-}
-#about .about_catch .catch_right p,
-#about .about_catch .catch_right .right {
   text-align: right;
-  display: block;
 }
 #about .about_contents {
-  padding-block: 9rem;
-}
-#about .about_contents .sec_title_b {
-  margin-bottom: 10rem;
-}
-#about .about_left,
-#about .about_right {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  background-color: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 5rem;
-  overflow: hidden;
   position: relative;
-  z-index: 2;
-}
-#about .about_left img,
-#about .about_right img {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
-}
-#about .about_left .about_text,
-#about .about_right .about_text {
-  flex: 1;
-  padding: 0 2rem;
-  color: #505050;
-  line-height: 1.5;
-}
-#about .about_left .about_text h4,
-#about .about_right .about_text h4 {
-  font-size: 2.1rem;
-  margin-bottom: 1.3rem;
-  color: #023f80;
-}
-#about .about_left .about_text .fontmiddle,
-#about .about_right .about_text .fontmiddle {
-  font-size: 1.8rem;
-  color: #023f80;
-}
-#about .about_left .about_text .space,
-#about .about_right .about_text .space {
-  padding-top: 1rem;
-}
-#about .about_left .about_text p,
-#about .about_right .about_text p {
-  margin-left: 1rem;
-}
-#about .about_left {
-  margin-left: 0;
-  margin-right: auto;
-  justify-content: flex-start;
-}
-#about .about_left img {
-  border-radius: 25px 0 0 25px;
-  margin: -2rem 0 -2rem -2rem;
-}
-#about .about_left .about_text {
-  margin-left: 2rem;
-}
-#about .about_right {
-  margin-left: auto;
-  margin-right: 0;
-  justify-content: flex-end;
-}
-#about .about_right img {
-  border-radius: 0 25px 25px 0;
-  margin: -2rem -2rem -2rem 0;
+  z-index: 3;
+  padding-top: 8rem;
 }
 
+/* ▼ sec_title_b のバイーン防止（可動幅制限） */
+@media (max-width: 930px) {
+  #about {
+    /* ▼ 青い帯（斜めカット） */
+  }
+  #about .about_bg {
+    height: 30%;
+  }
+}
 #study_env {
   background-color: #f6f4f1;
   padding-top: 5rem;
 }
 #study_env .subtitle {
-  margin-top: 8rem;
+  margin-top: 9rem;
   text-align: center;
 }
 #study_env .subtitle span {
@@ -487,14 +425,14 @@ main .catchcopy {
 #study_env ol.steps .env_right .env_flex {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7rem;
+  margin-bottom: 10rem;
   flex-direction: row;
   align-items: center;
 }
 #study_env ol.steps .env_left .env_flex .env_text,
 #study_env ol.steps .env_right .env_flex .env_text {
   flex: 1;
-  width: 70%;
+  width: 60%;
   position: relative;
   padding: 0 4rem;
 }
@@ -540,7 +478,7 @@ main .catchcopy {
 #study_env ol.steps .env_left .env_flex .env_st,
 #study_env ol.steps .env_right .env_flex .env_st {
   display: block;
-  margin: 0.5rem 0;
+  margin: 1rem 0 2.5rem 0;
   color: #313131;
   font-size: 2rem;
   font-weight: bold;
@@ -551,7 +489,7 @@ main .catchcopy {
 }
 #study_env ol.steps .env_left .env_flex img,
 #study_env ol.steps .env_right .env_flex img {
-  width: 30%;
+  width: 38%;
   height: auto;
   margin: 0 2rem;
   border-radius: 30px;
@@ -703,8 +641,20 @@ main .catchcopy {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
 }
 
+#metalife {
+  width: 100%;
+  height: auto;
+  background-color: #f6f4f1;
+  position: relative;
+  z-index: 0;
+}
 #metalife .meta_imgarea {
   position: relative;
+}
+#metalife .meta_imgarea .meta_group {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 #metalife .meta_imgarea .meta_group_link {
   position: absolute;
@@ -712,7 +662,7 @@ main .catchcopy {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 5px 45px;
-  border: 5px solid rgb(184, 184, 184);
+  border: 4px solid rgb(184, 184, 184);
   background-color: #fff;
   border-radius: 50px;
   font-size: 1.8rem;
@@ -721,22 +671,9 @@ main .catchcopy {
   transition: all 0.3s;
 }
 #metalife .meta_imgarea .meta_group_link:hover {
-  border: 5px solid rgb(246, 246, 246);
+  border: 4px solid rgb(246, 246, 246);
   background-color: rgb(184, 184, 184);
   color: white;
-}
-
-#metalife {
-  width: 100%;
-  height: auto;
-  background-color: #f6f4f1;
-  position: relative;
-  z-index: 0;
-}
-#metalife .meta_group {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 #metalife .meta_flex {
   display: flex;
@@ -859,19 +796,22 @@ main .catchcopy {
   padding-top: 2rem;
   align-items: center;
 }
+#voice .voice_slider .slide .voice_age {
+  padding-inline: 5px;
+}
 #voice .voice_slider .slide .voice_age,
 #voice .voice_slider .slide .voice_text_main {
   font-size: 1.5rem;
   padding-block: 1.5rem;
 }
 #voice .voice_slider .slide .graduate_status {
-  width: 100%;
   display: inline-block;
-  border-radius: 10px;
+  border-radius: 8px;
+  padding-inline: 10px;
   background-color: #fcf2e8;
   color: #023f80;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 #voice .voice_slider .slide a {
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
@@ -1066,6 +1006,7 @@ hackathon
   width: 70%;
   padding-bottom: 50px;
   padding: 2rem;
+  border: 1px solid rgb(0, 255, 76);
 }
 .hackathon .hackathon_block .block_content img {
   flex: 1;
@@ -1127,20 +1068,21 @@ hackathon
 }
 
 @media (max-width: 930px) {
-  .hackathon .block_content {
+  .hackathon .hackathon_block .block_content {
     flex-direction: column;
     gap: 2rem;
   }
-  .hackathon .block_content .block_textarea {
+  .hackathon .hackathon_block .block_content .block_textarea {
+    width: 90%;
+    border: 1px solid red;
+  }
+  .hackathon .hackathon_block .block_content .block_textarea .block_theme {
     width: 100%;
   }
-  .hackathon .block_content .block_textarea .block_theme {
+  .hackathon .hackathon_block .block_content .block_textarea .block_text {
     width: 100%;
   }
-  .hackathon .block_content .block_textarea .block_text {
-    width: 100%;
-  }
-  .hackathon .block_content img {
+  .hackathon .hackathon_block .block_content img {
     width: 90%;
     padding-right: 0;
   }
@@ -1190,7 +1132,6 @@ hackathon
 }
 
 #price {
-  width: 100%;
   text-align: center;
   padding: 10rem 0;
   font-weight: bold;
@@ -1203,6 +1144,7 @@ hackathon
 #price .price_flex {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
 }
 #price .price_flex span + p {
   display: inline-block;
@@ -1212,7 +1154,11 @@ hackathon
 #price .price_flex .price_right {
   width: 50%;
   padding: 3rem;
-  height: auto;
+}
+#price .price_flex .price_left .price_plan,
+#price .price_flex .price_right .price_plan {
+  font-size: 2.3rem;
+  padding-bottom: 40px;
 }
 #price .price_flex .price_left {
   background-color: #f6f4f1;
@@ -1237,7 +1183,7 @@ hackathon
 }
 #price .price_flex .price_left dl dt,
 #price .price_flex .price_left dl dd {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 #price .price_flex .price_left dl dt {
   width: 40%;
@@ -1657,4 +1603,8 @@ voice
 .scale_up.is_active {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+.footer_main .footer_link {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

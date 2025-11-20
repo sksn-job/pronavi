@@ -45,6 +45,10 @@
         align-items: center;
       }
 
+      .voice_age {
+        padding-inline: 5px;
+      }
+
       .voice_age,
       .voice_text_main {
         font-size: 1.5rem;
@@ -52,13 +56,13 @@
       }
 
       .graduate_status {
-        width: 100%;
         display: inline-block;
-        border-radius: 10px;
+        border-radius: 8px;
+        padding-inline: 10px;
         background-color: #fcf2e8;
         color: v.$font_accent;
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
 
       a {
