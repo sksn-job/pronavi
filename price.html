@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ProNavi</title>
+
+    <meta name="description" content="「在宅ワークを叶えたい方」に選ばれている業界初のマンツーマン コーチング型 6ヶ月集中のプログラミングスクール" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+
+     
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Slider CSS -->
+    <style>
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* dots */
+        .dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            border: none;
+        }
+
+        .dot.active {
+            background: #333;
+            transform: scale(1.2);
+        }
+
+        /* arrows */
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .nav.prev {
+            left: 8px;
+        }
+
+        .nav.next {
+            right: 8px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <h1 class="logo">
+            <img src="assets/img/logo_btn/logo.png" alt="ProNavi ロゴ">
+        </h1>
+
+        <!-- hamburger-menu -->
+        <nav id="nav">
+            <ul class="header_nav">
+                <li><a href="#about">プロナビとは</a></li>
+                <li><a href="#study_env">学習環境</a></li>
+                <li><a href="#reason">選ばれる理由</a></li>
+                <li><a href="#metaleaf">MetaLeaf</a></li>
+                <li><a href="#voice">卒業生の声</a></li>
+                <li><a href="#price">PRICE</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle_btn">
+            <span></span><span></span><span></span>
+        </div>
+
+        <div id="mask"></div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+        <!-- Section Title -->
+        <section class="flow-intro">
+            <h2 class="sec_title">受講の流れ</h2>
+        </section>
+
+        <!-- Slider Section -->
+        <section class="slider-section">
+
+            <div class="slider" aria-roledescription="carousel">
+                <div class="slides">
+
+                    <!-- slide-1 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow1.jpg" alt="flow1">
+                        <h3>【01. 目標設定と戦略立案】</h3>
+                        <p>あなたの成長を最大化するための目標設定と戦略立案を行います。</p>
+                    </div>
+
+                    <!-- slide-2 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow2.jpg" alt="flow2">
+                        <h3>【02. 日々の習慣化と伴走サポート】</h3>
+                        <p>学習を日々継続するためのサポートを行います。</p>
+                    </div>
+
+                    <!-- slide-3 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow3.jpg" alt="flow3">
+                        <h3>【03. 週次フィードバック】</h3>
+                        <p>毎週の課題チェックを行い、改善点を明確にします。</p>
+                    </div>
+
+                    <!-- slide-4 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow4.jpg" alt="flow4">
+                        <h3>【04. スキル定着と継続サポート】</h3>
+                        <p>段階的にスキルを定着させていきます。</p>
+                    </div>
+
+                    <!-- slide-5 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow5.jpg" alt="flow5">
+                        <h3>【05. 実案件挑戦の実践とサポート】</h3>
+                        <p>実案件を通して実践力を身につけます。</p>
+                    </div>
+                </div>
+
+                <button class="nav prev" aria-label="前へ">&lt;</button>
+                <button class="nav next" aria-label="次へ">&gt;</button>
+            </div>
+
+            <div class="dots" role="tablist"></div>
+
+        </section>
+
+
+        <!-- Curriculum Section -->
+        <section class="curriculum">
+            <h2 class="sec_title">カリキュラムの紹介</h2>
+
+            <div class="container">
+                <div class="intro">
+                    <h3>「プログラミング学習に不安はありませんか？」</h3>
+
+                    <div class="intro_text">
+                        <p>
+                            「自分にできるのかなあ」
+                        </p>
+                        <img src="assets/img/subpage_img/curriculum/curriculum1.png" alt="">
+                    </div>
+
+                    <div class="intro_text">
+                        <p>
+                            「どのコースを選べば良いのか」
+                        </p>
+                        <img src="assets/img/subpage_img/curriculum/curriculum2.jpg" alt="">
+                    </div>
+
+                    <div class="intro_text">
+                        <p>
+                            「全く知らない案件で<br>
+                            やっていけるか不安」
+                        </p>
+                        <img src="assets/img/subpage_img/curriculum/curriculum3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    <h2 class="main_text">
+                        <p>そのままで大丈夫です。</p>
+                    </h2>
+
+                    <h3 class="sub_text">
+                        <p>
+                            まずはカウンセリングで現在の状況や目標を丁寧にヒアリングし、<br>
+                            その内容をもとに、経験豊富なスタッフが、あなたのレベルに最適な<br>
+                            "オーダーメイドの学習プラン”をご提案。<br>
+                            無理なく、確実にスキルを身につけられます。
+                        </p>
+                    </h3>
+                </div>
+
+                <div class="curriculum-steps">
+
+                    <div class="c-step">
+                        <div class="c-icon">
+                            <img src="assets/img/subpage_img/curriculum/curriculum1.png">
+                        </div>
+                        Ï <div class="c-text">
+                            <h4>STEP1.</h4>
+                            <p>
+                                基礎学習教材を使用し、<br>
+                                ・HTML
+                                ・CSS
+                                の基礎を取得します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="c-step">
+                        <div class="c-icon">
+                            <img src="assets/img/subpage_img/curriculum/curriculum2.jpg">
+                        </div>
+
+                        <div class="c-text">
+                            <h4>STEP2.</h4>
+                            <p>
+                                ローカル開発環境構築を行います。<br>
+                                ・エディタ
+                                ・ブラウザ
+                                ・開発ツールなど
+                                をインストールし、プログラミングできる環境を整えます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="c-step">
+                        <div class="c-icon">
+                            <img src="assets/img/subpage_img/curriculum/curriculum3.jpg">
+                        </div>
+
+                        <div class="c-text">
+                            <h4>STEP3.</h4>
+                            <p>
+                                模写コーディングで<br>
+                                (お手本サイトを見ながら自力でゼロから再現すること)
+                                ・構造（HTML）
+                                ・見た目（CSS,SCSS）
+                                ・動きなど（jQuery、JaveScript）を習得します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="c-step">
+                        <div class="c-icon">
+                            <img src="assets/img/subpage_img/curriculum/curriculum4.jpg">
+                        </div>
+
+                        <div class="c-text">
+                            <h4>STEP4.</h4>
+                            <p>
+                                WordPress（誰でも簡単に自分のウェブサイトやブログを作れる<br>
+                                ソフト）の環境構築等を行います。
+                                パソコン上にWordPressの環境を作る方法から、<br>
+                                実際にWordPressでサイトを作るまでを学べます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="c-step">
+                        <div class="c-icon">
+                            <img src="assets/img/subpage_img/curriculum/curriculum5.jpg">
+                        </div>
+
+                        <div class="c-text">
+                            <h4>STEP5.</h4>
+                            <p>
+                                得した知識を活用し、オリジナルのウェブサイトを<br>
+                                制作していただきます。テーマ選びからデザイン、構築までを自分の手で行い、<br>
+                                “ゼロからつくる自分だけのサイト” を完成させます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="c-step">
+                        <div class="c-icon">
+                            <img src="assets/img/subpage_img/curriculum/curriculum6.jpg">
+                        </div>
+
+                        <div class="c-text">
+                            <h4>STEP6.</h4>
+                            <p>
+                                ブートキャンプにて、スキルはあるのに案件が取れない…<br>
+                                そんな課題を解決します。営業スキルを学び、自分で案件を獲得できる力を手に入れます。<br>
+                                一緒に最後まで走り抜けましょう！
+                            </p>
+                        </div>
+                        <h3>※卒業後は、下記でご紹介するAdNaviで、あなたが学びたい専門分野を自由に選べます。</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- cta -->
+    <section class="cta">
+        <img src="assets/img/" alt="">
+
+        <p>
+            気になったら、まずはプロのスタッフに相談してみませんか？<br>
+            話を聞くだけでもOk！<br>
+            無料カウンセリングで、あなたの不安や疑問を解決しましょう！
+        </p>
+
+        <button class="cta-btn">無料カウンセリングの予約はこちら</button>
+
+    </section>
+
+    <div class="adnavi">
+        <h2 class="sec_title">AdoNavi（アドナビ）コース</h2>
+        <p>
+            卒業後は、あなたが「もっと学びたい。」と思う方向に進める２つのコースをご用意しています。<br>
+            自分が伸ばしたい分野をじっくり決めて行けます。
+        </p>
+    </div>
+
+    <div class="high_level">
+        <h2>▶️ハイレベル（HL）コース</h2>
+        <p>
+            このコースでは、フロントエンド、バックエンドを習得できます。
+            フロントエンドはユーザーがみる画面やデザインの部分、バックエンドはその裏側で動く仕組みで、<br>
+            デーアを習得したり、操作に応じて処理したりします。
+            アプリケーションの仕組み、データベースの管理、システム管理の流れまで、システム開発の流れまで、実践的に身につける<br>
+            ことができます。
+        </p>
+
+        <div class="contents">
+            <div class="app">
+                <h2>アプリケーション</h2>
+                <p>
+                    アプリケーションとは、<br>
+                    サイトやアプリやユーザーの<br>
+                    操作に応じて動く仕組みです。
+                    ボタンを押すと何が起こるかを作る部分を学びます。
+                </p>
+            </div>
+
+            <div class="deta_base">
+                <h2>データベース</h2>
+                <p>
+                    データベースとは、情報を整理して<br>
+                    保存する場所です。
+                    データの保存・検索・更新の仕組み、<br>
+                    ユーザー情報や投稿データを安全に<br>
+                    管理する方法を学べます。
+                </p>
+            </div>
+
+            <div class="system">
+                <h2>システム開発</h2>
+                <p>
+                    システム開発は、アプリケー<br>
+                    ションとデータベースを組み<br>
+                    合わせ、実際に動くシステム<br>
+                    を作る方法を学びます。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="design">
+        <h2>▶️デザインコース</h2>
+        <p>
+            デザインの基礎とツール操作をゼロから学べるコース。<br>
+            実践を通じて、アイデアを形にする力を身につけていきます。
+        </p>
+
+        <div class="Figma">
+            <img src="assets/img/subpage_img/design_logo/Figma-logo.jpg" alt="">
+            <div class="figma_text">
+                <h2>Figma</h2>
+                <p>
+                    Figmaは、ブラウザ上で使え、デザインツール。チームで同時にデザインを作成・編集でき、アイデアをすぐ形にできるのが魅力です。
+                </p>
+            </div>
+        </div>
+
+        <div class="illustrator">
+            <img src="assets/img/subpage_img/design_logo/Illustrator-logo.jpg" alt="">
+            <div class="illustrater_text">
+                <h2>illustrater</h2>
+                <p>Illustratorは、プロも使うベクター形式（拡大縮小してもきれい）のデザインツール。ロゴやイラスト、印刷物まで、細かいデザインを自由に作れるのが魅力です。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="PRICE">
+
+        <h2>PRICE</h2>
+
+    </div>
+
+
+
+
+
+    <!-- Slider JS -->
+    <script>
+        const slider = document.querySelector('.slider');
+        const slidesWrap = slider.querySelector('.slides');
+        const slides = Array.from(slidesWrap.children);
+        const dotsContainer = document.querySelector('.dots');
+        const prevBtn = slider.querySelector('.nav.prev');
+        const nextBtn = slider.querySelector('.nav.next');
+
+        let current = 0;
+        const total = slides.length;
+
+        // ドット生成
+        for (let i = 0; i < total; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'dot';
+            btn.dataset.index = i;
+            dotsContainer.appendChild(btn);
+
+            btn.addEventListener('click', () => goTo(i));
+        }
+
+        const dots = Array.from(dotsContainer.children);
+
+        function update() {
+            slidesWrap.style.transform = `translateX(-${current * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        function goTo(index) {
+            if (index < 0) index = 0;
+            if (index >= total) index = total - 1;
+            current = index;
+            update();
+        }
+
+        prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        update();
+    </script>
+
+</body>
+
+</html> 
