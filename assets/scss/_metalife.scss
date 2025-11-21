@@ -47,23 +47,26 @@
   .meta_flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 100%;
     margin: 0 auto;
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
+
 
     .meta_text {
-      width: 60%;
+      width: 52%;
       height: auto;
-      padding-top: 5rem;
+      // padding-top: 5rem;
 
       .meta_text span:first-of-type {
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
 
-      .para {
+      .para,
+      p {
         margin-bottom: 3rem;
+        font-size: 1.8rem;
       }
 
       .bold {
@@ -125,7 +128,7 @@
           font-size: 2.5rem;
           color: v.$font_accent;
           text-align: center;
-          padding: 1rem;
+          padding: 2rem;
         }
 
         li {

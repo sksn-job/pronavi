@@ -23,8 +23,8 @@
     color: v.$font_accent;
 
     .env_catch_contents {
-      width: 25%;
-      height: 300px;
+      max-width: 250px;
+      height: 270px;
       background-color: v.$white;
       text-align: center;
       border: 2px solid #ccc; // 枠線

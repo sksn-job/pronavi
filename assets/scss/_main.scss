@@ -73,7 +73,7 @@ p {
 
     .cta_textarea {
       position: absolute;
-      top: 59%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: v.$font_accent;
@@ -82,7 +82,7 @@ p {
         font-size: clamp(1.8rem, 2vw, 2.7rem);
         font-weight: bold;
         text-align: center;
-        padding-bottom: 4rem;
+        padding-bottom: 7rem;
         line-height: 1.5;
       }
 
@@ -97,7 +97,7 @@ p {
 
   .cta_sp {
     display: none;
-    padding-block: 3rem;
+    padding: 5rem 0 4rem;
     background-color: v.$bg_color;
 
     .cta_sp_inner {
@@ -116,7 +116,6 @@ p {
           font-size: clamp(1.8rem, 2vw, 2.8rem);
           font-weight: bold;
           text-align: center;
-          padding-bottom: 1rem;
           line-height: 1.5;
         }
       }
