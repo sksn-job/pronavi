@@ -1,9 +1,16 @@
 @use "variables" as v;
 
 $sp: 930px;
+$sp_small: 787px;
 
 @mixin sp {
   @media (max-width: $sp) {
+    @content;
+  }
+}
+
+@mixin sp_small {
+  @media (max-width: $sp_small) {
     @content;
   }
 }
@@ -26,34 +33,18 @@ $sp: 930px;
   }
 }
 
-@mixin orange_button_long {
-  max-width: 90%;
-  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
-  color: white;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 50px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
-  transition: background 0.3s ease;
-  font-size: clamp(1.5rem, 2vw, 2rem);
 
-  &:hover {
-    background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
-  }
-}
+
 
 @mixin title_beige {
   width: 400px;
-  height: 100px;
+  height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
       v.$sub_color 60%,
       v.$bg_color 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -63,13 +54,13 @@ $sp: 930px;
 
 @mixin title_white {
   width: 400px;
-  height: 100px;
+  height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
       v.$sub_color 60%,
       v.$white 100%);
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -77,18 +68,20 @@ $sp: 930px;
   margin-top: 10rem;
 }
 
+/* ----VOICEで使用---- */
+
 @mixin article_title {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1030px;
   border-radius: 30px;
-  padding-block: 10px;
-  margin-bottom: 80px;
+  padding-block: 8px;
+  margin-bottom: 100px;
   background-color: v.$sub_back_color;
   color: v.$white;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.6rem;
 
 
   &::before {
@@ -100,27 +93,82 @@ $sp: 930px;
     border-bottom: 7px solid transparent;
     border-left: 10px solid white;
     margin-right: 8px;
+    margin-left: 8px;
   }
 }
 
+
 @mixin article_question {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: bold;
   color: v.$font_accent;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid gray;
+
 }
 
 @mixin article_answer {
   width: 55%;
   margin: 0 auto;
-  padding-bottom: 70px;
-  font-size: 1.7rem;
+  // padding-bottom: 100px;
+  font-size: 2rem;
   text-align: left;
+
+  &.inner_space {
+    padding-bottom: 100px;
+  }
+}
+
+
+/* ----VOICE・ハッカソン使用---- */
+
+@mixin blue_line {
+  width: 100%;
+  height: 3.5px;
+  background-color: v.$sub_back_color;
+}
+
+/* -----VOICE・ハッカソン無料相談申込ボタン-------- */
+
+@mixin orange_button_long {
+  max-width: 95%;
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  transition: all 0.8s ease;
+
+  &:hover {
+    background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+  }
+}
+
+
+/* ----ハッカソン使用---- */
+
+@mixin hackathon_block_title {
+  max-width: 1100px;
+  background: white;
+  color: v.$font_accent;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(2rem, 2vw, 2.4rem);
+  box-shadow: 3px 3px 3.3px rgba(0, 47, 109, 0.7);
 }
 
 @mixin link_blue {
@@ -136,9 +184,28 @@ $sp: 930px;
   font-size: 1.8rem;
   border-radius: 35px;
   text-align: center;
-  transition: all 0.3s;
+  font-weight: 600;
+  transition: transform 0.3s ease;
 
   &:hover {
-    filter: brightness(1.2);
+    transform: scale(1.1);
+  }
+}
+
+@mixin link_white {
+  display: block;
+  width: 520px;
+  padding-block: 1rem;
+  margin: 0 auto;
+  background: white;
+  color: v.$font_accent;
+  font-size: 1.8rem;
+  border-radius: 35px;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
   }
 }

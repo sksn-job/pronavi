@@ -1,0 +1,140 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+/* --------------------------
+hackathon
+----------------------------*/
+.hackathon_top {
+
+    img {
+        height: 650px;
+        object-fit: cover;
+    }
+
+    .blue_line {
+        @include m.blue_line;
+    }
+
+}
+
+.hackathon {
+    .hackathon_intro {
+        padding-bottom: 80px;
+
+        .subtitle {
+            @include m.title_white;
+            margin-bottom: 80px;
+        }
+
+        .hackathon_heading {
+            font-weight: bold;
+            color: v.$font_accent;
+            font-size: 2.2rem;
+            line-height: 1.6;
+
+            &:first-of-type {
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    .hackathon_block {
+        padding-block: 90px;
+
+        .block_title {
+            @include m.hackathon_block_title;
+            margin-bottom: 80px;
+            text-indent: 5rem;
+        }
+
+        .block_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+            padding-bottom: 80px;
+
+            .block_textarea {
+                width: 70%;
+                padding-bottom: 50px;
+                padding: 2rem;
+                border: 1px solid rgb(0, 255, 76);
+            }
+
+            img {
+                flex: 1;
+                padding-right: 2rem;
+            }
+
+            .block_theme {
+                font-size: 2.4rem;
+                font-weight: bold;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem;
+
+
+                &.black_line {
+                    border-bottom: 1px solid v.$font_main;
+                }
+
+                &.white_line {
+                    border-bottom: 1px solid v.$white;
+                }
+            }
+
+            .block_text {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .is-first {
+        background-color: v.$bg_color;
+    }
+
+    .is-second {
+        background-color: v.$sub_back_color;
+        color: v.$white;
+    }
+
+    .block_link_blue {
+        @include m.link_blue;
+    }
+
+    .block_link_white {
+        @include m.link_white;
+    }
+
+}
+
+@include m.sp {
+
+    .hackathon {
+
+        .hackathon_block {
+            .block_content {
+                flex-direction: column;
+                gap: 2rem;
+
+                .block_textarea {
+                    width: 90%;
+                    border: 1px solid red;
+
+                    .block_theme {
+                        width: 100%;
+                    }
+
+                    .block_text {
+                        width: 100%;
+                    }
+                }
+
+                img {
+                    width: 90%;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+}

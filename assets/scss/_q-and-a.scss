@@ -8,11 +8,13 @@
   padding: 5rem 0;
 
   .qa {
-    width: 100%;
-    padding: 5rem 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 0;
 
     .qa_item {
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
       margin-bottom: 3rem;
 
       .qa_question {
@@ -23,18 +25,20 @@
         color: v.$font_accent;
         font-weight: bold;
         border-radius: 30px;
-        margin-bottom: 2rem;
+        margin-bottom: 3.5px;
         box-shadow: 0 4px rgba(v.$font_accent, 0.8);
         transition: background 0.3s, color 0.3s;
       }
 
       .qa_answer {
         display: none;
+        width: 80%;
+        margin: 0 auto;
         font-size: 1.6rem;
         background-color: v.$white;
         margin-bottom: 2rem;
         box-sizing: border-box;
-        transition: all 0.3s;
+        // transition: all 0.3s;
 
         .qa_answer_inner {
           padding: 4.5rem;

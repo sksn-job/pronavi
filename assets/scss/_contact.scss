@@ -1,0 +1,52 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.contact {
+    background-color: v.$bg_color;
+    color: v.$font_accent;
+    text-align: center;
+    font-weight: bold;
+
+    .contact_title {
+        font-size: 2.3rem;
+    }
+
+    .contact_title_sub {
+        font-size: 1.5rem;
+        color: v.$font_main;
+        margin-bottom: 5rem;
+    }
+
+    .contact_box {
+        width: 70%;
+        margin: 0 auto;
+        padding-block: 10rem;
+        border-radius: 30px;
+        background-color: v.$white;
+    }
+
+    .contact_list {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        text-align: left;
+        border: 1px solid red;
+
+        .contact_label {
+            font-size: 1.5rem;
+
+
+            span {
+                display: inline-block;
+                padding-inline: 5px;
+                margin-left: 1rem;
+                border-radius: 2px;
+                font-size: 1.2rem;
+                color: v.$white;
+                font-weight: normal;
+                background-color: v.$font_accent;
+            }
+        }
+
+    }
+}

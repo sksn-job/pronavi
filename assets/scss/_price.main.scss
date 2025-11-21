@@ -2,7 +2,6 @@
 @use "variables" as v;
 
 #price {
-  width: 100%;
   text-align: center;
   padding: 10rem 0;
   font-weight: bold;
@@ -16,8 +15,9 @@
   .price_flex {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
 
-    span + p {
+    span+p {
       display: inline-block;
       padding-bottom: 4rem;
     }
@@ -26,8 +26,14 @@
     .price_right {
       width: 50%;
       padding: 3rem;
-      height: auto;
+
+      .price_plan {
+        font-size: 2.3rem;
+        padding-bottom: 40px;
+      }
+
     }
+
     .price_left {
       background-color: v.$bg_color;
       color: #505050;
@@ -42,6 +48,9 @@
         color: v.$white;
         border-radius: 30px;
       }
+
+
+
       dl {
         margin: 3rem auto;
         display: flex;
@@ -51,7 +60,7 @@
 
         dt,
         dd {
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
 
         dt {
@@ -59,14 +68,17 @@
           text-align: right;
           padding-right: 0.5rem;
         }
+
         dd {
           width: 60%;
           text-align: left;
         }
       }
+
       span {
         font-size: 3rem;
       }
+
       a {
         font-size: 1.8rem;
         display: block;
@@ -90,11 +102,13 @@
           text-align: center;
           font-size: 1.4rem;
         }
+
         &:hover {
           transform: scale(1.1); // 5%拡大
         }
       }
     }
+
     .price_right {
       background-color: v.$font_accent;
       color: v.$white;
@@ -110,7 +124,7 @@
         border-radius: 30px;
       }
 
-      p + p {
+      p+p {
         display: inline-block;
         padding-bottom: 2rem;
       }
@@ -133,6 +147,7 @@
       span {
         font-size: 3rem;
       }
+
       a {
         font-size: 1.8rem;
         display: block;
@@ -157,6 +172,7 @@
           text-align: center;
           font-size: 1.4rem;
         }
+
         &:hover {
           transform: scale(1.1); // 5%拡大
         }

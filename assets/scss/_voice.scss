@@ -35,61 +35,66 @@ voice
 
         .voice_text {
             top: 60%; // 画像内での位置
-            font-size: clamp(2rem, 2vw, 2rem);
+            font-size: clamp(2.2rem, 2vw, 2.3rem);
             font-weight: bold;
             line-height: 1.8em;
             padding-left: 5rem;
         }
     }
 
+    .blue_line {
+        @include m.blue_line;
+    }
+
     .profile_card {
 
-        // ここの帯のところだけメディアクリエトの幅1300px別で設定すること
         .blue_box {
-            position: relative;
-            height: 200px;
             background-color: #607CA8;
 
+            .profile_inner {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 100px;
+                padding-block: 5rem;
+            }
+
             .profile_name {
-                position: absolute;
-                right: 35%;
-                bottom: -35%;
                 font-size: 6rem;
                 color: v.$white;
                 font-weight: bold;
                 text-align: center;
+                padding-bottom: 1rem;
+                border-bottom: 3px solid white;
 
                 span {
                     font-size: 3.2rem;
                 }
-
-                .term {
-                    font-size: 3.5rem;
-                    font-weight: bold;
-                    color: v.$font_main;
-                }
             }
 
-
+            .profile_term {
+                font-size: 3.5rem;
+                font-weight: bold;
+                color: v.$white;
+            }
 
             img {
-                position: absolute;
-                left: 30%;
-                bottom: 0;
-                transform: translate(-50%, 50%);
-                width: 200px;
-                height: 200px;
+                width: 280px;
+                height: 280px;
                 object-fit: cover;
                 border-radius: 50%;
                 border: 1px solid #fff;
+                margin: 0;
             }
         }
 
         .profile-content {
-            height: 520px;
             background-color: v.$bg_color;
+            padding-block: 70px;
 
             .profile_list {
+                height: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 font-size: 2rem;
@@ -99,15 +104,11 @@ voice
                     display: block;
                     margin-bottom: 16px;
                     padding-block: 15px;
-
-                    &:first-of-type {
-                        margin-top: 190px;
-                    }
+                    font-weight: bold;
                 }
 
                 dt {
                     width: 30%;
-                    font-weight: bold;
                     text-align: center;
                     background-color: v.$sub_back_color;
                     color: v.$white;
@@ -126,7 +127,6 @@ voice
 
 .article {
 
-
     .article_title {
         @include m.article_title;
     }
@@ -143,12 +143,27 @@ voice
         padding-top: 100px;
     }
 
+    .accent_img_right,
+    .accent_img_left {
+        width: 230px;
+        display: block;
+        // padding-bottom: 30px;
+    }
+
+    .accent_img_right {
+        margin-left: auto;
+    }
+
+    .accent_img_left {
+        margin-right: auto;
+    }
+
     .message {
         display: flex;
         justify-content: center;
         align-items: center;
         align-items: stretch;
-        padding-bottom: 90px;
+        padding-bottom: 180px;
 
         .message_title {
             display: flex;
@@ -156,7 +171,7 @@ voice
             align-items: center;
             width: 25%;
             text-align: center;
-            font-size: 1.7rem;
+            font-size: 2rem;
             font-weight: 500;
             color: v.$white;
             background-color: v.$sub_back_color;
@@ -167,7 +182,7 @@ voice
             margin: 0 auto;
             padding: 3rem;
             text-align: left;
-            font-size: 1.7rem;
+            font-size: 2rem;
             color: v.$font_accent;
             border: 1px solid gray;
         }
@@ -177,8 +192,8 @@ voice
 
 }
 
-.other_person {
-    .other_person-title {
+.other_voice {
+    .other_voice-title {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -208,17 +223,17 @@ voice
         }
     }
 
-    .other_person-slider {
+    .voice_slider {
         margin-top: 50px;
         padding-bottom: 40px;
     }
 
     .slide_sub {
-        width: 250px;
+        width: 330px;
         box-sizing: border-box;
         background-color: v.$white;
-        padding: 3rem 2rem;
-        margin-left: 50px;
+        padding: 6rem 6rem;
+        margin-left: 20px;
         border-radius: 1rem;
         border: 1px solid rgb(190, 190, 190);
 
@@ -227,14 +242,15 @@ voice
             margin: 0 auto;
             border-radius: 50%;
             object-fit: cover;
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 130px;
             margin-bottom: 3rem;
         }
 
         h4 {
-            font-size: 1.8rem;
+            font-size: 2.4rem;
             margin-bottom: 1rem;
+            color: v.$font_accent;
         }
 
         p {
@@ -245,8 +261,8 @@ voice
         span {
             display: inline-block;
             margin-bottom: 2rem;
-            font-size: 1.2rem;
-            padding: 5px 10px;
+            font-size: 1.6rem;
+            padding: 5px 5px;
             background-color: #FCF2E8;
             border-radius: 5px;
             color: v.$font_accent;
@@ -255,45 +271,108 @@ voice
 
         a {
             @include m.orange_button;
-            display: block;
             margin: 0 auto;
         }
     }
-
-
 }
 
-.cta-counseling {
-    margin-top: 70px;
-    position: relative;
+/* ----voiceレスポンシブ---- */
+
+// @include m.sp {
+//     /* 930px */
+
+// }
 
 
-    .img {
-        display: block;
-        border: 1px solid red;
-        margin-top: 40px;
-        object-fit: cover;
+@include m.sp_small {
+
+    /* 787px */
+    .voice {
+
+        .profile_card {
+
+            .blue_box {
+
+                .profile_inner {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+
+            .profile-content {
+                background-color: v.$bg_color;
+                padding-block: 70px;
+
+                .profile_list {
+                    height: 100%;
+                    flex-direction: column;
+
+                    dt,
+                    dd {
+                        display: block;
+                        margin-bottom: 0;
+                        text-align: center;
+                    }
+
+                    dt {
+                        width: 100%;
+                    }
+
+                    dd {
+                        width: 100%;
+                        margin-bottom: 3rem;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 
-    .cta_textarea {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .article {
 
-        p {
-            // font-size: 2.8rem;
-            font-size: clamp(1.8rem, 2vw, 2.8rem);
-            font-weight: bold;
-            text-align: center;
-            padding-bottom: 3rem;
-            line-height: 1.5;
+        .article_title {
+            font-size: 2.3rem
         }
 
-        .orange_button_long {
-            @include m.orange_button_long;
-            display: block;
+        .article_question {
+            width: 90%;
+            font-size: 2rem
+        }
+
+        .article_answer {
+            width: 90%;
+        }
+
+        .accent_img_right {
             margin: 0 auto;
+        }
+
+        .accent_img_left {
+            margin: 0 auto;
+        }
+
+        .message {
+            flex-direction: column;
+            padding-bottom: 100px;
+
+            .message_title {
+                width: 100%;
+                text-align: center;
+                padding-block: 1rem;
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+    .other_voice {
+        .other_voice-title {
+            width: 300px;
+            margin-bottom: 50px;
         }
     }
 

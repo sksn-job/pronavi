@@ -1,0 +1,61 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.footer {
+    background-color: v.$font_accent;
+
+    .footer_list {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        font-size: 1.5rem;
+
+        .footer_link {
+            color: v.$white;
+        }
+    }
+
+    .footer_under {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        vertical-align: bottom;
+
+        .footer_logo {
+            display: block;
+            width: 160px;
+        }
+
+        .footer_sns a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            width: 20%;
+            border-radius: 50%;
+
+            .sns_img {
+                display: block;
+                border-radius: 50px;
+            }
+
+            .sns_text {
+                color: v.$white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@include m.sp_small {
+    .footer {
+        .footer_under {
+            .footer_logo {
+                display: block;
+                width: 130px;
+            }
+        }
+    }
+}
