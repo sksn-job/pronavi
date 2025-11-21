@@ -84,9 +84,11 @@ p {
 .cta-counseling {
   position: relative;
 }
+.cta-counseling.margin {
+  margin-top: 10rem;
+}
 .cta-counseling .cta_pc .cta_img {
   display: block;
-  margin-top: 40px;
   object-fit: cover;
 }
 .cta-counseling .cta_pc .cta_textarea {
@@ -181,7 +183,7 @@ p {
 #header {
   width: 100vw;
   height: 70px;
-  background-color: rgba(242, 242, 242, 0.8);
+  background-color: rgba(242, 242, 242, 0.7);
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -1848,4 +1850,45 @@ voice
     display: block;
     width: 130px;
   }
+}
+.contact {
+  background-color: #f6f4f1;
+  color: #023f80;
+  text-align: center;
+  font-weight: bold;
+}
+.contact .contact_title {
+  font-size: 2.3rem;
+}
+.contact .contact_title_sub {
+  font-size: 1.5rem;
+  color: #505050;
+  margin-bottom: 5rem;
+}
+.contact .contact_box {
+  width: 70%;
+  margin: 0 auto;
+  padding-block: 10rem;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.contact .contact_list {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid red;
+}
+.contact .contact_list .contact_label {
+  font-size: 1.5rem;
+}
+.contact .contact_list .contact_label span {
+  display: inline-block;
+  padding-inline: 5px;
+  margin-left: 1rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: normal;
+  background-color: #023f80;
 }/*# sourceMappingURL=style.css.map */

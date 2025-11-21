@@ -63,11 +63,14 @@ p {
 .cta-counseling {
   position: relative;
 
+  &.margin {
+    margin-top: 10rem;
+  }
+
   .cta_pc {
 
     .cta_img {
       display: block;
-      margin-top: 40px;
       object-fit: cover;
     }
 
