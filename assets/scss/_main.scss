@@ -61,36 +61,93 @@ p {
 
 /* ----サブページ無料相談申込----- */
 .cta-counseling {
-  margin-top: 70px;
   position: relative;
 
+  .cta_pc {
 
-  .img {
-    display: block;
-    border: 1px solid red;
-    margin-top: 40px;
-    object-fit: cover;
+    .cta_img {
+      display: block;
+      margin-top: 40px;
+      object-fit: cover;
+    }
+
+    .cta_textarea {
+      position: absolute;
+      top: 59%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: v.$font_accent;
+
+      p {
+        font-size: clamp(1.8rem, 2vw, 2.7rem);
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 4rem;
+        line-height: 1.5;
+      }
+
+      .orange_button_long {
+        @include m.orange_button_long;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
   }
 
-  .cta_textarea {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .cta_sp {
+    display: none;
+    padding-block: 3rem;
+    background-color: v.$bg_color;
 
-    p {
-      // font-size: 2.8rem;
-      font-size: clamp(1.8rem, 2vw, 2.8rem);
-      font-weight: bold;
-      text-align: center;
-      padding-bottom: 3rem;
-      line-height: 1.5;
+    .cta_sp_inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      .cta_img_sp {
+        width: 15%;
+        border-radius: 50%;
+      }
+
+      .cta_textarea_sp {
+        .cta_sp_text {
+          font-size: clamp(1.8rem, 2vw, 2.8rem);
+          font-weight: bold;
+          text-align: center;
+          padding-bottom: 1rem;
+          line-height: 1.5;
+        }
+      }
     }
 
     .orange_button_long {
       @include m.orange_button_long;
       display: block;
+      width: 50%;
       margin: 0 auto;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      // font-size: 1.6rem;
     }
+  }
+}
+
+/* ---サブページ無料相談申込レスポンシブ---*/
+
+@include m.sp_small {
+
+  /* 787px */
+  .cta-counseling {
+
+    .cta_pc {
+      display: none;
+    }
+
+    .cta_sp {
+      display: block;
+    }
+
   }
 }

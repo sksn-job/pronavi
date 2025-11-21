@@ -35,7 +35,7 @@ voice
 
         .voice_text {
             top: 60%; // 画像内での位置
-            font-size: clamp(2rem, 2vw, 2rem);
+            font-size: clamp(2.2rem, 2vw, 2.3rem);
             font-weight: bold;
             line-height: 1.8em;
             padding-left: 5rem;
@@ -49,8 +49,6 @@ voice
     .profile_card {
 
         .blue_box {
-
-            height: 345px;
             background-color: #607CA8;
 
             .profile_inner {
@@ -59,6 +57,7 @@ voice
                 justify-content: center;
                 align-items: center;
                 gap: 100px;
+                padding-block: 5rem;
             }
 
             .profile_name {
@@ -193,8 +192,8 @@ voice
 
 }
 
-.other_person {
-    .other_person-title {
+.other_voice {
+    .other_voice-title {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -224,7 +223,7 @@ voice
         }
     }
 
-    .other_person-slider {
+    .voice_slider {
         margin-top: 50px;
         padding-bottom: 40px;
     }
@@ -272,8 +271,110 @@ voice
 
         a {
             @include m.orange_button;
-            display: block;
             margin: 0 auto;
         }
     }
+}
+
+/* ----voiceレスポンシブ---- */
+
+// @include m.sp {
+//     /* 930px */
+
+// }
+
+
+@include m.sp_small {
+
+    /* 787px */
+    .voice {
+
+        .profile_card {
+
+            .blue_box {
+
+                .profile_inner {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+
+            .profile-content {
+                background-color: v.$bg_color;
+                padding-block: 70px;
+
+                .profile_list {
+                    height: 100%;
+                    flex-direction: column;
+
+                    dt,
+                    dd {
+                        display: block;
+                        margin-bottom: 0;
+                        text-align: center;
+                    }
+
+                    dt {
+                        width: 100%;
+                    }
+
+                    dd {
+                        width: 100%;
+                        margin-bottom: 3rem;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .article {
+
+        .article_title {
+            font-size: 2.3rem
+        }
+
+        .article_question {
+            width: 90%;
+            font-size: 2rem
+        }
+
+        .article_answer {
+            width: 90%;
+        }
+
+        .accent_img_right {
+            margin: 0 auto;
+        }
+
+        .accent_img_left {
+            margin: 0 auto;
+        }
+
+        .message {
+            flex-direction: column;
+            padding-bottom: 100px;
+
+            .message_title {
+                width: 100%;
+                text-align: center;
+                padding-block: 1rem;
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+    .other_voice {
+        .other_voice-title {
+            width: 300px;
+            margin-bottom: 50px;
+        }
+    }
+
+
 }

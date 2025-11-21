@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* ----VOICEで使用---- */
 /* ----VOICE・ハッカソン使用---- */
+/* -----VOICE・ハッカソン無料相談申込ボタン-------- */
 /* ----ハッカソン使用---- */
 html,
 body {
@@ -81,34 +82,33 @@ p {
 
 /* ----サブページ無料相談申込----- */
 .cta-counseling {
-  margin-top: 70px;
   position: relative;
 }
-.cta-counseling .img {
+.cta-counseling .cta_pc .cta_img {
   display: block;
-  border: 1px solid red;
   margin-top: 40px;
   object-fit: cover;
 }
-.cta-counseling .cta_textarea {
+.cta-counseling .cta_pc .cta_textarea {
   position: absolute;
-  top: 55%;
+  top: 59%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #023f80;
 }
-.cta-counseling .cta_textarea p {
-  font-size: clamp(1.8rem, 2vw, 2.8rem);
+.cta-counseling .cta_pc .cta_textarea p {
+  font-size: clamp(1.8rem, 2vw, 2.7rem);
   font-weight: bold;
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   line-height: 1.5;
 }
-.cta-counseling .cta_textarea .orange_button_long {
+.cta-counseling .cta_pc .cta_textarea .orange_button_long {
   max-width: 90%;
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
   color: white;
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 8px 25px;
   border-radius: 50px;
   display: inline-block;
   font-weight: bold;
@@ -116,13 +116,69 @@ p {
   white-space: nowrap;
   transition: background 0.3s ease;
   font-size: clamp(1.5rem, 2vw, 2rem);
+  transition: all 0.8s ease;
   display: block;
   margin: 0 auto;
 }
-.cta-counseling .cta_textarea .orange_button_long:hover {
+.cta-counseling .cta_pc .cta_textarea .orange_button_long:hover {
+  background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+}
+.cta-counseling .cta_sp {
+  display: none;
+  padding-block: 3rem;
+  background-color: #f6f4f1;
+}
+.cta-counseling .cta_sp .cta_sp_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.cta-counseling .cta_sp .cta_sp_inner .cta_img_sp {
+  width: 15%;
+  border-radius: 50%;
+}
+.cta-counseling .cta_sp .cta_sp_inner .cta_textarea_sp .cta_sp_text {
+  font-size: clamp(1.8rem, 2vw, 2.8rem);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+  line-height: 1.5;
+}
+.cta-counseling .cta_sp .orange_button_long {
+  max-width: 90%;
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  transition: all 0.8s ease;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.cta-counseling .cta_sp .orange_button_long:hover {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
 }
 
+/* ---サブページ無料相談申込レスポンシブ---*/
+@media (max-width: 787px) {
+  /* 787px */
+  .cta-counseling .cta_pc {
+    display: none;
+  }
+  .cta-counseling .cta_sp {
+    display: block;
+  }
+}
 #header {
   width: 100vw;
   height: 70px;
@@ -310,7 +366,7 @@ main .catchcopy {
   top: 0;
   left: 0;
   width: 100%;
-  height: 140vh;
+  height: 120vh;
   background-color: #023F80;
   clip-path: polygon(0 55%, 0 0, 100% 15%, 100% 70%);
   z-index: 2;
@@ -321,12 +377,12 @@ main .catchcopy {
   max-width: 1300px;
   padding-inline: 2%;
   margin-inline: auto;
-  margin-top: 11rem;
+  margin-top: 12rem;
   color: #fff;
   font-weight: bold;
 }
 #about .about_catch p {
-  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   line-height: 2;
   padding-left: 1em;
 }
@@ -344,6 +400,7 @@ main .catchcopy {
   position: relative;
   z-index: 3;
   padding-top: 8rem;
+  padding-bottom: 10rem;
 }
 #about .about_left,
 #about .about_right {
@@ -352,7 +409,6 @@ main .catchcopy {
   align-items: center;
   padding: 2rem;
   background-color: #fff;
-  border-radius: 25px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 5rem;
   overflow: hidden;
@@ -361,8 +417,7 @@ main .catchcopy {
 }
 #about .about_left img,
 #about .about_right img {
-  width: 300px;
-  height: auto;
+  width: 30%;
   object-fit: cover;
 }
 #about .about_left .about_text,
@@ -396,10 +451,6 @@ main .catchcopy {
   margin-right: auto;
   justify-content: flex-start;
 }
-#about .about_left img {
-  border-radius: 25px 0 0 25px;
-  margin: -2rem 0 -2rem -2rem;
-}
 #about .about_left .about_text {
   margin-left: 2rem;
 }
@@ -408,16 +459,13 @@ main .catchcopy {
   margin-right: 0;
   justify-content: flex-end;
 }
-#about .about_right img {
-  border-radius: 0 25px 25px 0;
-  margin: -2rem -2rem -2rem 0;
-}
 
 /* ▼ sec_title_b のバイーン防止（可動幅制限） */
 .sec_title_b {
   max-width: 100%;
   width: clamp(200px, 40vw, 400px);
   transform: none !important;
+  margin-bottom: 10rem;
 }
 
 @media (max-width: 930px) {
@@ -429,21 +477,14 @@ main .catchcopy {
     height: 50%;
   }
 }
-@media (max-width: 785px) {
-  /* 785px */
+@media (max-width: 787px) {
+  /* 787px */
   #about .about_bg {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  #about .about_bg {
-    height: 70vh;
+    height: 29%;
   }
   #about .about_catch .catch_right {
     text-align: left;
-  }
-}
-@media (max-width: 690px) {
-  #about .about_bg {
-    height: 60vh;
   }
 }
 #study_env {
@@ -1406,7 +1447,7 @@ voice
 }
 .voice .voice_intro .voice_text {
   top: 60%;
-  font-size: clamp(2rem, 2vw, 2rem);
+  font-size: clamp(2.2rem, 2vw, 2.3rem);
   font-weight: bold;
   line-height: 1.8em;
   padding-left: 5rem;
@@ -1417,7 +1458,6 @@ voice
   background-color: #4f6fa3;
 }
 .voice .profile_card .blue_box {
-  height: 345px;
   background-color: #607CA8;
 }
 .voice .profile_card .blue_box .profile_inner {
@@ -1426,6 +1466,7 @@ voice
   justify-content: center;
   align-items: center;
   gap: 100px;
+  padding-block: 5rem;
 }
 .voice .profile_card .blue_box .profile_name {
   font-size: 6rem;
@@ -1491,7 +1532,7 @@ voice
   background-color: #4f6fa3;
   color: #fff;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 .article .article_title::before {
   content: "";
@@ -1502,6 +1543,7 @@ voice
   border-bottom: 7px solid transparent;
   border-left: 10px solid white;
   margin-right: 8px;
+  margin-left: 8px;
 }
 .article .article_question {
   width: 80%;
@@ -1565,7 +1607,7 @@ voice
   border: 1px solid gray;
 }
 
-.other_person .other_person-title {
+.other_voice .other_voice-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1579,7 +1621,7 @@ voice
   text-align: center;
   margin-bottom: 100px;
 }
-.other_person .other_person-title::after {
+.other_voice .other_voice-title::after {
   content: "";
   display: inline-block;
   width: 0;
@@ -1590,11 +1632,11 @@ voice
   margin-left: 8px;
   margin-top: 5px;
 }
-.other_person .other_person-slider {
+.other_voice .voice_slider {
   margin-top: 50px;
   padding-bottom: 40px;
 }
-.other_person .slide_sub {
+.other_voice .slide_sub {
   width: 330px;
   box-sizing: border-box;
   background-color: #fff;
@@ -1603,7 +1645,7 @@ voice
   border-radius: 1rem;
   border: 1px solid rgb(190, 190, 190);
 }
-.other_person .slide_sub img {
+.other_voice .slide_sub img {
   display: block;
   margin: 0 auto;
   border-radius: 50%;
@@ -1612,16 +1654,16 @@ voice
   height: 130px;
   margin-bottom: 3rem;
 }
-.other_person .slide_sub h4 {
+.other_voice .slide_sub h4 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
   color: #023f80;
 }
-.other_person .slide_sub p {
+.other_voice .slide_sub p {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.other_person .slide_sub span {
+.other_voice .slide_sub span {
   display: inline-block;
   margin-bottom: 2rem;
   font-size: 1.6rem;
@@ -1631,7 +1673,7 @@ voice
   color: #023f80;
   font-weight: bold;
 }
-.other_person .slide_sub a {
+.other_voice .slide_sub a {
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
   color: white;
   text-decoration: none;
@@ -1643,13 +1685,74 @@ voice
   white-space: nowrap;
   transition: background 0.3s ease;
   font-size: 1.3rem;
-  display: block;
   margin: 0 auto;
 }
-.other_person .slide_sub a:hover {
+.other_voice .slide_sub a:hover {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
 }
 
+/* ----voiceレスポンシブ---- */
+@media (max-width: 787px) {
+  /* 787px */
+  .voice .profile_card .blue_box .profile_inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .voice .profile_card .profile-content {
+    background-color: #f6f4f1;
+    padding-block: 70px;
+  }
+  .voice .profile_card .profile-content .profile_list {
+    height: 100%;
+    flex-direction: column;
+  }
+  .voice .profile_card .profile-content .profile_list dt,
+  .voice .profile_card .profile-content .profile_list dd {
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .voice .profile_card .profile-content .profile_list dt {
+    width: 100%;
+  }
+  .voice .profile_card .profile-content .profile_list dd {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .voice .profile_card .profile-content .profile_list dd:last-of-type {
+    margin-bottom: 0;
+  }
+  .article .article_title {
+    font-size: 2.3rem;
+  }
+  .article .article_question {
+    width: 90%;
+    font-size: 2rem;
+  }
+  .article .article_answer {
+    width: 90%;
+  }
+  .article .accent_img_right {
+    margin: 0 auto;
+  }
+  .article .accent_img_left {
+    margin: 0 auto;
+  }
+  .article .message {
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
+  .article .message .message_title {
+    width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+    font-size: 2rem;
+  }
+  .other_voice .other_voice-title {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+}
 .fade_up {
   opacity: 0;
   transform: translateY(30px);
@@ -1696,6 +1799,49 @@ voice
   transform: translateY(0) scale(1);
 }
 
-.footer_main .footer_link {
+.footer {
+  background-color: #023f80;
+}
+.footer .footer_list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+.footer .footer_list .footer_link {
   color: #fff;
+}
+.footer .footer_under {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  vertical-align: bottom;
+}
+.footer .footer_under .footer_logo {
+  display: block;
+  width: 180px;
+}
+.footer .footer_under .footer_sns a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 20%;
+  border-radius: 50%;
+}
+.footer .footer_under .footer_sns a .sns_img {
+  display: block;
+  border-radius: 50px;
+}
+.footer .footer_under .footer_sns a .sns_text {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 787px) {
+  .footer .footer_under .footer_logo {
+    display: block;
+    width: 130px;
+  }
 }/*# sourceMappingURL=style.css.map */

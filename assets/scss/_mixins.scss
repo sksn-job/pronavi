@@ -1,7 +1,7 @@
 @use "variables" as v;
 
 $sp: 930px;
-$sp_small:785px;
+$sp_small: 787px;
 
 @mixin sp {
   @media (max-width: $sp) {
@@ -33,24 +33,8 @@ $sp_small:785px;
   }
 }
 
-@mixin orange_button_long {
-  max-width: 90%;
-  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
-  color: white;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 50px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
-  transition: background 0.3s ease;
-  font-size: clamp(1.5rem, 2vw, 2rem);
 
-  &:hover {
-    background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
-  }
-}
+
 
 @mixin title_beige {
   width: 400px;
@@ -97,7 +81,7 @@ $sp_small:785px;
   background-color: v.$sub_back_color;
   color: v.$white;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.8rem;
 
 
   &::before {
@@ -109,6 +93,7 @@ $sp_small:785px;
     border-bottom: 7px solid transparent;
     border-left: 10px solid white;
     margin-right: 8px;
+    margin-left: 8px;
   }
 }
 
@@ -146,6 +131,29 @@ $sp_small:785px;
   height: 3.5px;
   background-color: v.$sub_back_color;
 }
+
+/* -----VOICE・ハッカソン無料相談申込ボタン-------- */
+
+@mixin orange_button_long {
+  max-width: 90%;
+  background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
+  color: white;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  transition: all 0.8s ease;
+
+  &:hover {
+    background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
+  }
+}
+
 
 /* ----ハッカソン使用---- */
 
