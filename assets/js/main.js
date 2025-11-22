@@ -129,7 +129,7 @@ $(".voice_slider").slick({
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 2500,
   centerMode: true,
   dots: true,
   arrows: true,
