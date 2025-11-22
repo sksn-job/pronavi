@@ -1,0 +1,11 @@
+@use "mixins" as m;
+@use "variables" as v;
+
+.price_bg {
+    width: 100%;
+    height: 30rem;
+    background-image: url(assets/img/subpage_img/sub_bg/voice_hakkathon_bg.jpg);
+    // background-position: center top;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+}

@@ -2135,4 +2135,10 @@ voice
   background-color: #f6f4f1;
   border: 1px solid #023f80;
   color: #023f80;
+}
+
+.price_bg {
+  width: 100%;
+  height: 30rem;
+  background-image: url(assets/img/subpage_img/sub_bg/voice_hakkathon_bg.jpg);
 }/*# sourceMappingURL=style.css.map */

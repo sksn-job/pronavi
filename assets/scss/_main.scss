@@ -196,10 +196,10 @@ to-topボタン
 
   &:hover {
     background-color: v.$bg_color;
-    border-color: #537EA3; // 外枠の色も変えるなら
+    border-color: #537EA3;
   }
 
   &:hover::before {
-    border-bottom-color: #537EA3; // ← これで矢印の色が変わる！
+    border-bottom-color: #537EA3;
   }
 }
