@@ -183,6 +183,45 @@ p {
     display: block;
   }
 }
+/* -----------------------------------
+to-topボタン
+------------------------------------ */
+.to_top {
+  display: block;
+  position: fixed;
+  right: 10rem;
+  bottom: 3rem;
+  z-index: 200;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f6f4f1;
+  color: white;
+  border: 1px solid #023f80;
+  transition: all 0.3s;
+}
+.to_top.main_page {
+  right: 11rem;
+  bottom: 20rem;
+}
+.to_top::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 10px solid #023f80;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.to_top:hover {
+  background-color: #537EA3;
+  border-color: #537EA3;
+}
+.to_top:hover::before {
+  border-bottom-color: #f6f4f1;
+}
+
 #header {
   width: 100%;
   height: 70px;
@@ -2050,6 +2089,7 @@ voice
 }
 .contact .contact_list .contact_label {
   display: block;
+  border-radius: 3px;
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
@@ -2067,6 +2107,7 @@ voice
 .contact .contact_list textarea {
   width: 100%;
   padding-inline: 1rem;
+  border-radius: 3px;
   border: 1px solid gray;
   font-size: 1.6rem;
   font-weight: normal;
@@ -2076,7 +2117,7 @@ voice
   margin-bottom: 2rem;
 }
 .contact .contact_list textarea {
-  height: 160px;
+  height: 22rem;
   padding: 1rem;
 }
 .contact .submit_button {
@@ -2084,6 +2125,7 @@ voice
   display: inline-block;
   font-size: 1.5rem;
   padding: 10px 50px;
+  border-radius: 3px;
   color: white;
   background-color: #023f80;
   transition: all 0.3s;

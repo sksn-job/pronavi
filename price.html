@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ProNavi</title>
+    <meta name="description" content="「在宅ワークを叶えたい方」に選ばれている業界初のマンツーマン コーチング型 6ヶ月集中のプログラミングスクール" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<!-- Slider CSS -->
+<!-- <style>
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* dots */
+        .dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            border: none;
+        }
+
+        .dot.active {
+            background: #333;
+            transform: scale(1.2);
+        }
+
+        /* arrows */
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .nav.prev {
+            left: 8px;
+        }
+
+        .nav.next {
+            right: 8px;
+        }
+    </style> -->
+<!-- </head> -->
+
+
+<body>
+    <header id="header">
+
+        <h1 class="logo">
+            <a href="index.html">
+                <a href="index.html"><img src="assets/img/logo_btn/logo.png" alt="logo" /></a>
+            </a>
+        </h1>
+
+        <nav id="nav">
+            <ul class="header_nav">
+                <li><a href="#about">プロナビとは</a></li>
+                <li><a href="#study_env">学習環境</a></li>
+                <li><a href="#reason">選ばれる理由</a></li>
+                <li><a href="#metalife">MetaLife</a></li>
+                <li><a href="#voice">卒業生の声</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#price">PRICE</a></li>
+                <li><a href="#qa">よくある質問</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mask"></div>
+    </header>
+
+    <main>
+        <h2 class="sec_title_b">カリキュラムの紹介</h2>
+        <section class="slider-section">
+            <div class="slider">
+
+                <div class="slides">
+
+                    <!-- slide-1 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow1.jpg" alt="flow1">
+                        <h3>【01. 目標設定と戦略立案】</h3>
+                        <p>あなたの成長を最大化するための目標設定と戦略立案を行います。</p>
+                    </div>
+
+                    <!-- slide-2 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow2.jpg" alt="flow2">
+                        <h3>【02. 日々の習慣化と伴走サポート】</h3>
+                        <p>学習を日々継続するためのサポートを行います。</p>
+                    </div>
+
+                    <!-- slide-3 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow3.jpg" alt="flow3">
+                        <h3>【03. 週次フィードバック】</h3>
+                        <p>毎週の課題チェックを行い、改善点を明確にします。</p>
+                    </div>
+
+                    <!-- slide-4 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow4.jpg" alt="flow4">
+                        <h3>【04. スキル定着と継続サポート】</h3>
+                        <p>段階的にスキルを定着させていきます。</p>
+                    </div>
+
+                    <!-- slide-5 -->
+                    <div class="slide">
+                        <img src="assets/img/subpage_img/flow/flow5.jpg" alt="flow5">
+                        <h3>【05. 実案件挑戦の実践とサポート】</h3>
+                        <p>実案件を通して実践力を身につけます。</p>
+                    </div>
+
+                </div>
+
+                <button class="nav prev">&lt;</button>
+                <button class="nav next">&gt;</button>
+
+                <div class="dots"></div>
+
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="curriculum">
+            <h2 class="sec_title_b">カリキュラムの紹介</h2>
+
+
+            <div class="intro_box">
+                <h3>「プログラミング学習に不安はありませんか？」</h3>
+
+                <div class="intro">
+                    <img src="assets/img/subpage_img/curriculum/curriculum1.png" alt="">
+                    <p>
+                        「自分にできるのかなあ」
+                    </p>
+                </div>
+
+                <div class="intro">
+                    <img src="assets/img/subpage_img/curriculum/curriculum2.jpg" alt="">
+                    <p>
+                        「どのコースを選べば良いのか」
+                    </p>
+                </div>
+
+                <div class="intro">
+                    <img src="assets/img/subpage_img/curriculum/curriculum3.jpg" alt="">
+                    <p>
+                        「全く知らない案件で<br>
+                        やっていけるか不安」
+                    </p>
+                </div>
+            </div>
+
+            <div class="text">
+                <h2 class="main_text">
+                    <p>
+                        そのままで大丈夫です。
+                    </p>
+                </h2>
+
+                <h3 class="sub_text">
+                    <p>
+                        まずはカウンセリングで現在の状況や目標を丁寧にヒアリングし、
+                        その内容をもとに、経験豊富なスタッフが、あなたのレベルに最適な
+                        "オーダーメイドの学習プラン”をご提案。<br>
+                        無理なく、確実にスキルを身につけられます。
+                    </p>
+                </h3>
+            </div>
+
+            <div class="curriculum-steps">
+                <div class="c_step">
+                    <div class="c_icon">
+                        <img src="assets/img/subpage_img/curriculum/curriculum1.png">
+                        <h4>STEP1.</h4>
+                    </div>
+                    Ï <div class="c_text">
+                        <p>
+                            基礎学習教材を使用し、<br>
+                            ・HTML<br>
+                            ・CSS<br>
+                            の基礎を取得します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="c_step">
+                    <div class="c_icon">
+                        <img src="assets/img/subpage_img/curriculum/curriculum2.jpg">
+                        <h4>STEP2.</h4>
+                    </div>
+
+                    <div class="c_text">
+                        <p>
+                            ローカル開発環境構築を行います。<br>
+                            ・エディタ<br>
+                            ・ブラウザ<br>
+                            ・開発ツールなど<br>
+                            をインストールし、プログラミングできる環境を整えます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="c_step">
+                    <div class="c_icon">
+                        <img src="assets/img/subpage_img/curriculum/curriculum3.jpg">
+                        <h4>STEP3.</h4>
+                    </div>
+
+                    <div class="c_text">
+                        <p>
+                            模写コーディングで
+                            (お手本サイトを見ながら自力でゼロから再現すること)<br>
+                            ・構造（HTML）<br>
+                            ・見た目（CSS,SCSS）<br>
+                            ・動きなど（jQuery、JaveScript）を習得します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="c_step">
+                    <div class="c_icon">
+                        <img src="assets/img/subpage_img/curriculum/curriculum4.jpg">
+                        <h4>STEP4.</h4>
+                    </div>
+
+                    <div class="c_text">
+                        <p>
+                            WordPress（誰でも簡単に自分のウェブサイトやブログを作れる
+                            ソフト）の環境構築等を行います。
+                            パソコン上にWordPressの環境を作る方法から、
+                            実際にWordPressでサイトを作るまでを学べます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="c_step">
+                    <div class="c_icon">
+                        <img src="assets/img/subpage_img/curriculum/curriculum5.jpg">
+                        <h4>STEP5.</h4>
+                    </div>
+
+                    <div class="c_text">
+                        <p>
+                            得した知識を活用し、オリジナルのウェブサイトを
+                            制作していただきます。テーマ選びからデザイン、構築までを自分の手で行い、
+                            “ゼロからつくる自分だけのサイト” を完成させます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer"></div>
+        <a id="to_top" href="#" class="to_top"></a>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </main>
+</body>
+
+</html>
