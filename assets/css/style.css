@@ -515,6 +515,7 @@ main .catchcopy {
 @media (max-width: 930px) {
   /* 930px */
   #about {
+    min-height: 0;
     /* ▼ 青い帯（斜めカット） */
   }
   #about .about_bg {
@@ -731,6 +732,7 @@ main .catchcopy {
 
 @media (max-width: 787px) {
   #study_env {
+    min-height: 0;
     /* ----下コンテンツ---- */
   }
   #study_env .env_catch {
@@ -2139,6 +2141,9 @@ voice
 
 .price_bg {
   width: 100%;
-  height: 30rem;
-  background-image: url(assets/img/subpage_img/sub_bg/voice_hakkathon_bg.jpg);
+  height: 35rem;
+  background-image: url("../img/subpage_img/sub_bg/voice_hakkathon_bg.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */
