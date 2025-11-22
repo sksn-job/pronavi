@@ -168,18 +168,18 @@ to-topボタン
   position: fixed;
   right: 10rem;
   bottom: 3rem;
-  z-index: 200;
+  z-index: 99999;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: v.$bg_color;
+  background-color: #537EA3;
 
   color: white;
   border: 1px solid v.$font_accent;
   transition: all 0.3s;
 
   &.main_page {
-    right: 11rem;
+    right: 5rem;
     bottom: 20rem;
   }
 
@@ -189,17 +189,17 @@ to-topボタン
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-bottom: 10px solid v.$font_accent;
+    border-bottom: 10px solid v.$bg_color;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
   }
 
   &:hover {
-    background-color: #537EA3;
+    background-color: v.$bg_color;
     border-color: #537EA3; // 外枠の色も変えるなら
   }
 
   &:hover::before {
-    border-bottom-color: v.$bg_color; // ← これで矢印の色が変わる！
+    border-bottom-color: #537EA3; // ← これで矢印の色が変わる！
   }
 }

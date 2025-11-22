@@ -1,2 +1,6 @@
 @use "mixins" as m;
 @use "variables" as v;
+
+.price_bg {
+    background-image: url(assets/img/subpage_img/sub_bg/voice_hakkathon_bg.jpg);
+}
