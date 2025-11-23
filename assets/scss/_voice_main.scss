@@ -117,3 +117,11 @@
     }
   }
 }
+
+@include m.sp_small {
+  #voice {
+    .graduate_work {
+      width: 60%;
+    }
+  }
+}

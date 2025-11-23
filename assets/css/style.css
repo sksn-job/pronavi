@@ -1980,7 +1980,7 @@ voice
   transform: translateY(0);
 }
 
-
+/*======================================*/
 .scroll_in_left {
   opacity: 0;
   transform: translateX(-40px);
@@ -2003,7 +2003,7 @@ voice
   transform: translateX(0);
 }
 
-
+/*=========================================*/
 .scale_up {
   opacity: 0;
   transform: translateY(20px) scale(0.8);
@@ -2183,39 +2183,6 @@ flow
   object-fit: cover;
 }
 
-/* --------------------------
-カリキュラム
-----------------------------*/
-.bk_color {
-  background-color: #f6f4f1;
-  padding-block: 9rem;
-}
-.bk_color .intro_title {
-  margin-block: 10rem;
-  font-weight: bold;
-  font-size: 3.8rem;
-  color: #023f80;
-  text-align: center;
-}
-.bk_color .intro_flexbox {
-  display: flex;
-  justify-content: center;
-  gap: 10rem;
-}
-.bk_color .intro_flexbox .intro_item {
-  max-width: 250px;
-  text-align: center;
-  padding-block: 3rem;
-  border-radius: 5px;
-  background-color: white;
-}
-.bk_color .intro_flexbox .intro_item .intro_img {
-  display: inline-block;
-  width: 60%;
-  padding-bottom: 1rem;
-  border-radius: 50%;
-}
-
 .text_area {
   padding-block: 7rem;
   background-color: #023f80;
@@ -2246,7 +2213,6 @@ flow
   margin-top: 2rem;
   font-size: 1.8rem;
   font-weight: normal;
-
 }
 
 /* ----カリキュラムステップ----- */
@@ -2285,4 +2251,4 @@ flow
   padding-left: 5rem;
   font-size: 1.5rem;
   padding-block: 1rem;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -160,7 +160,7 @@ main {
 
   .catchcopy {
     z-index: 10;
-    font-size: 6rem;
+    font-size: clamp(3.6rem, 9.6vw, 6rem);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     color: #fff;
     position: absolute;
