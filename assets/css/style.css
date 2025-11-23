@@ -2214,4 +2214,36 @@ flow
   width: 60%;
   padding-bottom: 1rem;
   border-radius: 50%;
+}
+
+.text_area {
+  padding-block: 7rem;
+  background-color: #023f80;
+  color: #fff;
+  text-align: center;
+}
+.text_area .intro_undertext {
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+}
+.text_area .intro_sub_undertext {
+  line-height: 1.6;
+}
+.text_area .intro_sub_undertext p:first-of-type {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.text_area .intro_sub_undertext p:nth-child(2) {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.text_area .intro_sub_undertext p:nth-child(2) span {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.text_area .intro_sub_undertext p:last-of-type {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: normal;
 }/*# sourceMappingURL=style.css.map */
