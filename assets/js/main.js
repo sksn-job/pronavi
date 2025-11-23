@@ -155,6 +155,28 @@ $(".qa_question").on("click", function () {
   item.find(".qa_answer").slideToggle(200);
 });
 
+// flow_slider 本体（margin設定は削除）
+$(".flow_slider").slick({
+  slidesToShow: 3,        // 見える枚数は3
+  slidesToScroll: 1,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  dots: true,
+  arrows: true,
+  variableWidth: true,    // ★CSSのwidthをそのまま使う
+  centerMode: false,      // ★勝手に中央寄せさせない
+  responsive: [
+    {
+      breakpoint: 787,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,  // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
+      },
+    },
+  ],
+});
+
 
 /* ------フッター読み込み-------- */
 $(function () {

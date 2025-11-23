@@ -20,15 +20,19 @@ flow
 }
 
 .slider {
+    padding-bottom: 8rem;
+
     .slide {
         text-align: center;
         width: 250px;
+        margin-left: 20px;
+        margin-bottom: 3rem;
         border: 1px solid rgb(147, 149, 255);
         border-radius: 5px;
         overflow: hidden;
 
         .flow_slide_title {
-            padding-top: 2rem;
+            padding-top: 3rem;
             font-size: 1.6rem;
             color: v.$sub_color;
         }
