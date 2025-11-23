@@ -8,7 +8,6 @@ body {
   font-size: 62.5%; //1rem = 10pxに統一//
   font-family: Noto Sans JP;
   color: v.$font_main;
-  width: 100vw;
   //scroll-behavior: smooth;//最近はこの一言でスムーススクロールするらしい。js不要。
 
   @include m.sp {
@@ -59,7 +58,9 @@ p {
   z-index: 2;
 }
 
-/* ----サブページ無料相談申込----- */
+/* --------------------------------
+サブページ無料相談申込共通
+-----------------------------------*/
 .cta-counseling {
   position: relative;
 
@@ -136,7 +137,11 @@ p {
   }
 }
 
-/* ---サブページ無料相談申込レスポンシブ---*/
+
+
+/* --------------------------------
+サブページ無料相談申込レスポンシブ
+-----------------------------------*/
 
 @include m.sp_small {
 
@@ -151,5 +156,50 @@ p {
       display: block;
     }
 
+  }
+}
+
+/* -----------------------------------
+to-topボタン
+------------------------------------ */
+
+.to_top {
+  display: block;
+  position: fixed;
+  right: 10rem;
+  bottom: 3rem;
+  z-index: 99999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #537EA3;
+
+  color: white;
+  border: 1px solid v.$font_accent;
+  transition: all 0.3s;
+
+  &.main_page {
+    right: 5rem;
+    bottom: 20rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 10px solid v.$bg_color;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+
+  &:hover {
+    background-color: v.$bg_color;
+    border-color: #537EA3;
+  }
+
+  &:hover::before {
+    border-bottom-color: #537EA3;
   }
 }

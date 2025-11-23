@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ProNavi</title>
+    <meta name="description" content="「在宅ワークを叶えたい方」に選ばれている業界初のマンツーマン コーチング型 6ヶ月集中のプログラミングスクール" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo">
+            <a href="index.html"><img src="assets/img/logo_btn/logo.png" alt="logo" /></a>
+        </h1>
+
+        <nav id="nav">
+            <ul class="header_nav">
+                <li><a href="#about">プロナビとは</a></li>
+                <li><a href="#study_env">学習環境</a></li>
+                <li><a href="#reason">選ばれる理由</a></li>
+                <li><a href="#metalife">MetaLife</a></li>
+                <li><a href="#voice">卒業生の声</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#price">PRICE</a></li>
+                <li><a href="#qa">よくある質問</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mask"></div>
+    </header>
+
+    <main>
+
+        <section class="contact">
+            <div class="wrapper">
+
+                <div class="contact_box">
+                    <h4 class="contact_title">お問い合わせ</h4>
+                    <p class="contact_title_sub">contact</p>
+
+                    <form action="" method="post">
+                        <dl class="contact_list">
+                            <dt><label for="user_name" class="contact_label">お名前<span>必須</span></label></dt>
+                            <dd><input type="text" id="user_name" class="contact_input"></dd>
+                            <dt><label for="e-mail" class="contact_label">メールアドレス<span>必須</span></label></dt>
+                            <dd><input type="email" id="e-mail" pattern=".+@.+" required class="contact_input"></dd>
+                            <dt><label for="textarea" class="contact_label">お問い合わせ内容<span>必須</span></label></dt>
+                            <dd><textarea name="message" id="textarea"></textarea></dd>
+                        </dl>
+
+                        <button type="submit" class="submit_button">送信する</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

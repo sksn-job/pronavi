@@ -90,7 +90,8 @@ p {
 }
 .cta-counseling .cta_pc .cta_img {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cta-counseling .cta_pc .cta_textarea {
   position: absolute;
@@ -341,7 +342,8 @@ main .slick_slider {
 main .slick_slider img {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .overlay_img {
   width: 240px;
@@ -462,7 +464,8 @@ main .catchcopy {
 #about .about_right img {
   width: 30%;
   aspect-ratio: 1/1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #about .about_left .about_text,
 #about .about_right .about_text {
@@ -540,7 +543,8 @@ main .catchcopy {
   #about .about_right img {
     width: 100%;
     aspect-ratio: 10/4;
-    object-position: center top;
+    -o-object-position: center top;
+       object-position: center top;
     margin-bottom: 2rem;
   }
   #about .about_right {
@@ -763,9 +767,11 @@ main .catchcopy {
     width: 90%;
     border-radius: 0px;
     aspect-ratio: 10/4;
-    object-position: center top;
+    -o-object-position: center top;
+       object-position: center top;
     border-radius: 25px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-top: 3rem;
     margin-right: auto;
   }
@@ -1000,7 +1006,8 @@ main .catchcopy {
 #metalife .meta_imgarea .meta_group {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #metalife .meta_imgarea .meta_group_link {
   position: absolute;
@@ -1067,7 +1074,8 @@ main .catchcopy {
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading img {
   width: 20%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading .heading_text {
   width: 80%;
@@ -1131,7 +1139,8 @@ main .catchcopy {
 }
 #voice .voice_slider .slide img {
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 130px;
   height: 130px;
   margin: 0 auto;
@@ -1291,7 +1300,8 @@ hackathon
 ----------------------------*/
 .hackathon_top img {
   height: 650px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hackathon_top .blue_line {
   width: 100%;
@@ -1703,7 +1713,8 @@ voice
 .voice .profile_card .blue_box img {
   width: 280px;
   height: 280px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   border: 1px solid #fff;
   margin: 0;
@@ -1865,7 +1876,8 @@ voice
   display: block;
   margin: 0 auto;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 130px;
   height: 130px;
   margin-bottom: 3rem;
@@ -2180,7 +2192,8 @@ flow
 }
 .slider .slide .flow_slide_img {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* --------------------------

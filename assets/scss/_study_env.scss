@@ -23,8 +23,8 @@
     color: v.$font_accent;
 
     .env_catch_contents {
-      max-width: 250px;
-      height: 270px;
+      max-width: 230px;
+      height: 250px;
       background-color: v.$white;
       text-align: center;
       border: 2px solid #ccc; // 枠線
@@ -200,6 +200,93 @@
           letter-spacing: 0.2rem;
           font-size: 2rem;
           color: #aaa1a1;
+        }
+      }
+    }
+  }
+}
+
+@include m.sp_small {
+
+  #study_env {
+    min-height: 0; // 実害なし
+
+    // 詳細度キープ
+    .env_catch {
+      height: 250px;
+
+      .env_catch_contents {
+        max-width: 180px;
+        height: 180px;
+        border: 2px solid #ccc; // 枠線
+        border-radius: 0;
+        transition: none;
+      }
+
+      .flex_center {
+        align-self: flex-start;
+      }
+    }
+
+    /* ----下コンテンツ---- */
+    ol.steps {
+
+
+      .env_left,
+      .env_right {
+        .env_flex {
+
+          flex-direction: column;
+          margin-bottom: 10rem;
+
+          .env_text {
+            width: 100%;
+            position: relative;
+          }
+
+          img {
+            width: 90%;
+            border-radius: 0px;
+            aspect-ratio: 10 / 4;
+            object-position: center top;
+            border-radius: 25px;
+            // object-fit: contain;
+            object-fit: cover;
+            margin-top: 3rem;
+            margin-right: auto;
+            // display: none;
+          }
+        }
+      }
+
+
+      .env_right .env_flex {
+        flex-direction: column-reverse;
+      }
+
+      .env_right {
+        .env_text {
+          &::before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100%;
+            background-color: #313131;
+            top: 0;
+            left: 2rem;
+          }
+
+          &::after {
+            position: absolute;
+            content: "Feature";
+            bottom: 3rem;
+            left: -4rem;
+            right: auto;
+            transform: rotate(-90deg);
+            letter-spacing: 0.2rem;
+            font-size: 2rem;
+            color: #aaa1a1;
+          }
         }
       }
     }
