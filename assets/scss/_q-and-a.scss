@@ -61,3 +61,15 @@
     }
   }
 }
+
+@include m.sp_small {
+  #qa {
+    .qa {
+      width: 100%;
+
+      .qa_item {
+        width: 100%;
+      }
+    }
+  }
+}
