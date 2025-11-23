@@ -135,8 +135,46 @@ flow
                 border-radius: 50%;
                 // border: 1px solid white;
             }
+        }
+    }
+}
+
+.text_area {
+    padding-block: 7rem;
+    background-color: v.$font_accent;
+    color: v.$white;
+    text-align: center;
+
+    .intro_undertext {
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .intro_sub_undertext {
+        line-height: 1.6;
+
+        p:first-of-type {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: normal;
+
+        }
+
+        p:nth-child(2) {
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            span {
+                font-size: 1.8rem;
+                font-weight: normal;
+            }
+        }
+
+        p:last-of-type {
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            font-weight: normal;
 
         }
     }
-
 }
