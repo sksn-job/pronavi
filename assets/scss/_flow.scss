@@ -178,3 +178,48 @@ flow
         }
     }
 }
+
+/* ----カリキュラムステップ----- */
+.curriculum-steps {
+    padding-block: 8rem;
+
+    .c_step_card {
+        display: flex;
+        align-items: stretch;
+        width: 80%;
+        margin: 0 auto;
+        border: 0.5px solid rgb(179, 179, 179);
+
+        .c_icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 2rem;
+            background-color: v.$sub_color;
+
+            .c_icon_img {
+                width: 50%;
+                padding-right: 2rem;
+
+                // padding-inline: 2rem;
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                }
+            }
+
+            .step_number {
+                flex: 1;
+                font-size: 2.2rem;
+                color: v.$white;
+            }
+        }
+
+        .c_text {
+            padding-left: 5rem;
+            font-size: 1.5rem;
+            padding-block: 1rem;
+        }
+    }
+}

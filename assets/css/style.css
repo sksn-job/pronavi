@@ -2246,4 +2246,42 @@ flow
   margin-top: 2rem;
   font-size: 1.8rem;
   font-weight: normal;
+}
+
+/* ----カリキュラムステップ----- */
+.curriculum-steps {
+  padding-block: 8rem;
+}
+.curriculum-steps .c_step_card {
+  display: flex;
+  align-items: stretch;
+  width: 80%;
+  margin: 0 auto;
+  border: 0.5px solid rgb(179, 179, 179);
+}
+.curriculum-steps .c_step_card .c_icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  background-color: #4b769d;
+}
+.curriculum-steps .c_step_card .c_icon .c_icon_img {
+  width: 50%;
+  padding-right: 2rem;
+}
+.curriculum-steps .c_step_card .c_icon .c_icon_img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.curriculum-steps .c_step_card .c_icon .step_number {
+  flex: 1;
+  font-size: 2.2rem;
+  color: #fff;
+}
+.curriculum-steps .c_step_card .c_text {
+  padding-left: 5rem;
+  font-size: 1.5rem;
+  padding-block: 1rem;
 }/*# sourceMappingURL=style.css.map */
