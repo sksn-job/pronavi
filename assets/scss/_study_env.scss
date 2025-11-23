@@ -209,7 +209,9 @@
 @include m.sp_small {
 
   #study_env {
+    min-height: 0; // 実害なし
 
+    // 詳細度キープ
     .env_catch {
       height: 250px;
 
