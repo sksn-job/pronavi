@@ -1980,7 +1980,7 @@ voice
   transform: translateY(0);
 }
 
-/*======================================*/
+
 .scroll_in_left {
   opacity: 0;
   transform: translateX(-40px);
@@ -2003,7 +2003,7 @@ voice
   transform: translateX(0);
 }
 
-/*=========================================*/
+
 .scale_up {
   opacity: 0;
   transform: translateY(20px) scale(0.8);
@@ -2246,6 +2246,7 @@ flow
   margin-top: 2rem;
   font-size: 1.8rem;
   font-weight: normal;
+
 }
 
 /* ----カリキュラムステップ----- */
@@ -2284,4 +2285,4 @@ flow
   padding-left: 5rem;
   font-size: 1.5rem;
   padding-block: 1rem;
-}/*# sourceMappingURL=style.css.map */
+}
