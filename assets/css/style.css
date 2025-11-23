@@ -68,6 +68,11 @@ p {
   align-items: center;
   margin: 0 auto;
 }
+@media (max-width: 787px) {
+  .wrapper {
+    padding: 0 3rem;
+  }
+}
 
 .subtitle {
   font-size: 2.5rem;
@@ -354,7 +359,7 @@ main .overlay_img {
 }
 main .catchcopy {
   z-index: 10;
-  font-size: 6rem;
+  font-size: clamp(3.6rem, 9.6vw, 6rem);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   color: #fff;
   position: absolute;
@@ -863,7 +868,8 @@ main .catchcopy {
   color: orange;
   font-size: 2rem;
   border-radius: 0 0 0 0;
-  max-width: 60px;
+  padding: 0;
+  width: 15%;
 }
 #reason .point span:hover {
   background: linear-gradient(to right, #ffa500 0%, #ffe747 100%);
@@ -1066,8 +1072,9 @@ main .catchcopy {
   text-align: center;
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading img {
-  width: 20%;
-  object-fit: cover;
+  max-width: 80px;
+  width: 100%;
+  object-fit: contain;
 }
 #metalife .no_wrapper .meta_wrapper .meta_heading .heading_text {
   width: 80%;
@@ -1217,6 +1224,11 @@ main .catchcopy {
   scale: 1.2;
 }
 
+@media (max-width: 787px) {
+  #voice .graduate_work {
+    width: 60%;
+  }
+}
 #instagram {
   width: 100%;
   background-color: #4b769d;
@@ -1479,6 +1491,14 @@ hackathon
   color: #fff;
 }
 
+@media (max-width: 787px) {
+  #qa .qa {
+    width: 100%;
+  }
+  #qa .qa .qa_item {
+    width: 100%;
+  }
+}
 #price {
   text-align: center;
   padding: 10rem 0;
@@ -1527,19 +1547,19 @@ hackathon
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 30%;
+  width: 100%;
 }
 #price .price_flex .price_left dl dt,
 #price .price_flex .price_left dl dd {
   font-size: 2.2rem;
 }
 #price .price_flex .price_left dl dt {
-  width: 40%;
+  width: 50%;
   text-align: right;
   padding-right: 0.5rem;
 }
 #price .price_flex .price_left dl dd {
-  width: 60%;
+  width: 50%;
   text-align: left;
 }
 #price .price_flex .price_left span {
@@ -1549,16 +1569,13 @@ hackathon
   font-size: 1.8rem;
   display: block;
   position: relative;
-  padding-left: 5%;
   align-items: center;
   margin: 0 auto 2rem;
-  width: 20%;
   transition: 0.5s;
 }
 #price .price_flex .price_left a::before {
   content: "＞";
-  position: absolute;
-  left: 0;
+  display: inline-block;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -1590,7 +1607,6 @@ hackathon
   padding-bottom: 2rem;
 }
 #price .price_flex .price_right ul {
-  width: 28%;
   font-size: 2rem;
   margin: 0 auto 2rem;
   padding: 0;
@@ -1600,7 +1616,6 @@ hackathon
   list-style: "＞";
   text-align: left;
   margin-bottom: 0.5rem;
-  padding-left: 2rem;
 }
 #price .price_flex .price_right span {
   font-size: 3rem;
@@ -1609,17 +1624,14 @@ hackathon
   font-size: 1.8rem;
   display: block;
   position: relative;
-  padding-left: 5%;
   align-items: center;
   margin: 0 auto 3rem;
-  width: 20%;
   color: #fff;
   transition: 0.5s;
 }
 #price .price_flex .price_right a::before {
   content: "＞";
-  position: absolute;
-  left: 0;
+  display: inline-block;
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -1628,11 +1640,38 @@ hackathon
   line-height: 28px;
   text-align: center;
   font-size: 1.4rem;
+  margin-right: 10px;
 }
 #price .price_flex .price_right a:hover {
   transform: scale(1.1);
 }
 
+@media (max-width: 930px) {
+  #price .price_flex .price_left a,
+  #price .price_flex .price_right a {
+    width: 40%;
+  }
+  #price .price_flex .price_left .price_title,
+  #price .price_flex .price_right .price_title {
+    width: 50%;
+  }
+}
+@media (max-width: 787px) {
+  #price .price_flex {
+    flex-direction: column;
+  }
+  #price .price_flex .price_left,
+  #price .price_flex .price_right {
+    width: 100%;
+  }
+  #price .price_flex .price_left a::before,
+  #price .price_flex .price_right a::before {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1.2rem;
+  }
+}
 /* --------------------------
 voice
 ----------------------------*/
@@ -2157,18 +2196,19 @@ flow
 }
 
 .slider {
-  /* dots */
-  /* arrows */
+  padding-bottom: 8rem;
 }
 .slider .slide {
   text-align: center;
   width: 250px;
+  margin-left: 20px;
+  margin-bottom: 3rem;
   border: 1px solid rgb(147, 149, 255);
   border-radius: 5px;
   overflow: hidden;
 }
 .slider .slide .flow_slide_title {
-  padding-top: 2rem;
+  padding-top: 3rem;
   font-size: 1.6rem;
   color: #4b769d;
 }
