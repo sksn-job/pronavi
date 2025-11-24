@@ -172,6 +172,13 @@ $(".flow_slider").slick({
     {
       breakpoint: 787,
       settings: {
+        slidesToShow: 2,
+        variableWidth: false,  // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
+      },
+    },
+    {
+      breakpoint: 560,
+      settings: {
         slidesToShow: 1,
         variableWidth: false,  // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
       },
