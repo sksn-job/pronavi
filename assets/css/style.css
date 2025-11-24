@@ -447,7 +447,7 @@ main .catchcopy {
 #about .about_contents {
   position: relative;
   z-index: 3;
-  padding-top: 8rem;
+  padding-top: 12rem;
   padding-bottom: 10rem;
 }
 #about .about_left,
@@ -458,7 +458,7 @@ main .catchcopy {
   padding: 2rem;
   background-color: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -513,7 +513,6 @@ main .catchcopy {
 .sec_title_b {
   max-width: 100%;
   width: clamp(200px, 40vw, 400px);
-  transform: none !important;
   margin-bottom: 10rem;
 }
 
@@ -529,6 +528,9 @@ main .catchcopy {
 }
 @media (max-width: 787px) {
   /* 787px */
+  #about {
+    min-height: 0;
+  }
   #about .about_bg {
     height: 118vh;
   }
@@ -553,8 +555,11 @@ main .catchcopy {
   }
 }
 @media (max-width: 490px) {
+  #about {
+    min-height: 0;
+  }
   #about .about_bg {
-    height: 143vh;
+    height: 140vh;
   }
 }
 #study_env {
@@ -694,7 +699,7 @@ main .catchcopy {
   width: 38%;
   height: auto;
   margin: 0 2rem;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 #study_env ol.steps .env_left .env_text::before {
   position: absolute;
@@ -1002,6 +1007,7 @@ main .catchcopy {
 }
 #metalife .meta_imgarea {
   position: relative;
+  margin-bottom: 60px;
 }
 #metalife .meta_imgarea .meta_group {
   width: 100%;
@@ -1109,6 +1115,37 @@ main .catchcopy {
   line-height: 1.3;
 }
 
+@media (max-width: 787px) {
+  #metalife .meta_imgarea .meta_group_link {
+    top: 70%;
+    padding-inline: 15px;
+    font-size: 1.6rem;
+  }
+  #metalife .meta_flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  #metalife .meta_flex .meta_text {
+    width: 100%;
+  }
+  #metalife .meta_flex .meta_greenimg {
+    width: 60%;
+  }
+  #metalife .no_wrapper .meta_wrapper {
+    padding-inline: 3rem;
+  }
+  #metalife .no_wrapper .meta_wrapper .meta_heading {
+    width: 100%;
+  }
+  #metalife .no_wrapper .meta_wrapper .meta_contents {
+    flex-direction: column;
+  }
+  #metalife .no_wrapper .meta_wrapper .meta_contents .meta_item {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+}
 #voice {
   background-color: #f6f4f1;
   width: 100%;
@@ -1528,6 +1565,10 @@ hackathon
   font-size: 2.3rem;
   padding-bottom: 40px;
 }
+#price .price_flex .price_left .price_plan.right,
+#price .price_flex .price_right .price_plan.right {
+  padding-bottom: 20px;
+}
 #price .price_flex .price_left {
   background-color: #f6f4f1;
   color: #505050;
@@ -1543,9 +1584,9 @@ hackathon
   border-radius: 30px;
 }
 #price .price_flex .price_left dl {
-  margin: 3rem auto;
+  margin: 3.4rem auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -1554,12 +1595,12 @@ hackathon
   font-size: 2.2rem;
 }
 #price .price_flex .price_left dl dt {
-  width: 50%;
+  width: 45%;
   text-align: right;
   padding-right: 0.5rem;
 }
 #price .price_flex .price_left dl dd {
-  width: 50%;
+  width: 55%;
   text-align: left;
 }
 #price .price_flex .price_left span {
@@ -1574,7 +1615,7 @@ hackathon
   transition: 0.5s;
 }
 #price .price_flex .price_left a::before {
-  content: "＞";
+  content: "▶";
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -1584,6 +1625,7 @@ hackathon
   line-height: 28px;
   text-align: center;
   font-size: 1.4rem;
+  margin-right: 15px;
 }
 #price .price_flex .price_left a:hover {
   transform: scale(1.1);
@@ -1604,17 +1646,19 @@ hackathon
 }
 #price .price_flex .price_right p + p {
   display: inline-block;
-  padding-bottom: 2rem;
+  padding-bottom: 2.2rem;
+}
+#price .price_flex .price_right .price_plan_twice {
+  font-size: 2rem;
 }
 #price .price_flex .price_right ul {
+  text-align: center;
   font-size: 2rem;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3.5rem;
   padding: 0;
-  text-align: left;
 }
 #price .price_flex .price_right ul li {
-  list-style: "＞";
-  text-align: left;
+  display: block;
   margin-bottom: 0.5rem;
 }
 #price .price_flex .price_right span {
@@ -1630,7 +1674,7 @@ hackathon
   transition: 0.5s;
 }
 #price .price_flex .price_right a::before {
-  content: "＞";
+  content: "▶";
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -1640,7 +1684,7 @@ hackathon
   line-height: 28px;
   text-align: center;
   font-size: 1.4rem;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 #price .price_flex .price_right a:hover {
   transform: scale(1.1);
@@ -2179,7 +2223,7 @@ voice
 }
 
 /* --------------------------
-flow
+flow-slider
 ----------------------------*/
 .price_bg {
   width: 100%;
@@ -2223,72 +2267,113 @@ flow
   object-fit: cover;
 }
 
-.text_area {
+/* --------------------------
+カリキュラム
+----------------------------*/
+.curriculum {
+  /* ------イントロトップエリア------ */
+  /* ------イントロ下テキストエリア------ */
+  /* ----カリキュラムステップ----- */
+}
+.curriculum .bk_color {
+  background-color: #f6f4f1;
+  padding-top: 10rem;
+  text-align: center;
+}
+.curriculum .bk_color .intro_title {
+  padding-block: 3rem 10rem;
+  font-size: 3.8rem;
+  color: #023f80;
+}
+.curriculum .bk_color .intro_flexbox {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.curriculum .bk_color .intro_flexbox .intro_item {
+  width: 250px;
+  margin-bottom: 10rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.curriculum .bk_color .intro_flexbox .intro_item .intro_img {
+  width: 70%;
+  padding-block: 3rem 2rem;
+}
+.curriculum .bk_color .intro_flexbox .intro_item .intro_text {
+  padding-bottom: 3rem;
+  padding-inline: 1rem;
+}
+.curriculum .text_area {
   padding-block: 7rem;
   background-color: #023f80;
   color: #fff;
   text-align: center;
 }
-.text_area .intro_undertext {
+.curriculum .text_area .intro_undertext {
   font-size: 3.5rem;
   margin-bottom: 5rem;
 }
-.text_area .intro_sub_undertext {
+.curriculum .text_area .intro_sub_undertext {
   line-height: 1.6;
 }
-.text_area .intro_sub_undertext p:first-of-type {
+.curriculum .text_area .intro_sub_undertext p:first-of-type {
   margin-bottom: 2rem;
   font-size: 1.8rem;
   font-weight: normal;
 }
-.text_area .intro_sub_undertext p:nth-child(2) {
+.curriculum .text_area .intro_sub_undertext p:nth-child(2) {
   font-size: 2.5rem;
   font-weight: bold;
 }
-.text_area .intro_sub_undertext p:nth-child(2) span {
+.curriculum .text_area .intro_sub_undertext p:nth-child(2) span {
   font-size: 1.8rem;
   font-weight: normal;
 }
-.text_area .intro_sub_undertext p:last-of-type {
+.curriculum .text_area .intro_sub_undertext p:last-of-type {
   margin-top: 2rem;
   font-size: 1.8rem;
   font-weight: normal;
 }
-
-/* ----カリキュラムステップ----- */
-.curriculum-steps {
-  padding-block: 8rem;
+.curriculum .curriculum-steps {
+  padding-block: 12rem;
 }
-.curriculum-steps .c_step_card {
+.curriculum .curriculum-steps .step_card_list {
   display: flex;
   align-items: stretch;
+  align-items: center;
   width: 80%;
-  margin: 0 auto;
+  height: 12rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
   border: 0.5px solid rgb(179, 179, 179);
 }
-.curriculum-steps .c_step_card .c_icon {
+.curriculum .curriculum-steps .step_card_list:last-of-type {
+  margin-bottom: 0;
+}
+.curriculum .curriculum-steps .step_card_list .icon_item {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-inline: 2rem;
   background-color: #4b769d;
 }
-.curriculum-steps .c_step_card .c_icon .c_icon_img {
+.curriculum .curriculum-steps .step_card_list .icon_item .icon_img {
   width: 50%;
   padding-right: 2rem;
 }
-.curriculum-steps .c_step_card .c_icon .c_icon_img img {
+.curriculum .curriculum-steps .step_card_list .icon_item .icon_img img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
 }
-.curriculum-steps .c_step_card .c_icon .step_number {
+.curriculum .curriculum-steps .step_card_list .icon_item .step_number {
   flex: 1;
   font-size: 2.2rem;
   color: #fff;
 }
-.curriculum-steps .c_step_card .c_text {
-  padding-left: 5rem;
+.curriculum .curriculum-steps .step_card_list .c_text {
+  padding-inline: 3rem;
   font-size: 1.5rem;
-  padding-block: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@
 
   .meta_imgarea {
     position: relative;
-
+    margin-bottom: 60px;
 
     .meta_group {
       width: 100%;
@@ -139,6 +139,53 @@
           font-size: 1.6rem;
           padding-bottom: 1rem;
           line-height: 1.3;
+        }
+      }
+    }
+  }
+}
+
+@include m.sp_small {
+  #metalife {
+    .meta_imgarea {
+
+      .meta_group_link {
+        top: 70%;
+        padding-inline: 15px;
+        font-size: 1.6rem;
+      }
+    }
+
+    .meta_flex {
+      flex-direction: column;
+      align-items: center;
+
+      .meta_text {
+        width: 100%;
+      }
+
+      .meta_greenimg {
+        width: 60%;
+      }
+    }
+
+    .no_wrapper {
+
+      .meta_wrapper {
+        padding-inline: 3rem;
+
+        .meta_heading {
+          width: 100%;
+        }
+
+        .meta_contents {
+          flex-direction: column;
+
+          .meta_item {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto 20px;
+          }
         }
       }
     }

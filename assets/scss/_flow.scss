@@ -2,8 +2,10 @@
 @use "variables" as v;
 
 /* --------------------------
-flow
+flow-slider
 ----------------------------*/
+
+
 
 .price_bg {
     width: 100%;
@@ -51,84 +53,138 @@ flow
     }
 }
 
-.text_area {
-    padding-block: 7rem;
-    background-color: v.$font_accent;
-    color: v.$white;
-    text-align: center;
+/* --------------------------
+カリキュラム
+----------------------------*/
 
-    .intro_undertext {
-        font-size: 3.5rem;
-        margin-bottom: 5rem;
-    }
+.curriculum {
 
-    .intro_sub_undertext {
-        line-height: 1.6;
+    /* ------イントロトップエリア------ */
+    .bk_color {
+        background-color: v.$bg_color;
+        padding-top: 10rem;
+        text-align: center;
 
-        p:first-of-type {
-            margin-bottom: 2rem;
-            font-size: 1.8rem;
-            font-weight: normal;
+        .intro_title {
+            padding-block: 3rem 10rem;
+            font-size: 3.8rem;
+            color: v.$font_accent;
         }
 
-        p:nth-child(2) {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .intro_flexbox {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
 
-            span {
+            .intro_item {
+                width: 250px;
+                margin-bottom: 10rem;
+                background-color: v.$white;
+                border-radius: 5px;
+                // border: 1px solid red;
+
+                .intro_img {
+                    width: 70%;
+                    padding-block: 3rem 2rem;
+                }
+
+                .intro_text {
+                    padding-bottom: 3rem;
+                    padding-inline: 1rem;
+                }
+
+            }
+        }
+    }
+
+    /* ------イントロ下テキストエリア------ */
+    .text_area {
+        padding-block: 7rem;
+        background-color: v.$font_accent;
+        color: v.$white;
+        text-align: center;
+
+        .intro_undertext {
+            font-size: 3.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .intro_sub_undertext {
+            line-height: 1.6;
+
+            p:first-of-type {
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+                font-weight: normal;
+            }
+
+            p:nth-child(2) {
+                font-size: 2.5rem;
+                font-weight: bold;
+
+                span {
+                    font-size: 1.8rem;
+                    font-weight: normal;
+                }
+            }
+
+            p:last-of-type {
+                margin-top: 2rem;
                 font-size: 1.8rem;
                 font-weight: normal;
             }
         }
-
-        p:last-of-type {
-            margin-top: 2rem;
-            font-size: 1.8rem;
-            font-weight: normal;
-        }
     }
-}
 
-/* ----カリキュラムステップ----- */
-.curriculum-steps {
-    padding-block: 8rem;
+    /* ----カリキュラムステップ----- */
+    .curriculum-steps {
+        padding-block: 12rem;
 
-    .c_step_card {
-        display: flex;
-        align-items: stretch;
-        width: 80%;
-        margin: 0 auto;
-        border: 0.5px solid rgb(179, 179, 179);
-
-        .c_icon {
+        .step_card_list {
             display: flex;
-            justify-content: space-between;
+            align-items: stretch;
             align-items: center;
-            padding-inline: 2rem;
-            background-color: v.$sub_color;
+            width: 80%;
+            height: 12rem;
+            margin-inline: auto;
+            margin-bottom: 3rem;
+            border: 0.5px solid rgb(179, 179, 179);
 
-            .c_icon_img {
-                width: 50%;
-                padding-right: 2rem;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
 
-                img {
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 50%;
+            .icon_item {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 2rem;
+                background-color: v.$sub_color;
+
+                .icon_img {
+                    width: 50%;
+                    padding-right: 2rem;
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .step_number {
+                    flex: 1;
+                    font-size: 2.2rem;
+                    color: v.$white;
                 }
             }
 
-            .step_number {
-                flex: 1;
-                font-size: 2.2rem;
-                color: v.$white;
-            }
-        }
+            .c_text {
+                padding-inline: 3rem;
+                font-size: 1.5rem;
 
-        .c_text {
-            padding-left: 5rem;
-            font-size: 1.5rem;
-            padding-block: 1rem;
+            }
         }
     }
 }
