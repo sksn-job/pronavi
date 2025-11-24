@@ -159,11 +159,13 @@ $(".qa_question").on("click", function () {
 $(".flow_slider").slick({
   slidesToShow: 3,        // 見える枚数は3
   slidesToScroll: 1,
-  infinite: true,
-  autoplay: true,
+  infinite: false,
+  autoplay: false,
   autoplaySpeed: 2500,
   dots: true,
   arrows: true,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
   variableWidth: true,    // ★CSSのwidthをそのまま使う
   centerMode: false,      // ★勝手に中央寄せさせない
   responsive: [
