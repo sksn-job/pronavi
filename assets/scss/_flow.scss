@@ -200,58 +200,61 @@ flow-slider
 }
 
 .adnavi {
-  background-color: #F2F2F2;
-  color: black;
-  text-align: center;
-  padding: 6rem 2rem;
+    background-color: #F2F2F2;
+    color: black;
+    text-align: center;
+    padding: 6rem 2rem;
 
-  .wrapper {
-    max-width: 120rem;
-    margin: 0 auto;
-  }
+    .wrapper {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
 
-  .sec_title_w {
-    font-size: 2.2rem;
+    .sec_title_w {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .sub_title {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 5rem;
+    }
+
+    .highlevel {
+        width: 100%;
+        background-color: #607CA8;
+        color: black;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+}
+
+.adnavi_title {
+    font-size: 1.8rem;
     margin-bottom: 2rem;
+    color: #F2F2F2;
+}
 
-  }
+.adnavi_subtext {
+    font-size: 3rem;
+    line-height: 2.0;
+    margin-bottom: 4rem;
+    color: #F2F2F2;
+}
 
-  .sub_title {
-    font-size: 2rem;
-    line-height: 1.6;
-    margin-bottom: 5rem;
-  }
+.hilevel_content {
+    display: flex;
+    justify-content: center;
+    /* 横並び中央寄せ */
+    gap: 4rem;
+    /* カード間の隙間 */
+    flex-wrap: wrap;
+    /* 幅が狭いときは折り返す */
 
-  .highlevel {
-  width: 100%;
-  background-color: #607CA8;
-  color: black;
-  padding: 50px 20px;
-  text-align: center; 
-  }
-
-  }
-
-    .adnavi_title {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      color: #F2F2F2;
-    }
-
-    .adnavi_subtext {
-      font-size: 3rem;
-      line-height: 2.0;
-      margin-bottom: 4rem;
-      color: #F2F2F2;
-    }
-
-    .hilevel_content {
-      display: flex;
-      justify-content: center; /* 横並び中央寄せ */
-      gap: 4rem; /* カード間の隙間 */
-      flex-wrap: wrap; /* 幅が狭いときは折り返す */
-
-      .adnavi_card {
+    .adnavi_card {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -259,40 +262,33 @@ flow-slider
         gap: 2rem;
 
         li {
-          background-color: white;
-          color: #023f80;
-          padding: 2rem;
-          border-radius: 8px;
-          width: 30rem;
-          box-sizing: border-box;
-          text-align: left; /* カード内は左寄せ */
-          box-shadow: 0.2rem 0.6rem rgba(0,0,0,0.1);
+            background-color: white;
+            color: #023f80;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 30rem;
+            box-sizing: border-box;
+            text-align: left;
+            /* カード内は左寄せ */
+            box-shadow: 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
 
-          img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 1.5rem;
-            border-radius: 0.4rem;
-          }
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1.5rem;
+                border-radius: 0.4rem;
+            }
 
-          .adnavi_card_title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-          }
+            .adnavi_card_title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
 
-          .adnavi_card_text {
-            font-size: 0.95rem;
-            line-height: 1.5;
-          }
+            .adnavi_card_text {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
         }
-      }
     }
-  
-
-
-
-                
-
-
-
+}
