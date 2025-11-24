@@ -609,7 +609,6 @@ main .catchcopy {
   position: absolute;
   top: 0;
   left: 50%;
-  right: 50%;
   transform: translateX(-50%);
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
@@ -2282,7 +2281,7 @@ flow-slider
 }
 .curriculum .bk_color .intro_title {
   padding-block: 3rem 10rem;
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   color: #023f80;
 }
 .curriculum .bk_color .intro_flexbox {
@@ -2292,7 +2291,7 @@ flow-slider
 }
 .curriculum .bk_color .intro_flexbox .intro_item {
   width: 250px;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
   background-color: #fff;
   border-radius: 5px;
 }
@@ -2305,35 +2304,46 @@ flow-slider
   padding-inline: 1rem;
 }
 .curriculum .text_area {
-  padding-block: 7rem;
+  position: relative;
+  padding-block: 13.5rem 7rem;
   background-color: #023f80;
   color: #fff;
   text-align: center;
 }
+.curriculum .text_area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 85px solid #f6f4f1;
+}
 .curriculum .text_area .intro_undertext {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   margin-bottom: 5rem;
 }
 .curriculum .text_area .intro_sub_undertext {
   line-height: 1.6;
+  color: #f6f4f1;
 }
 .curriculum .text_area .intro_sub_undertext p:first-of-type {
-  margin-bottom: 2rem;
   font-size: 1.8rem;
-  font-weight: normal;
 }
 .curriculum .text_area .intro_sub_undertext p:nth-child(2) {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
 }
 .curriculum .text_area .intro_sub_undertext p:nth-child(2) span {
-  font-size: 1.8rem;
-  font-weight: normal;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 .curriculum .text_area .intro_sub_undertext p:last-of-type {
-  margin-top: 2rem;
-  font-size: 1.8rem;
-  font-weight: normal;
+  margin-top: 5rem;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 .curriculum .curriculum-steps {
   padding-block: 12rem;
