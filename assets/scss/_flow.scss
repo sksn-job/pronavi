@@ -29,7 +29,8 @@ flow-slider
         .slide {
             text-align: center;
             width: 250px;
-            margin-left: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
             margin-bottom: 3rem;
             border: 1px solid rgb(147, 149, 255);
             border-radius: 5px;
@@ -102,11 +103,11 @@ flow-slider
     }
 
     .prev {
-        left: -20px; // 好きな位置に調整できるよ
+        left: 0; // 好きな位置に調整できるよ
     }
 
     .next {
-        right: -20px;
+        right: 0;
     }
 }
 
@@ -464,7 +465,6 @@ flow-slider
             font-size: 2rem;
             margin: 0 auto 3.5rem;
             padding: 0;
-            // text-align: left;
 
             li {
                 display: block;
@@ -486,7 +486,7 @@ flow-slider
 ----------------------------*/
 
 @include m.sp {
-    #price {
+    .price {
         .price_flex {
 
             .price_left,
@@ -501,7 +501,48 @@ flow-slider
 }
 
 @include m.sp_small {
-    #price {
+
+    .curriculum {
+        // 詳細度キープ
+
+        .curriculum-steps {
+            //    詳細度キープ
+
+            .step_card_list {
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+
+                .icon_item {
+                    width: 100%;
+
+                    .icon_img {
+                        width: 50%;
+                        padding-block: 1rem;
+
+                        img {
+                            display: block;
+                            width: 45px;
+                            height: 45px;
+                            margin-left: auto;
+                        }
+
+                        .step_number {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .c_text {
+                    width: 100%;
+                    padding-block: 1rem;
+                }
+            }
+        }
+    }
+
+
+    .price {
         .price_flex {
             flex-direction: column;
 
