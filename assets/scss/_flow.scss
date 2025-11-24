@@ -261,7 +261,6 @@ flow-slider
 
 .adnavi {
     background-color: #F2F2F2;
-    color: black;
     text-align: center;
     padding: 6rem 2rem;
 
@@ -273,7 +272,6 @@ flow-slider
     .sec_title_w {
         font-size: 2.2rem;
         margin-bottom: 2rem;
-
     }
 
     .sub_title {
@@ -285,7 +283,6 @@ flow-slider
     .highlevel {
         width: 100%;
         background-color: #607CA8;
-        color: black;
         padding: 50px 20px;
         text-align: center;
     }
@@ -307,11 +304,8 @@ flow-slider
 .hilevel_content {
     display: flex;
     justify-content: center;
-    /* 横並び中央寄せ */
     gap: 4rem;
-    /* カード間の隙間 */
     flex-wrap: wrap;
-    /* 幅が狭いときは折り返す */
 
     .adnavi_card {
         list-style: none;
@@ -328,7 +322,6 @@ flow-slider
             width: 30rem;
             box-sizing: border-box;
             text-align: left;
-            /* カード内は左寄せ */
             box-shadow: 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
 
             img {
@@ -350,4 +343,173 @@ flow-slider
             }
         }
     }
+}
+
+
+
+
+/* -------------------------
+プライス
+----------------------------*/
+.price {
+    text-align: center;
+    padding: 10rem 0;
+    font-weight: bold;
+
+    h2 {
+        font-size: 6rem;
+        color: v.$font_accent;
+        padding-bottom: 2rem;
+    }
+
+    .price_flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        span+p {
+            display: inline-block;
+            padding-bottom: 4rem;
+        }
+
+        .price_left,
+        .price_right {
+            width: 50%;
+            padding: 3rem;
+
+            .price_plan {
+                font-size: 2.3rem;
+                padding-bottom: 40px;
+
+                &.right {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+
+        .price_left {
+            background-color: v.$bg_color;
+            color: #505050;
+
+            .price_title {
+                width: 40%;
+                font-size: 2rem;
+                line-height: 2;
+                text-align: center;
+                margin: 3rem auto;
+                background-color: v.$font_accent;
+                color: v.$white;
+                border-radius: 30px;
+            }
+
+
+
+            dl {
+                margin: 3.4rem auto;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+
+                dt,
+                dd {
+                    font-size: 2.2rem;
+                }
+
+                dt {
+                    width: 45%;
+                    text-align: right;
+                    padding-right: 0.5rem;
+                }
+
+                dd {
+                    width: 55%;
+                    text-align: left;
+                }
+            }
+
+            span {
+                font-size: 3rem;
+            }
+
+        }
+    }
+
+    .price_right {
+        background-color: v.$font_accent;
+        color: v.$white;
+
+        .price_title {
+            width: 40%;
+            font-size: 2rem;
+            line-height: 2;
+            text-align: center;
+            margin: 3rem auto;
+            background-color: v.$white;
+            color: v.$font_accent;
+            border-radius: 30px;
+        }
+
+        p+p {
+            display: inline-block;
+            padding-bottom: 2.2rem;
+        }
+
+        .price_plan_twice {
+            font-size: 2rem;
+        }
+
+        ul {
+            text-align: center;
+            font-size: 2rem;
+            margin: 0 auto 3.5rem;
+            padding: 0;
+            // text-align: left;
+
+            li {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        span {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+
+/* -------------------------
+レスポンシブ
+----------------------------*/
+
+@include m.sp {
+    #price {
+        .price_flex {
+
+            .price_left,
+            .price_right {
+
+                .price_title {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@include m.sp_small {
+    #price {
+        .price_flex {
+            flex-direction: column;
+
+            .price_left,
+            .price_right {
+                width: 100%;
+            }
+        }
+    }
+
 }
