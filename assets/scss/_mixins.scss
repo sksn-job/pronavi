@@ -173,7 +173,7 @@ $sp_small: 787px;
 
 @mixin link_blue {
   display: block;
-  width: 520px;
+  max-width: 520px;
   padding-block: 1rem;
   margin: 0 auto;
   background: linear-gradient(to right,
@@ -194,7 +194,7 @@ $sp_small: 787px;
 
 @mixin link_white {
   display: block;
-  width: 520px;
+  max-width: 520px;
   padding-block: 1rem;
   margin: 0 auto;
   background: white;
