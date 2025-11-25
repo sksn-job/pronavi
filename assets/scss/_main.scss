@@ -63,94 +63,89 @@ p {
 }
 
 /* --------------------------------
-サブページ無料相談申込共通
+サブページ無料相談申込 共通 CTA
 -----------------------------------*/
 .cta-counseling {
   position: relative;
+  margin-top: 10rem;
 
-  &.margin {
-    margin-top: 10rem;
-  }
-
+  /* PC版 */
   .cta_pc {
+    position: relative;
 
     .cta_img {
+      width: 100%;
       display: block;
       object-fit: cover;
     }
 
     .cta_textarea {
       position: absolute;
-      top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      inset: 0; // ← 上下左右0 → 真ん中に配置される
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: v.$font_accent;
+      padding: 2rem;
 
       p {
         font-size: clamp(1.8rem, 2vw, 2.7rem);
         font-weight: bold;
-        text-align: center;
-        padding-bottom: 7rem;
-        line-height: 1.5;
+        line-height: 1.6;
+        margin-bottom: 4rem;
       }
 
       .orange_button_long {
         @include m.orange_button_long;
-        display: block;
-        margin: 0 auto;
       }
     }
-
   }
 
+  /* SP版 */
   .cta_sp {
     display: none;
-    padding: 5rem 0 4rem;
+    padding: 4rem 0 3rem;
     background-color: v.$bg_color;
 
     .cta_sp_inner {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
 
       .cta_img_sp {
-        width: 15%;
+        width: 22%;
         border-radius: 50%;
       }
 
       .cta_textarea_sp {
-        .cta_sp_text {
-          font-size: clamp(1.8rem, 2vw, 2.8rem);
+        p {
+          font-size: clamp(1.6rem, 2vw, 2.4rem);
           font-weight: bold;
+          line-height: 1.6;
           text-align: center;
-          line-height: 1.5;
         }
       }
     }
 
     .orange_button_long {
       @include m.orange_button_long;
+      width: 60%;
+      margin: 2rem auto 0;
+      font-size: 1.4rem;
       display: block;
-      width: 50%;
-      margin: 0 auto;
-      font-size: 1.5rem;
-      margin-top: 2rem;
     }
   }
 }
 
-
-
 /* --------------------------------
-サブページ無料相談申込レスポンシブ
+サブページ無料相談申込 レスポンシブ（SP切替）
 -----------------------------------*/
-
 @include m.sp_small {
 
-  /* 787px */
   .cta-counseling {
-
     .cta_pc {
       display: none;
     }
@@ -158,7 +153,6 @@ p {
     .cta_sp {
       display: block;
     }
-
   }
 }
 
