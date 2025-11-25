@@ -37,7 +37,8 @@ $sp_small: 787px;
 
 
 @mixin title_beige {
-  width: 400px;
+  max-width: 100%;
+  width: clamp(250px, 40vw, 400px);
   height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
@@ -50,10 +51,12 @@ $sp_small: 787px;
   align-items: center;
   padding-left: 2rem;
   margin-top: 10rem;
+
 }
 
 @mixin title_white {
-  width: 400px;
+  max-width: 100%;
+  width: clamp(250px, 40vw, 400px);
   height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,

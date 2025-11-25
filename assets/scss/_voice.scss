@@ -21,21 +21,19 @@ voice
             padding: 0 2%;
             margin: 0 auto;
             position: absolute;
-            left: 2rem;
-            right: 2rem;
             color: v.$font_accent;
             text-shadow: 0px 4px 4px #FFFFFF;
         }
 
         .voice_title {
             top: 40%; // 画像内での位置を %で調整
-            font-size: clamp(3.8rem, 4vw, 4.8rem);
+            font-size: clamp(3.3rem, 4vw, 4.8rem);
             font-weight: bold;
         }
 
         .voice_text {
             top: 60%; // 画像内での位置
-            font-size: clamp(2.2rem, 2vw, 2.3rem);
+            font-size: clamp(1.9rem, 2vw, 2.3rem);
             font-weight: bold;
             line-height: 1.8em;
             padding-left: 5rem;
@@ -225,7 +223,8 @@ voice
 
     .voice_slider {
         margin-top: 50px;
-        padding-bottom: 40px;;
+        padding-bottom: 40px;
+        ;
     }
 
     .slide_sub {
@@ -271,6 +270,7 @@ voice
 
         a {
             @include m.orange_button;
+            display: block;
             margin: 0 auto;
         }
     }
@@ -280,7 +280,6 @@ voice
 
 // @include m.sp {
 //     /* 930px */
-
 // }
 
 
@@ -290,6 +289,20 @@ voice
     .voice {
 
         // 詳細度キープ
+        .voice_intro {
+
+            // 詳細度キープ
+
+            .voice_title {
+                top: 40%; // 画像内での位置を %で調整
+            }
+
+            .voice_text {
+                padding-left: 2rem;
+            }
+        }
+
+
         .profile_card {
 
             // 詳細度キープ
@@ -299,6 +312,23 @@ voice
                 .profile_inner {
                     flex-direction: column;
                     gap: 20px;
+
+                    .profile_name {
+                        font-size: 4rem;
+
+                        span {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .profile_term {
+                        font-size: 2.5rem;
+                    }
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                    }
                 }
             }
 
@@ -338,7 +368,7 @@ voice
     .article {
 
         .article_title {
-            font-size: 2.3rem
+            font-size: 2rem
         }
 
         .article_question {
@@ -369,7 +399,6 @@ voice
                 font-size: 2rem;
             }
         }
-
     }
 
     .other_voice {
@@ -378,6 +407,4 @@ voice
             margin-bottom: 50px;
         }
     }
-
-
 }
