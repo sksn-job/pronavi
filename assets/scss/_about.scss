@@ -127,8 +127,7 @@
 /* ▼ sec_title_b のバイーン防止（可動幅制限） */
 .sec_title_b {
   max-width: 100%; // 吹き飛び防止
-  width: clamp(200px, 40vw, 400px);
-  // transform: none !important; // スクロールアニメが暴れないように
+  width: clamp(250px, 40vw, 400px);
   margin-bottom: 10rem;
 }
 
@@ -157,8 +156,13 @@
     }
 
     .about_catch {
+      .catch_left {
+        margin-top: 14rem;
+      }
+
       .catch_right {
         text-align: left;
+
       }
     }
 
@@ -194,140 +198,3 @@
 
   }
 }
-
-// #about {
-//   margin: 0;
-//   position: relative;
-//   padding-top: 0.5rem;
-//   width: 100%;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     aspect-ratio: 16 / 9;
-//     background-image: url(../img/bg/linetop_bg2.jpg);
-//     background-repeat: no-repeat;
-//     background-position: top center;
-//     background-size: cover;
-//     z-index: -1;
-//   }
-
-
-//   // ブレイクポイント930px
-//   .about_catch {
-//     margin-top: 15rem;
-//     color: v.$white;
-//     max-width: 1300px;
-//     padding-inline: 2%;
-//     font-weight: bold;
-//     margin-inline: auto;
-
-//     p {
-//       font-size: 2.5rem;
-//       text-align: left;
-//       line-height: 2;
-//       padding-left: 1em;
-//     }
-
-//     span {
-//       display: inline-block;
-//       font-size: 4rem;
-//       line-height: 2;
-//     }
-
-//     .catch_right {
-//       margin-top: 7rem;
-//       margin-left: auto;
-
-//       p,
-//       .right {
-//         text-align: right;
-//         display: block;
-//       }
-//     }
-//   }
-
-//   .about_contents {
-//     padding-block: 9rem;
-
-//     .sec_title_b {
-//       margin-bottom: 10rem;
-//     }
-//   }
-
-//   .about_left,
-//   .about_right {
-//     width: 90%;
-//     display: flex;
-//     align-items: center;
-//     padding: 2rem;
-//     background-color: #fff;
-//     border-radius: 25px;
-//     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-//     margin-bottom: 5rem;
-//     overflow: hidden;
-//     position: relative;
-//     z-index: 2;
-
-//     img {
-//       width: 300px;
-//       height: auto;
-//       object-fit: cover;
-//     }
-
-//     .about_text {
-//       flex: 1;
-//       padding: 0 2rem;
-//       color: v.$font_main;
-//       line-height: 1.5;
-
-//       h4 {
-//         font-size: 2.1rem;
-//         margin-bottom: 1.3rem;
-//         color: v.$font_accent;
-//       }
-
-//       .fontmiddle {
-//         font-size: 1.8rem;
-//         color: v.$font_accent;
-//       }
-
-//       .space {
-//         padding-top: 1rem;
-//       }
-
-//       p {
-//         margin-left: 1rem;
-//       }
-//     }
-//   }
-
-//   .about_left {
-//     margin-left: 0;
-//     margin-right: auto;
-//     justify-content: flex-start;
-
-//     img {
-//       border-radius: 25px 0 0 25px;
-//       margin: -2rem 0 -2rem -2rem;
-//     }
-
-//     .about_text {
-//       margin-left: 2rem;
-//     }
-//   }
-
-//   .about_right {
-//     margin-left: auto;
-//     margin-right: 0;
-//     justify-content: flex-end;
-
-//     img {
-//       border-radius: 0 25px 25px 0;
-//       margin: -2rem -2rem -2rem 0;
-//     }
-//   }
-// }

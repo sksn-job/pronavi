@@ -35,10 +35,23 @@ p {
 
 .sec_title_b {
   @include m.title_beige;
+
+  @include m.sp_small {
+    height: 60px;
+    font-size: 1.7rem;
+    margin-top: 5rem;
+  }
+
 }
 
 .sec_title_w {
   @include m.title_white;
+
+  @include m.sp_small {
+    height: 60px;
+    font-size: 1.7rem;
+    margin-top: 5rem;
+  }
 }
 
 .wrapper {
@@ -140,21 +153,7 @@ p {
   }
 }
 
-/* --------------------------------
-サブページ無料相談申込 レスポンシブ（SP切替）
------------------------------------*/
-@include m.sp_small {
 
-  .cta-counseling {
-    .cta_pc {
-      display: none;
-    }
-
-    .cta_sp {
-      display: block;
-    }
-  }
-}
 
 /* -----------------------------------
 to-topボタン
@@ -198,5 +197,32 @@ to-topボタン
 
   &:hover::before {
     border-bottom-color: #537EA3;
+  }
+}
+
+/* --------------------------------
+サブページ無料相談申込 to-top レスポンシブ（SP切替）
+-----------------------------------*/
+@include m.sp_small {
+
+  .cta-counseling {
+    .cta_pc {
+      display: none;
+    }
+
+    .cta_sp {
+      display: block;
+    }
+  }
+
+  .to_top {
+    right: 5rem;
+    bottom: 3rem;
+
+    &.main_page {
+      right: 3rem;
+      bottom: 15rem;
+    }
+
   }
 }
