@@ -345,68 +345,69 @@ flow-slider
         }
     }
 }
-  .design {
+
+.design {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
     flex-wrap: wrap;
 
-  .adnavi_title {
-    font-size: 3rem;
-    margin: 3rem 2rem;
-    color: #023f80;
-  }
-
-  .adnavi_subtext {
-    font-size: 2rem;
-    line-height: 2.0;
-    margin-bottom: 4rem;
-    color: #023f80;
-    text-align: center;
-  }
-
-  .adnavi_card {
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 4rem;
-    max-width: 100%;
-    box-sizing: border-box;
-
-    li {
-      background-color: white;
-      color: #023f80;
-      padding: 2rem;
-      border-radius: 8px;
-      width: 30rem;
-      box-sizing: border-box;
-      text-align: left;
-      box-shadow: 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
-
-      img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1.5rem;
-        border-radius: 0.4rem;
-      }
-
-      .adnavi_card_title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-
-      .adnavi_card_text {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        text-align: center;
-      }
+    .adnavi_title {
+        font-size: 3rem;
+        margin: 3rem 2rem;
+        color: #023f80;
     }
-  }
+
+    .adnavi_subtext {
+        font-size: 2rem;
+        line-height: 2.0;
+        margin-bottom: 4rem;
+        color: #023f80;
+        text-align: center;
+    }
+
+    .adnavi_card {
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 4rem;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        li {
+            background-color: white;
+            color: #023f80;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 30rem;
+            box-sizing: border-box;
+            text-align: left;
+            box-shadow: 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1.5rem;
+                border-radius: 0.4rem;
+            }
+
+            .adnavi_card_title {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            .adnavi_card_text {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+    }
 }
 
 
@@ -548,24 +549,25 @@ flow-slider
 レスポンシブ
 ----------------------------*/
 @include m.sp_small {
-  .hilevel_content,
-  .design {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
 
-    .adnavi_card {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
+    .hilevel_content,
+    .design {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
 
-      li {
-        width: 100%;
-      }
+        .adnavi_card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+
+            li {
+                width: 100%;
+            }
+        }
     }
-  }
 }
 
 @include m.sp {
