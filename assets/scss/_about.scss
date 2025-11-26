@@ -27,7 +27,7 @@
     max-width: 1300px;
     padding-inline: 2%;
     margin-inline: auto;
-    margin-top: 12rem; // ★ 上下余白は固定ではなく後で可変にもできる
+    margin-top: 16rem; // ★ 上下余白は固定ではなく後で可変にもできる
     color: #fff;
     font-weight: bold;
 
@@ -137,13 +137,19 @@
   #about {
     min-height: 0; // 実害なし
 
+    .about_catch {
+      .catch_left {
+        margin-top: 15rem;
+      }
+    }
+
     /* ▼ 青い帯（斜めカット） */
     .about_bg {
-      height: 130vh;
+      height: 100vh;
     }
+
   }
 }
-
 
 @include m.sp_small {
 
@@ -155,45 +161,40 @@
       height: 118vh;
     }
 
-    .about_catch {
-      .catch_left {
-        margin-top: 14rem;
-      }
+    .catch_right {
+      text-align: left;
 
-      .catch_right {
-        text-align: left;
-
-      }
     }
-
-
-    .about_left,
-    .about_right {
-      width: 100%;
-      flex-direction: column;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-
-      img {
-        width: 100%;
-        aspect-ratio: 10 / 4;
-        object-position: center top;
-        margin-bottom: 2rem;
-      }
-    }
-
-    .about_right {
-      flex-direction: column-reverse;
-    }
-
   }
+
+
+  .about_left,
+  .about_right {
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      aspect-ratio: 10 / 4;
+      object-position: center top;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .about_right {
+    flex-direction: column-reverse;
+  }
+
 }
+
 
 @media (max-width:490px) {
   #about {
     min-height: 0;
 
     .about_bg {
-      height: 140vh;
+      height: 130vh;
     }
 
   }

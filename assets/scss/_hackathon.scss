@@ -9,6 +9,8 @@ hackathon
     img {
         height: 650px;
         object-fit: cover;
+        object-position: 40% center;
+
     }
 
     .blue_line {
@@ -21,8 +23,7 @@ hackathon
     .hackathon_intro {
         padding-bottom: 80px;
 
-        .subtitle {
-            @include m.title_white;
+        .sec_title_w {
             margin-bottom: 80px;
         }
 
@@ -110,6 +111,9 @@ hackathon
 @include m.sp {
 
     .hackathon {
+        .sec_title_w {
+            margin-top: 80px;
+        }
 
         .hackathon_block {
             .block_content {
