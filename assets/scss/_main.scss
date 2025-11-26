@@ -8,6 +8,7 @@ body {
   font-size: 62.5%; //1rem = 10pxに統一//
   font-family: Noto Sans JP;
   color: v.$font_main;
+  overflow-x: hidden;
   //scroll-behavior: smooth;//最近はこの一言でスムーススクロールするらしい。js不要。
 
   @include m.sp {
@@ -104,7 +105,7 @@ p {
       padding: 2rem;
 
       p {
-        font-size: clamp(1.8rem, 2vw, 2.7rem);
+        font-size: clamp(1.8rem, 2vw, 2.5rem);
         font-weight: bold;
         line-height: 1.6;
         margin-bottom: 4rem;
@@ -197,6 +198,14 @@ to-topボタン
 
   &:hover::before {
     border-bottom-color: #537EA3;
+  }
+
+
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 

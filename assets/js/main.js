@@ -3,10 +3,14 @@ $(document).ready(function () {
   $(".toggle_btn").on("click", function () {
     $(this).toggleClass("open");
     $("#nav, #mask").toggleClass("open");
+    $(".btn").toggleClass("is-hidden");
+    $(".to_top").toggleClass("is-hidden");
   });
 
   $("#mask,#nav a").on("click", function () {
     $(".toggle_btn, #nav, #mask").removeClass("open");
+    $(".btn").removeClass("is-hidden");
+    $(".to_top").removeClass("is-hidden");
   });
 });
 
