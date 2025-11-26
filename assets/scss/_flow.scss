@@ -628,16 +628,47 @@ flow-slider
                 }
             }
         }
-    }
+
+        .text_area {
+            // 詳細度キープ
+
+            .intro_undertext {
+                font-size: 3.6rem;
+                margin-bottom: 5rem;
+            }
+
+            .intro_sub_undertext {
+                line-height: 1.6;
 
 
-    .price {
-        .price_flex {
-            flex-direction: column;
+                p:first-of-type {
+                    font-size: 1.5rem;
+                }
 
-            .price_left,
-            .price_right {
-                width: 100%;
+                p:nth-child(2) {
+                    font-size: 1.5rem;
+
+                    span {
+                        font-size: 2.3rem;
+                    }
+                }
+
+                p:last-of-type {
+                    font-size: 2.2rem;
+
+                }
+            }
+        }
+
+
+        .price {
+            .price_flex {
+                flex-direction: column;
+
+                .price_left,
+                .price_right {
+                    width: 100%;
+                }
             }
         }
     }

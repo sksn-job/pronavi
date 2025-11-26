@@ -24,7 +24,7 @@
   #nav {
     width: 300px;
     height: 100vh;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background: linear-gradient(45deg,
         rgba(217, 217, 217, 1) 0%,
         #12345a 70%,
@@ -43,7 +43,7 @@
     }
 
     .header_nav {
-      padding: 6rem 0 0 1rem;
+      padding: 7rem 0 0 1rem;
       text-align: start;
     }
 
@@ -181,6 +181,12 @@ main {
   background-repeat: no-repeat;
   background-size: contain; // または cover
   background-position: center;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 
   .btn_push {
     position: absolute;
