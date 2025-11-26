@@ -249,7 +249,7 @@
             border-radius: 0px;
             aspect-ratio: 10 / 4;
             object-position: center top;
-            border-radius: 25px;
+            border-radius: 10px;
             // object-fit: contain;
             object-fit: cover;
             margin-top: 3rem;
@@ -286,6 +286,56 @@
             letter-spacing: 0.2rem;
             font-size: 2rem;
             color: #aaa1a1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include m.sp_small {
+  #study_env {
+
+    // 詳細度キープ
+    .subtitle {
+      margin-top: 8rem;
+      font-size: 2rem;
+
+      span {
+        font-size: 4rem;
+      }
+    }
+
+    ol.steps {
+
+      // 詳細キープ
+      .env_left,
+      .env_right {
+
+        // 詳細キープ
+        .env_flex {
+          // 詳細キープ
+
+          .env_text {
+
+            // 詳細キープ
+            .env_heading {
+              font-size: 2.2rem;
+
+              .step_number {
+                width: 30px;
+                height: 30px;
+                font-size: 1.5rem;
+
+                &::before {
+                  content: counter(step);
+                }
+              }
+            }
+          }
+
+          .env_st {
+            font-size: 1.9rem;
           }
         }
       }

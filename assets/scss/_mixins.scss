@@ -142,14 +142,14 @@ $sp_small: 787px;
   background: linear-gradient(to right, #ec7733 0%, #ef8e24 60%, #f8c600 100%);
   color: white;
   text-decoration: none;
-  padding: 8px 25px;
+  padding: 8px 15px;
   border-radius: 50px;
   display: inline-block;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
   transition: background 0.3s ease;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(0.9rem, 2vw, 2rem);
   transition: all 0.8s ease;
 
   &:hover {
