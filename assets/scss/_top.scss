@@ -145,6 +145,7 @@ main {
       width: 100%;
       height: 100vh;
       object-fit: cover;
+      object-position: 65% center;
     }
   }
 
@@ -262,8 +263,8 @@ main {
     }
 
     .catchcopy {
-      top: 22%;
-      left: 5rem;
+      top: 20%;
+      left: 4rem;
     }
   }
 
