@@ -19,6 +19,13 @@
       object-fit: cover;
     }
 
+    .meta_group_sp {
+      display: none;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
     .meta_group_link {
       position: absolute;
       top: 65%;
@@ -145,12 +152,31 @@
   }
 }
 
+@include m.sp {
+  #metalife {
+
+    // 詳細度キープ
+    .meta_imgarea {
+      // 詳細度キープ
+
+      .meta_group {
+        display: none;
+      }
+
+      .meta_group_sp {
+        display: block;
+
+
+      }
+    }
+  }
+}
+
 @include m.sp_small {
   #metalife {
     .meta_imgarea {
 
       .meta_group_link {
-        top: 70%;
         padding-inline: 15px;
         font-size: 1.6rem;
       }
