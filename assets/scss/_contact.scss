@@ -2,11 +2,10 @@
 @use "variables" as v;
 
 .contact {
-    padding-block: 10rem;
+    padding-block: 11rem 10rem;
     background-color: v.$bg_color;
     color: v.$font_accent;
     text-align: center;
-    // font-weight: bold;
 
     .contact_title {
         font-size: 2.3rem;
@@ -64,11 +63,13 @@
         .contact_input {
             padding-block: 1rem;
             margin-bottom: 2rem;
+            color: v.$font_main;
         }
 
         textarea {
             height: 22rem;
             padding: 1rem;
+            color: v.$font_main;
         }
 
     }
@@ -88,6 +89,56 @@
             background-color: v.$bg_color;
             border: 1px solid v.$font_accent;
             color: v.$font_accent;
+        }
+    }
+}
+
+@include m.sp_small {
+
+    .contact {
+        // 詳細度キープ
+
+        .contact_title {
+            font-size: 2rem;
+        }
+
+        .contact_title_sub {
+            font-size: 1.4rem;
+            color: v.$font_main;
+            margin-bottom: 4rem;
+        }
+
+        .contact_box {
+            width: 100%;
+            padding-block: 5rem;
+        }
+
+        .contact_list {
+            width: 90%;
+
+            .contact_label {
+                display: block;
+                border-radius: 3px;
+                font-size: 1.3rem;
+                margin-bottom: 5px;
+
+                span {
+                    font-size: 1rem;
+                }
+            }
+
+            .contact_input,
+            textarea {
+                font-size: 1.4rem;
+            }
+
+            .contact_input {
+                padding-block: 0.8rem;
+            }
+        }
+
+        .submit_button {
+            font-size: 1.2rem;
         }
     }
 }

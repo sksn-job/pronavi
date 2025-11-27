@@ -59,6 +59,7 @@
           animation: border-rotate 1s linear infinite;
         }
       }
+
       p {
         margin-top: 3rem;
         text-align: center;
@@ -69,12 +70,34 @@
     }
   }
 }
+
 // 回転アニメ
 @keyframes border-rotate {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@include m.sp_small {
+  #instagram {
+    // 詳細度キープ
+
+    ul {
+      // 詳細度キープ
+
+      li {
+        margin-right: 1rem;
+
+        p {
+          margin-top: 2rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 }
