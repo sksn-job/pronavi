@@ -47,7 +47,7 @@ $sp: 1023px; // タブレット 768〜1023px
 
 @mixin title_beige {
   max-width: 100%;
-  width: clamp(250px, 40vw, 400px);
+  width: clamp(300px, 40vw, 400px);
   height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,
@@ -65,7 +65,7 @@ $sp: 1023px; // タブレット 768〜1023px
 
 @mixin title_white {
   max-width: 100%;
-  width: clamp(250px, 40vw, 400px);
+  width: clamp(300px, 40vw, 400px);
   height: 80px;
   background: linear-gradient(to right,
       v.$font_accent 0%,

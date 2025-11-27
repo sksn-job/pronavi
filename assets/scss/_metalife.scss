@@ -28,20 +28,20 @@
 
     .meta_group_link {
       position: absolute;
-      top: 65%;
+      top: 64%;
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 5px 45px;
-      border: 4px solid rgb(184, 184, 184);
+      border: 2px solid rgb(184, 184, 184);
       background-color: v.$white;
       border-radius: 50px;
-      font-size: 1.8rem;
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
       font-weight: bold;
       color: v.$font_accent;
       transition: all 0.3s;
 
       &:hover {
-        border: 3px solid rgb(246, 246, 246);
+        border: 2px solid rgb(246, 246, 246);
         background-color: rgb(184, 184, 184);
         color: white;
         // transform: translateY(1px);
@@ -63,7 +63,7 @@
     .meta_text {
       width: 52%;
       height: auto;
-      // padding-top: 5rem;
+      padding-top: 5rem;
 
       .meta_text span:first-of-type {
         font-weight: bold;
@@ -99,6 +99,7 @@
       .meta_heading {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 45%;
         margin: 0 auto;
         text-align: center;
@@ -159,12 +160,32 @@
     .meta_imgarea {
       // 詳細度キープ
 
-      .meta_group {
-        display: none;
-      }
 
-      .meta_group_sp {
-        display: block;
+    }
+
+    .no_wrapper {
+
+      .meta_wrapper {
+        padding-inline: 3rem;
+
+        .meta_heading {
+          width: 80%;
+
+          .heading_text {
+            font-size: 3.2rem;
+          }
+        }
+
+        .meta_contents {
+          flex-direction: column;
+          margin-top: 5rem;
+
+          .meta_item {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto 20px;
+          }
+        }
       }
     }
   }
@@ -172,11 +193,21 @@
 
 @include m.sp_small {
   #metalife {
+
+    // 詳細度キープ
     .meta_imgarea {
+
+      .meta_group {
+        display: none;
+      }
+
+      .meta_group_sp {
+        display: block;
+      }
 
       .meta_group_link {
         padding-inline: 15px;
-        font-size: 1.6rem;
+        font-size: 1rem;
       }
     }
 
@@ -186,6 +217,16 @@
 
       .meta_text {
         width: 100%;
+        // word-break: keep-all;
+        // overflow-wrap: break-word;
+        padding-block: 5rem 4rem;
+        font-size: 1.6rem;
+        line-height: 1.6;
+
+
+        span {
+          font-size: 1.8rem;
+        }
       }
 
       .meta_greenimg {
@@ -199,11 +240,16 @@
         padding-inline: 3rem;
 
         .meta_heading {
-          width: 100%;
+          width: 90%;
+
+          .heading_text {
+            font-size: 2.3rem;
+          }
         }
 
         .meta_contents {
           flex-direction: column;
+          margin-top: 5rem;
 
           .meta_item {
             max-width: 400px;

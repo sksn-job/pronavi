@@ -71,6 +71,10 @@
       padding-top: 16rem;
       padding-bottom: 10rem;
       line-height: 2.5;
+
+      .pc_none {
+        display: none;
+      }
     }
   }
 
@@ -110,6 +114,10 @@
               top: 100%;
               left: 0;
               background-color: v.$font_accent;
+            }
+
+            .pc_none {
+              display: none;
             }
 
             .step_number {
@@ -206,21 +214,72 @@
   }
 }
 
+@include m.sp {
+
+  #study_env {
+    min-height: 0;
+
+    ol.steps {
+      min-height: 0;
+
+      .env_left,
+      .env_right {
+        .env_flex {
+          min-height: 0;
+
+          .env_text {
+            min-height: 0;
+
+            .env_heading {
+              min-height: 0;
+
+              .pc_none {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @include m.sp_small {
 
   #study_env {
-    min-height: 0; // 実害なし
+    min-height: 0;
 
-    // 詳細度キープ
+    .subtitle {
+      margin-top: 0;
+      font-size: 2rem;
+
+      span {
+        font-size: 3.4rem;
+      }
+    }
+
     .env_catch {
-      height: 250px;
+      height: 200px;
 
       .env_catch_contents {
         max-width: 180px;
-        height: 180px;
-        border: 2px solid #ccc; // 枠線
+        height: 130px;
+        border: 1px solid #ccc; // 枠線
         border-radius: 0;
         transition: none;
+
+        &:nth-child(2) {
+          margin-inline: 1rem;
+        }
+
+        p {
+          // padding: 1rem;
+          font-size: 1.2rem;
+        }
+
+        .last_p {
+          padding-inline: 1rem;
+        }
       }
 
       .flex_center {
@@ -228,9 +287,22 @@
       }
     }
 
+    .no_wrapper {
+      // 詳細度キープ
+
+      .subtitle {
+        font-size: 1.7rem;
+
+        .pc_none {
+          display: block;
+        }
+      }
+    }
+
+
     /* ----下コンテンツ---- */
     ol.steps {
-
+      padding: 8rem 0;
 
       .env_left,
       .env_right {
@@ -242,6 +314,38 @@
           .env_text {
             width: 100%;
             position: relative;
+            padding: 0 1rem;
+
+            &::before {
+              display: none;
+            }
+
+            &::after {
+              display: none;
+            }
+
+            .env_heading {
+              font-size: 2.2rem;
+
+              .pc_none {
+                display: block;
+              }
+
+              &::before {
+                width: 100%;
+              }
+
+              .step_number {
+                width: 26px;
+                height: 26px;
+                font-size: 1.4rem;
+
+              }
+            }
+
+            .env_st {
+              font-size: 1.8rem;
+            }
           }
 
           img {
@@ -262,83 +366,6 @@
 
       .env_right .env_flex {
         flex-direction: column-reverse;
-      }
-
-      .env_right {
-        .env_text {
-          &::before {
-            position: absolute;
-            content: "";
-            width: 2px;
-            height: 100%;
-            background-color: #313131;
-            top: 0;
-            left: 2rem;
-          }
-
-          &::after {
-            position: absolute;
-            content: "Feature";
-            bottom: 3rem;
-            left: -4rem;
-            right: auto;
-            transform: rotate(-90deg);
-            letter-spacing: 0.2rem;
-            font-size: 2rem;
-            color: #aaa1a1;
-          }
-        }
-      }
-    }
-  }
-}
-
-// スマートフォン
-@include m.sp_small {
-  #study_env {
-
-    // 詳細度キープ
-    .subtitle {
-      margin-top: 0;
-      font-size: 2rem;
-
-      span {
-        font-size: 4rem;
-      }
-    }
-
-    ol.steps {
-
-      // 詳細キープ
-      .env_left,
-      .env_right {
-
-        // 詳細キープ
-        .env_flex {
-          // 詳細キープ
-
-          .env_text {
-
-            // 詳細キープ
-            .env_heading {
-              font-size: 2.2rem;
-
-              .step_number {
-                width: 30px;
-                height: 30px;
-                font-size: 1.5rem;
-
-                &::before {
-                  content: counter(step);
-                }
-              }
-            }
-          }
-
-          .env_st {
-            font-size: 1.9rem;
-          }
-        }
       }
     }
   }

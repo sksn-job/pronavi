@@ -118,11 +118,8 @@
   #reason {
 
     .reason_flex {
-      width: 100%;
-      padding-top: 90px;
-      display: flex;
-      justify-content: space-between;
-      margin: 13rem 0 5rem 0;
+      padding-top: 3rem;
+      margin: 10rem 0 5rem 0;
       align-items: center;
 
       img {
@@ -164,11 +161,12 @@
       border-radius: 0 0 0 0;
 
       span {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
 
       p {
         padding-right: 1rem;
+        padding-block: 0.7rem;
         font-size: 1.3rem;
       }
     }
