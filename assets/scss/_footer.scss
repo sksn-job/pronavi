@@ -49,18 +49,29 @@
     }
 }
 
+// スマホ 〜767px
 @include m.sp_small {
     .footer {
 
         // 詳細度キープ
         .footer_list {
-            font-size: 1.2rem;
+            flex-direction: column;
+            gap: 0;
+            font-size: 1.1rem;
         }
 
         .footer_under {
             .footer_logo {
                 display: block;
                 width: 110px;
+            }
+
+            .footer_sns a {
+                // 詳細度キープ
+
+                .sns_text {
+                    font-size: 1.2rem;
+                }
             }
         }
     }

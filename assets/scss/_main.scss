@@ -136,7 +136,7 @@ p {
 
       .cta_textarea_sp {
         p {
-          font-size: clamp(1.6rem, 2vw, 2.4rem);
+          font-size: clamp(1.5rem, 2vw, 2.4rem);
           font-weight: bold;
           line-height: 1.6;
           text-align: center;
@@ -148,7 +148,6 @@ p {
       @include m.orange_button_long;
       width: 60%;
       margin: 2rem auto 0;
-      font-size: 1.4rem;
       display: block;
     }
   }
