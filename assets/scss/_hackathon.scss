@@ -30,7 +30,7 @@ hackathon
         .hackathon_heading {
             font-weight: bold;
             color: v.$font_accent;
-            font-size: 2.2rem;
+            font-size: clamp(1.7rem, 2vw, 2.2rem);
             line-height: 1.6;
 
             &:first-of-type {
@@ -108,6 +108,7 @@ hackathon
 
 }
 
+// タブレット 768〜1023px
 @include m.sp {
 
     .hackathon {
@@ -141,4 +142,45 @@ hackathon
         }
     }
 
+}
+
+// スマホ 〜767px
+@include m.sp_small {
+    .hackathon {
+        .sec_title_w {
+            margin-top: 80px;
+        }
+
+        .hackathon_block {
+
+            .block_title {
+                margin-bottom: 50px;
+                font-size: 1.8rem;
+            }
+
+            .block_content {
+                flex-direction: column;
+                gap: 2rem;
+
+                .block_textarea {
+                    width: 100%;
+
+                    .block_theme {
+                        width: 100%;
+                        font-size: 1.8rem;
+                    }
+
+                    .block_text {
+                        width: 100%;
+                        font-size: 1.6rem;
+                    }
+                }
+
+                img {
+                    width: 90%;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
 }

@@ -278,14 +278,10 @@ voice
 
 /* ----voiceレスポンシブ---- */
 
-// @include m.sp {
-//     /* 930px */
-// }
-
 
 @include m.sp_small {
 
-    /* 787px */
+
     .voice {
 
         // 詳細度キープ
@@ -367,19 +363,6 @@ voice
 
     .article {
 
-        .article_title {
-            font-size: 2rem
-        }
-
-        .article_question {
-            width: 90%;
-            font-size: 2rem
-        }
-
-        .article_answer {
-            width: 90%;
-        }
-
         .accent_img_right {
             margin: 0 auto;
         }
@@ -396,8 +379,13 @@ voice
                 width: 100%;
                 text-align: center;
                 padding-block: 1rem;
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
+
+            .message_answer {
+                font-size: 1.6rem;
+            }
+
         }
     }
 

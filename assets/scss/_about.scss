@@ -32,13 +32,13 @@
     font-weight: bold;
 
     p {
-      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+      font-size: clamp(1.6rem, 2.5vw, 2.5rem);
       line-height: 2;
       padding-left: 1em;
     }
 
     span {
-      font-size: clamp(2.4rem, 4vw, 4rem);
+      font-size: clamp(2.3rem, 4vw, 4rem);
       line-height: 1.6;
       display: inline-block;
     }
@@ -131,9 +131,10 @@
   margin-bottom: 10rem;
 }
 
+
+// タブレット 768〜1023px
 @include m.sp {
 
-  /* 930px */
   #about {
     min-height: 0; // 実害なし
 
@@ -151,19 +152,24 @@
   }
 }
 
+
+// スマホ 〜767px
 @include m.sp_small {
 
-  /* 787px */
+  // 詳細度キープ
   #about {
     min-height: 0;
 
     .about_bg {
-      height: 118vh;
+      height: 128vh;
     }
 
-    .catch_right {
-      text-align: left;
+    .about_catch {
+      margin-top: 13rem;
 
+      .catch_right {
+        text-align: left;
+      }
     }
   }
 
@@ -189,7 +195,7 @@
 }
 
 
-@media (max-width:490px) {
+@media (max-width:530px) {
   #about {
     min-height: 0;
 

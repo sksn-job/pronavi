@@ -217,6 +217,7 @@ main {
 レスポンシブ
 ---------------------------- */
 
+//  タブレット 768〜1023px
 @include m.sp {
 
   main {
@@ -244,6 +245,8 @@ main {
   }
 }
 
+
+// スマホ 〜767px
 @include m.sp_small {
 
   #header {
@@ -281,10 +284,10 @@ main {
     right: -6rem;
 
     .btn_push {
-      left: 8rem;
+      left: 6rem;
       top: 50%;
-      margin: 0 3rem 0 0;
-      font-size: 1.4rem;
+      margin: 0 4rem 0 0;
+      font-size: 1.3rem;
     }
   }
 }
