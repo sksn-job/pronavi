@@ -210,6 +210,21 @@ to-topボタン
 /* --------------------------------
 サブページ無料相談申込 to-top レスポンシブ（SP切替）
 -----------------------------------*/
+// タブレット
+@include m.sp {
+
+  .to_top {
+    right: 5rem;
+    bottom: 3rem;
+
+    &.main_page {
+      right: 3rem;
+      bottom: 23rem;
+    }
+  }
+}
+
+// スマートフォン
 @include m.sp_small {
 
   .cta-counseling {
@@ -228,8 +243,7 @@ to-topボタン
 
     &.main_page {
       right: 3rem;
-      bottom: 17rem;
+      bottom: 16rem;
     }
-
   }
 }
