@@ -54,8 +54,21 @@
   .about_contents {
     position: relative;
     z-index: 3;
-    padding-top: 12rem;
-    padding-bottom: 10rem; // ★ 青帯とぶつからないよう調整
+    padding-top: 12rem; // ★ 青帯とぶつからないよう調整
+    padding-bottom: 10rem;
+
+    /* ▼ sec_title_b のバイーン防止（可動幅制限） */
+    .sec_title_b {
+      max-width: 100%; // 吹き飛び防止
+      margin-bottom: 10rem;
+    }
+
+  }
+
+  .sec_title_b {
+    max-width: 100%; // 吹き飛び防止
+    width: clamp(250px, 40vw, 400px);
+    margin-bottom: 10rem;
   }
 
 
@@ -88,6 +101,10 @@
         font-size: 2.1rem;
         margin-bottom: 1.3rem;
         color: v.$font_accent;
+
+        .pc_none {
+          display: none;
+        }
       }
 
       .fontmiddle {
@@ -124,12 +141,6 @@
 }
 
 
-/* ▼ sec_title_b のバイーン防止（可動幅制限） */
-.sec_title_b {
-  max-width: 100%; // 吹き飛び防止
-  width: clamp(250px, 40vw, 400px);
-  margin-bottom: 10rem;
-}
 
 
 // タブレット 768〜1023px
@@ -146,7 +157,7 @@
 
     /* ▼ 青い帯（斜めカット） */
     .about_bg {
-      height: 120vh;
+      height: 87vh;
     }
 
   }
@@ -171,28 +182,57 @@
         text-align: left;
       }
     }
-  }
 
+    .about_contents {
+      padding-bottom: 3rem;
+    }
 
-  .about_left,
-  .about_right {
-    width: 100%;
-    flex-direction: column;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-
-    img {
+    .about_left,
+    .about_right {
       width: 100%;
-      aspect-ratio: 10 / 4;
-      object-position: center top;
-      margin-bottom: 2rem;
+      flex-direction: column;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem 1rem;
+
+      .about_text {
+        padding: 0;
+
+        h4 {
+          font-size: 1.8rem;
+
+          .pc_none {
+            display: block;
+          }
+        }
+
+        .fontmiddle {
+          font-size: 1.6rem;
+        }
+
+        .space {
+          padding-top: 1rem;
+        }
+
+        p {
+          margin-left: 0;
+          font-size: 1.5rem;
+        }
+      }
+
+      img {
+        width: 100%;
+        aspect-ratio: 10 / 4;
+        object-position: center top;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .about_right {
+      flex-direction: column-reverse;
     }
   }
-
-  .about_right {
-    flex-direction: column-reverse;
-  }
-
 }
+
 
 
 @media (max-width:530px) {

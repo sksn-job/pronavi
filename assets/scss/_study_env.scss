@@ -293,12 +293,13 @@
   }
 }
 
+// スマートフォン
 @include m.sp_small {
   #study_env {
 
     // 詳細度キープ
     .subtitle {
-      margin-top: 8rem;
+      margin-top: 0;
       font-size: 2rem;
 
       span {
