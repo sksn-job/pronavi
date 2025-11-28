@@ -120,6 +120,7 @@ $(".slick_slider").slick({
   dots: false,
 });
 
+
 // voice_slider 初期化前に margin 設定（余白問題対策）
 $(".voice_slider").on("init", function (event, slick) {
   slick.$slides.each(function (index, slide) {
@@ -161,39 +162,38 @@ $(".qa_question").on("click", function () {
 
 // flow_slider 本体（margin設定は削除）
 $(".flow_slider").slick({
-  slidesToShow: 3,        // 見える枚数は3
+  slidesToShow: 3, // 見える枚数は3
   slidesToScroll: 1,
   infinite: false,
   autoplay: false,
   autoplaySpeed: 2500,
   dots: true,
   arrows: true,
-  prevArrow: $('.prev'),
-  nextArrow: $('.next'),
-  variableWidth: true,    // ★CSSのwidthをそのまま使う
-  centerMode: false,      // ★勝手に中央寄せさせない
+  prevArrow: $(".prev"),
+  nextArrow: $(".next"),
+  variableWidth: true, // ★CSSのwidthをそのまま使う
+  centerMode: false, // ★勝手に中央寄せさせない
   responsive: [
     {
       breakpoint: 787,
       settings: {
         slidesToShow: 2,
-        variableWidth: false,  // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
+        variableWidth: false, // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
       },
     },
     {
       breakpoint: 560,
       settings: {
         slidesToShow: 1,
-        variableWidth: false,  // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
+        variableWidth: false, // SPでは横幅100%にするとでかすぎる787だと。あとで修正が必要。
       },
     },
   ],
 });
 
-
 /* ------フッター読み込み-------- */
 $(function () {
-  $("#footer").load("footer.html");  // パスだけ注意！
+  $("#footer").load("footer.html"); // パスだけ注意！
 });
 
 /*=================================================
@@ -225,5 +225,3 @@ pagetop.click(function () {
   // イベントが親要素へ伝播しないための記述
   return false;
 });
-
-

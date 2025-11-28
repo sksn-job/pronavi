@@ -74,28 +74,57 @@
         display: block;
       }
     }
-
     .slick-dots li button {
-      width: 15px;
-      /* 幅 */
-      height: 15px;
-      /* 高さ */
-      border-radius: 50%;
-      /* 丸くする */
-      background-color: #ccc;
-      /* 通常色 */
+      padding: 0; // 余白をリセット
+      background: none; // button 本体は透明
+      border: none;
+      width: auto;
+      height: auto;
 
       &::before {
         content: "";
+        display: block;
+        width: 15px; // 丸のサイズ
+        height: 15px;
+        border-radius: 50%;
+        background-color: #ccc;
+
+        @include m.sp-small {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
 
+    // .slick-dots li button {
+    //   display: block;
+    //   width: 15px;
+    //   height: 15px;
+    //   border-radius: 50%;
+    //   background-color: #ccc;
+    //   &::before {
+    //     content: "";
+    //   }
+
+    //   @include m.sp-small {
+    //     &::before {
+    //       width: 5px;
+    //       height: 5px;
+    //     }
+    //   }
+    // }
+
     /* 選択中のドット */
-    .slick-dots li.slick-active button {
+    .slick-dots li.slick-active button::before {
       background-color: #023f80;
       /* 選択中の色 */
       width: 15px;
       height: 15px;
+
+      @include m.sp-small {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 
@@ -126,27 +155,6 @@
 
     .voice_slider {
       min-height: 0;
-
-      .slick-dots li button {
-        width: 10px;
-        /* 幅 */
-        height: 10px;
-        /* 高さ */
-        border-radius: 50%;
-        /* 丸くする */
-        background-color: #ccc;
-        /* 通常色 */
-
-      }
-
-      /* 選択中のドット */
-      .slick-dots li.slick-active button {
-        background-color: #023f80;
-        /* 選択中の色 */
-        width: 10px;
-        height: 10px;
-      }
     }
-
   }
 }
