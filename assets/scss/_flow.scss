@@ -265,8 +265,7 @@ flow-slider
 }
 
 .adnavi {
-    text-align: center;
-    padding-block: 6rem;
+    padding-block: 5rem;
 
     .bg_blue {
         background-color: v.$sub_color;
@@ -292,12 +291,12 @@ flow-slider
 
 .adnavi_title {
     font-size: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     color: #F2F2F2;
 }
 
 .adnavi_subtext {
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 1.8;
     margin-bottom: 4rem;
     color: #F2F2F2;
@@ -345,7 +344,7 @@ flow-slider
             }
 
             .adnavi_card_text {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 line-height: 1.5;
             }
         }
@@ -361,19 +360,26 @@ flow-slider
     gap: 4rem;
     flex-wrap: wrap;
     background-color: v.$bg_color;
-
-
-    .adnavi_title {
-        font-size: 3rem;
-        margin-bottom: 5rem;
-        color: #023f80;
     }
 
-    .adnavi_subtext {
+    .design_title,.design_subtext {
+        font-size: 2rem;
+        margin-bottom: 5rem;
+        line-height: 1.6;
+        color:#023f80;
+    }
+
+    .adnavi_card_title {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+        // color: #023f80;
+    }
+
+    .adnavi_card_text {
         font-size: 2rem;
         line-height: 2.0;
         margin-bottom: 4rem;
-        color: #023f80;
+        // color: #023f80;
         text-align: center;
     }
 
@@ -396,6 +402,10 @@ flow-slider
             box-sizing: border-box;
             text-align: left;
             box-shadow: 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            &:hover {
+                transform: translateY(-8px);   // ふわっと浮く
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 
             img {
                 width: 100%;
@@ -412,7 +422,7 @@ flow-slider
             }
 
             .adnavi_card_text {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 line-height: 1.5;
                 text-align: left;
             }
