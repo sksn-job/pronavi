@@ -44,7 +44,6 @@
         border: 2px solid rgb(246, 246, 246);
         background-color: rgb(184, 184, 184);
         color: white;
-        // transform: translateY(1px);
       }
     }
 
@@ -84,7 +83,26 @@
     .meta_greenimg {
       width: 35%;
     }
+
+    .meta_group_link_sp {
+      display: none;
+      padding: 5px 45px;
+      border: 3px solid #22978B;
+      background-color: rgba(255, 255, 255, 0.577);
+      border-radius: 50px;
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
+      font-weight: bold;
+      color: #22978B;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 3px solid #22978B;
+        background-color: #22978bae;
+        color: white;
+      }
+    }
   }
+
 
   .no_wrapper {
     width: 100%;
@@ -105,8 +123,6 @@
         text-align: center;
 
         img {
-          // width: 20%;
-          // object-fit: cover;
           max-width: 80px;
           width: 100%;
           object-fit: contain;
@@ -157,11 +173,6 @@
   #metalife {
 
     // 詳細度キープ
-    .meta_imgarea {
-      // 詳細度キープ
-
-
-    }
 
     .no_wrapper {
 
@@ -206,8 +217,9 @@
       }
 
       .meta_group_link {
-        padding-inline: 15px;
-        font-size: 1rem;
+        display: none;
+        // padding-inline: 15px;
+        // font-size: 1rem;
       }
     }
 
@@ -231,6 +243,11 @@
 
       .meta_greenimg {
         width: 60%;
+      }
+
+      .meta_group_link_sp {
+        margin-top: 5rem;
+        display: block;
       }
     }
 
