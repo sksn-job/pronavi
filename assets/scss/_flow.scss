@@ -265,13 +265,11 @@ flow-slider
 }
 
 .adnavi {
-    background-color: #fff;
     text-align: center;
-    padding: 6rem 2rem;
+    padding-block: 6rem;
 
-    .wrapper {
-        max-width: 120rem;
-        margin: 0 auto;
+    .bg_blue {
+        background-color: v.$sub_color;
     }
 
     .sec_title_w {
@@ -282,26 +280,25 @@ flow-slider
     .sub_title {
         font-size: 2rem;
         line-height: 1.6;
-        margin-bottom: 5rem;
+        margin-block: 10rem;
     }
 
     .highlevel {
         width: 100%;
-        background-color: #607CA8;
-        padding: 50px 20px;
+        padding-block: 10rem;
         text-align: center;
     }
 }
 
 .adnavi_title {
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     color: #F2F2F2;
 }
 
 .adnavi_subtext {
     font-size: 2rem;
-    line-height: 2.0;
+    line-height: 1.8;
     margin-bottom: 4rem;
     color: #F2F2F2;
 }
@@ -333,7 +330,9 @@ flow-slider
             box-shadow: 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
 
             img {
-                width: 100%;
+                display: block;
+                margin-inline: auto;
+                width: 90%;
                 height: auto;
                 margin-bottom: 1.5rem;
                 border-radius: 0.4rem;
@@ -342,11 +341,11 @@ flow-slider
             .adnavi_card_title {
                 font-size: 2rem;
                 font-weight: bold;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
             }
 
             .adnavi_card_text {
-                font-size: 1rem;
+                font-size: 1.6rem;
                 line-height: 1.5;
             }
         }
@@ -358,12 +357,15 @@ flow-slider
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-block: 10rem;
     gap: 4rem;
     flex-wrap: wrap;
+    background-color: v.$bg_color;
+
 
     .adnavi_title {
         font-size: 3rem;
-        margin: 3rem 2rem;
+        margin-bottom: 5rem;
         color: #023f80;
     }
 
@@ -405,14 +407,14 @@ flow-slider
             .adnavi_card_title {
                 font-size: 2rem;
                 font-weight: bold;
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
                 text-align: center;
             }
 
             .adnavi_card_text {
-                font-size: 1rem;
+                font-size: 1.6rem;
                 line-height: 1.5;
-                text-align: center;
+                text-align: left;
             }
         }
     }
@@ -712,7 +714,7 @@ flow-slider
         }
     }
 
-    // アドナビコース
+    /* -------アドナビコース------ */
 
     .hilevel_content,
     .design {
@@ -733,6 +735,8 @@ flow-slider
         }
     }
 
+    /* -------申込帯＆プライス------ */
+
     .cta-counseling {
         margin-top: 0;
     }
@@ -752,7 +756,7 @@ flow-slider
                 width: 100%;
 
                 .price_plan {
-                    font-size: 1.8rem;
+                    font-size: 2.3rem;
                 }
 
                 dl dt,
