@@ -189,34 +189,75 @@
   }
 }
 
+/* -------------------------
+レスポンシブ
+----------------------------*/
+
+// タブレット 768〜1023px
+
 @include m.sp {
   #price {
-    .price_flex {
+    padding: 10rem 0 0 0;
 
-      .price_left,
-      .price_right {
-        a {
-          width: 40%;
-        }
-
-        .price_title {
-          width: 50%;
-          font-size: 1.8rem;
-        }
-
-      }
-    }
-  }
-}
-
-@include m.sp_small {
-  #price {
     .price_flex {
       flex-direction: column;
 
       .price_left,
       .price_right {
         width: 100%;
+
+        .price_title {
+          width: 50%;
+          font-size: 1.6rem;
+        }
+
+      }
+
+      .price_left {
+        // 詳細度キープ
+
+        .price_plan {
+          // 詳細度キープ
+
+          padding-block: 10px;
+        }
+
+        dl {
+          padding-left: 3rem;
+        }
+      }
+
+    }
+  }
+}
+
+
+// スマホ 〜767px
+
+@include m.sp_small {
+  #price {
+
+    h2 {
+      font-size: 4.8rem;
+    }
+
+    .price_flex {
+      flex-direction: column;
+
+      .price_left,
+      .price_right {
+        width: 100%;
+
+        .price_plan {
+          font-size: 2.3rem;
+        }
+
+        dl dt,
+        dl dd,
+        li,
+        .price_plan_twice {
+          font-size: 1.8rem;
+        }
 
         a {
 
@@ -231,6 +272,10 @@
         .price_title {
           width: 50%;
           font-size: 1.6rem;
+        }
+
+        span {
+          font-size: 2.9rem;
         }
 
       }
