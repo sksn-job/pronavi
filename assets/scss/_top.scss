@@ -25,10 +25,12 @@
     width: 300px;
     height: 100vh;
     font-size: 1.8rem;
-    background: linear-gradient(45deg,
-        rgba(217, 217, 217, 1) 0%,
-        #12345a 70%,
-        #1c497f 100%);
+    background: linear-gradient(
+      45deg,
+      rgba(217, 217, 217, 1) 0%,
+      #12345a 70%,
+      #1c497f 100%
+    );
     position: fixed;
     top: 0;
     overflow-y: auto;
@@ -137,8 +139,9 @@
 main {
   .slick_slider {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
+    z-index: 1;
     /*overflow: hidden;*/
 
     img {
@@ -157,6 +160,22 @@ main {
     position: absolute;
     top: 56%;
     left: 8%;
+
+    @include m.sp-small {
+      display: none;
+    }
+  }
+  .overlay_img_sp {
+    display: none;
+
+    @include m.sp-small {
+      display: block;
+      position: absolute;
+      width: 50vw;
+      top: 67vh;
+      right: 0;
+      z-index: 10;
+    }
   }
 
   .catchcopy {
@@ -212,16 +231,13 @@ main {
   }
 }
 
-
 /* -------------------------
 レスポンシブ
 ---------------------------- */
 
 //  タブレット 768〜1023px
 @include m.sp {
-
   main {
-
     // 詳細度キープ
     .overlay_img {
       width: 230px;
@@ -236,7 +252,6 @@ main {
     bottom: 10rem;
     right: -8rem;
 
-
     .btn_push {
       font-size: 1.6rem;
       line-height: 1.6;
@@ -245,12 +260,9 @@ main {
   }
 }
 
-
 // スマホ 〜767px
 @include m.sp_small {
-
   #header {
-
     // 詳細度キープ
     .logo img {
       width: 170px;
@@ -260,9 +272,7 @@ main {
     }
   }
 
-
   main {
-
     // 詳細度キープ
     .overlay_img {
       width: 180px;
