@@ -34,6 +34,10 @@
         color: v.$font_accent;
         border-left: 5px solid v.$font_accent;
         margin-bottom: 2rem;
+
+        .pc_none {
+          display: none;
+        }
       }
 
       .reason_catch {
@@ -49,7 +53,7 @@
     }
   }
 
-  .wrapper > .reason_flex:first-of-type {
+  .wrapper>.reason_flex:first-of-type {
     margin-top: 5rem; // ★ここだけ好きな値に！
   }
 
@@ -99,12 +103,32 @@
 
 @include m.sp {
   #reason {
-    .point {
-      width: 90%;
 
-      span {
-        font-size: 2rem;
+    .reason_flex {
+
+      .reason_text {
+        // 詳細度キープ
+
+        .reason_subtitle {
+          // 詳細度キープ
+
+          .pc_none {
+            display: block;
+          }
+        }
+
+        .reason_catch {
+          text-indent: 0.5rem;
+        }
       }
+    }
+  }
+
+  .point {
+    width: 90%;
+
+    span {
+      font-size: 2rem;
     }
   }
 }
@@ -131,12 +155,17 @@
           color: v.$font_accent;
           border-left: 5px solid v.$font_accent;
           margin-bottom: 2rem;
+
+          .pc_none {
+            display: block;
+          }
         }
 
         .reason_catch {
           font-size: 1.9rem;
           color: v.$font_accent;
           margin-bottom: 2rem;
+          text-indent: 0.5rem;
         }
 
         .reason_content {
@@ -146,7 +175,7 @@
       }
     }
 
-    .wrapper > .reason_flex:first-of-type {
+    .wrapper>.reason_flex:first-of-type {
       margin-top: 5rem; // ★ここだけ好きな値に！
     }
 
