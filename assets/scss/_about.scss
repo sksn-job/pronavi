@@ -148,13 +148,14 @@
 
     /* ▼ 青い帯（斜めカット） */
     .about_bg {
-      height: 87vh;
+      height: 88vh;
     }
   }
 }
 
 // スマホ 〜767px
 @include m.sp_small {
+
   // 詳細度キープ
   #about {
     min-height: 0;
