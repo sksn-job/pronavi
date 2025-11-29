@@ -28,6 +28,7 @@
     margin-top: 16rem; // ★ 上下余白は固定ではなく後で可変にもできる
     color: #fff;
     font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
     p {
       font-size: clamp(1.6rem, 2.5vw, 2.5rem);
