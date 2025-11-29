@@ -105,8 +105,12 @@ hackathon
     .block_link_white {
         @include m.link_white;
     }
-
 }
+
+.cta-counseling.no_margin {
+    margin-top: 0;
+}
+
 
 // タブレット 768〜1023px
 @include m.sp {
