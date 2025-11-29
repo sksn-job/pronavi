@@ -120,7 +120,6 @@ $(".slick_slider").slick({
   dots: false,
 });
 
-
 // voice_slider 初期化前に margin 設定（余白問題対策）
 $(".voice_slider").on("init", function (event, slick) {
   slick.$slides.each(function (index, slide) {
@@ -135,7 +134,7 @@ $(".voice_slider").slick({
   slidesToScroll: 1,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 2000,
   centerMode: true,
   dots: true,
   arrows: true,

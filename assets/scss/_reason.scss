@@ -11,8 +11,6 @@
     margin: 0;
   }
 
-
-
   .reason_flex {
     width: 100%;
     padding-top: 90px;
@@ -51,13 +49,14 @@
     }
   }
 
-  .wrapper>.reason_flex:first-of-type {
+  .wrapper > .reason_flex:first-of-type {
     margin-top: 5rem; // ★ここだけ好きな値に！
   }
 
   .point {
     width: 80%;
     margin: 0 auto;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,12 +95,10 @@
     text-align: center;
     width: 50%;
   }
-
 }
 
 @include m.sp {
   #reason {
-
     .point {
       width: 90%;
 
@@ -112,11 +109,8 @@
   }
 }
 
-
 @include m.sp_small {
-
   #reason {
-
     .reason_flex {
       padding-top: 3rem;
       margin: 10rem 0 5rem 0;
@@ -152,7 +146,7 @@
       }
     }
 
-    .wrapper>.reason_flex:first-of-type {
+    .wrapper > .reason_flex:first-of-type {
       margin-top: 5rem; // ★ここだけ好きな値に！
     }
 
@@ -193,5 +187,4 @@
       width: 70%;
     }
   }
-
 }
