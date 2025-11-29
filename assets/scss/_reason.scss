@@ -166,6 +166,10 @@
           color: v.$font_accent;
           margin-bottom: 2rem;
           text-indent: 0.5rem;
+
+          br {
+            display: none;
+          }
         }
 
         .reason_content {
